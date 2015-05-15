@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/r1" android:background="@color/button_red" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/t1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Help And Support" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/t11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="If you are experiencing any problems, please choose one of the Help/Support options" android:layout_below="@id/r1" android:layout_centerInParent="true" />
+    <ScrollView android:id="@id/scrl" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/t11">
+        <LinearLayout android:orientation="vertical" android:id="@id/l1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/l11" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="30.0dip">
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/witdrawl_btn" android:background="@color/button_red" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="Withdrawel" />
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/companyinfo_btn" android:background="@color/button_red" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:text="Company Info" />
+                <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/helplogout_btn" android:background="@color/button_red" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:text="Logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/help_and_support.xml -->

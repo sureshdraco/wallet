@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffe5e5e5" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/r1" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="left|center" android:id="@id/t1" android:background="@color/button_red" android:paddingLeft="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Notification Page" android:layout_toLeftOf="@id/t1" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/clearnotify_mTextView" android:background="@color/button_gray" android:layout_width="70.0dip" android:layout_height="fill_parent" android:text="Clear" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ListView android:id="@id/notification_listitem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/r1" />
+</RelativeLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/ntification_page.xml -->

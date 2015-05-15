@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.token.app">
+    <permission android:name="com.token.app.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.token.app.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.token.app.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.token.app.permission.C2D_MESSAGE"/>
+    <uses-feature android:name="android.hardware.location" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application android:allowBackup="true" android:debuggable="true" android:icon="@drawable/icon" android:label="Wallet" android:name="com.token.app.Global" android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:windowSoftInputMode="adjustPan">
+        <activity android:label="Wallet" android:name="com.token.app.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_registration" android:name="com.token.app.RegistrationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.token.app.MainTabActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="@string/title_activity_transaction" android:name="com.token.app.TransactionActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_invoice" android:name="com.token.app.InvoiceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_help_and_support" android:name="com.token.app.HelpAndSupportActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_balance" android:name="com.token.app.BalanceActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAhmDxxDHHyRjcFPc6gpGtnw6ZloDqr0Us"/>
+        <receiver android:name="com.token.app.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.token.app"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.token.app.GcmIntentService"/>
+        <activity android:label="@string/title_activity_information" android:name="com.token.app.InformationActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_show_trasaction_info" android:name="com.token.app.ShowTrasactionInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_show_all_transactions" android:name="com.token.app.ShowAllTransactionsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.token.app.BuyCreditViewActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_ntification_page" android:name="com.token.app.NotificationPageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.token.app.AllTransactionFragementActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:label="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.token.app.PaymentActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_confirmation" android:name="com.token.app.TokenInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_confirmation" android:name="com.token.app.ConfirmationActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

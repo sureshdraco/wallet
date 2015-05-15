@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="100.0dip">
+        <ImageView android:id="@id/notification_imageView" android:layout_width="80.0dip" android:layout_height="80.0dip" android:layout_marginLeft="10.0dip" android:scaleType="fitXY" android:adjustViewBounds="true" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="16.0sp" android:id="@id/notify_date_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="2.0dip" android:text="Date : " android:layout_toRightOf="@id/notification_imageView" android:layout_below="@id/notify_message_tv" />
+        <TextView android:textSize="16.0sp" android:id="@id/notify_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:text="Title : " android:layout_toRightOf="@id/notification_imageView" />
+        <TextView android:textSize="16.0sp" android:id="@id/notify_message_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:text="Message : " android:layout_toRightOf="@id/notification_imageView" android:layout_below="@id/notify_title_tv" />
+    </RelativeLayout>
+</RelativeLayout>

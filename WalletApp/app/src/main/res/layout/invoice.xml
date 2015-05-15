@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/r2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/t2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="50.0dip" android:layout_marginRight="20.0dip" android:text="Please Enter Amount (BD) Below:" android:layout_below="@id/r1" />
+        <TextView android:textSize="16.0sp" android:textColor="@color/button_gray" android:id="@id/t3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="20.0dip" android:text="enter the amount, you will get token code send it you get paid" android:layout_below="@id/t2" android:layout_centerHorizontal="true" />
+        <EditText android:textSize="15.0sp" android:textColor="@android:color/black" android:id="@id/invoice_amount_et" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="20.0dip" android:hint="Please enter amount in BD" android:layout_below="@id/t3" android:inputType="numberDecimal" />
+        <RelativeLayout android:id="@id/r21" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="25.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="25.0dip" android:layout_below="@id/invoice_amount_et">
+            <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/invoice_ok_btn" android:background="@color/button_green" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="Generate" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/token_relativeLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/r21">
+            <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/t31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Send Token To Payer" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/token_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="6342" android:layout_below="@id/t31" android:layout_centerHorizontal="true" android:textIsSelectable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

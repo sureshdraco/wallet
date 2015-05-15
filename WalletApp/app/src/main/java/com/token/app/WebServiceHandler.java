@@ -7,15 +7,15 @@ import com.google.android.gms.plus.PlusShare;
 import com.token.util.GlobalConstants;
 
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.BasicHttpParams;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -44,13 +44,15 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://walletgcc.com/wallet/public/usersmaster/balanceinfo");
+		HttpPost httpPost = new HttpPost("http://walletgcc.com/wallet/public/usersmaster/balanceinfo");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("email", str));
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("email", str);
 		Log.v("namevalue of AccountData", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			Log.e("Before response", ":::::::::::" + "");
 			str2 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
@@ -79,17 +81,17 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/buycredit/authenticate");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/buycredit/authenticate");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("password", str2));
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("email", str);
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter("password", str2);
 		Log.e("namevalue of buyAuthenticateService", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -120,23 +122,19 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/buycredit/create");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/buycredit/create");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("amount", str2));
 		arrayList.add(new BasicNameValuePair("option", str4));
 		arrayList.add(new BasicNameValuePair("user_id", str));
 		arrayList.add(new BasicNameValuePair("auth", "1"));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("amount", str2);
-		basicHttpParams.setParameter("option", str4);
-		basicHttpParams.setParameter("user_id", str);
-		basicHttpParams.setParameter("auth", "1");
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-
 		Log.e("namevalue of buycredit Service", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		String str6;
 		try {
 			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
@@ -169,19 +167,17 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/forgetpass");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/forgetpass");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("mobile", str2));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("mobile", str2);
-		basicHttpParams.setParameter("email", str);
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-
 		Log.e("namevalue of forgot password", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -210,17 +206,16 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/create");
+		HttpPost httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/create");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("creator", str));
 		arrayList.add(new BasicNameValuePair("amount", str2));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("amount", str2);
-		basicHttpParams.setParameter("creator", str);
-
 		Log.v("namevalue of generate token  info", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -248,17 +243,16 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/companyinfo");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/companyinfo");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter("email", str);
-
 		Log.e("namevalue of company  info", ":::::::::::::::::" + arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str2 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -310,18 +304,17 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost(GlobalConstants.LOGIN_URL);
+		HttpPost httpPost = new HttpPost(GlobalConstants.LOGIN_URL);
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair(GlobalConstants.LOGIN_USERNAME, str));
 		arrayList.add(new BasicNameValuePair(GlobalConstants.LOGIN_PASSWORD, str2));
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter(GlobalConstants.LOGIN_USERNAME, str);
-		basicHttpParams.setParameter(GlobalConstants.LOGIN_PASSWORD, str2);
 		Log.e("namevalue of login data", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		try {
 			String str4 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -375,19 +368,17 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/payment");
+		HttpPost httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/payment");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("payer", str3));
 		arrayList.add(new BasicNameValuePair("status", str2));
 		arrayList.add(new BasicNameValuePair("code", str));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("payer", str3);
-		basicHttpParams.setParameter("status", str2);
-		basicHttpParams.setParameter("code", str);
-
 		Log.v("namevalue of payment info", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str4 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -419,7 +410,7 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/notificationapi/create");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/notificationapi/create");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
@@ -427,17 +418,12 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("device_id", str3));
 		arrayList.add(new BasicNameValuePair("note", str4));
 		arrayList.add(new BasicNameValuePair("option", str5));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter("email", str);
-		basicHttpParams.setParameter("password", str2);
-		basicHttpParams.setParameter("device_id", str3);
-		basicHttpParams.setParameter("note", str4);
-		basicHttpParams.setParameter("option", str5);
-
 		Log.e("namevalue of register device", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -464,7 +450,7 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost(GlobalConstants.SIGNUP_URL);
+		HttpPost httpPost = new HttpPost(GlobalConstants.SIGNUP_URL);
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_FIRSTNAME, str));
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_LASTNAME, str2));
@@ -473,18 +459,12 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_CIVILID, str6));
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_PASSWORD, str3));
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_FIRSTNAME, str);
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_LASTNAME, str2);
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_EMAIL, str4);
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_NUMBER, str5);
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_CIVILID, str6);
-		basicHttpParams.setParameter(GlobalConstants.SIGNUP_PASSWORD, str3);
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-
 		Log.e("namevalue of Signup data", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		String str8;
 		try {
 			Log.v("Response", basicResponseHandler + "postMethod" + httpPost);
@@ -519,15 +499,15 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/info");
+		HttpPost httpPost = new HttpPost("http://walletgcc.com/wallet/public/transactionapi/info");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("code", str));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("code", str);
-
 		Log.v("namevalue of tokendata", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str2 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
@@ -546,7 +526,7 @@ public class WebServiceHandler {
 					Log.v("creationdate", jSONObject2.toString());
 					if (jSONObject2.has(GlobalConstants.TOKEN_DATE)) {
 						obj = jSONObject2.getString(GlobalConstants.TOKEN_DATE);
-						Log.v("date", obj.toString());
+						Log.v("date", obj);
 					}
 				} catch (Exception e3) {
 					e3.printStackTrace();
@@ -580,19 +560,17 @@ public class WebServiceHandler {
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/transaction");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/transaction");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("password", str2));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter("email", str);
-		basicHttpParams.setParameter("password", str2);
-
 		Log.e("namevalue of getting transaction info", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 		try {
 			String str4 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			Log.e("result of getting transaction info ", str4);
@@ -740,25 +718,23 @@ public class WebServiceHandler {
 	}
 
 	public static String withdrawalService(Context context, String str, String str2) {
-		String str3 = "";
+		String str3;
 		Exception e;
 		String str4 = "";
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpUriRequest httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/withdrawapi/create");
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/withdrawapi/create");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("withdrawer", str));
 		arrayList.add(new BasicNameValuePair("amount", str2));
-
-		BasicHttpParams basicHttpParams = new BasicHttpParams();
-		basicHttpParams.setParameter("_token", "faa8cca04d3234b759203g08dc22afdb2");
-		basicHttpParams.setParameter("withdrawer", str);
-		basicHttpParams.setParameter("amount", str2);
-
 		Log.e("namevalue of witdraw", arrayList.toString());
-		httpPost.setParams(basicHttpParams);
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {

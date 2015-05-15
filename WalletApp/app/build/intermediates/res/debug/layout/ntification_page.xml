@@ -6,4 +6,4 @@
         <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:id="@id/clearnotify_mTextView" android:background="@color/button_gray" android:layout_width="70.0dip" android:layout_height="fill_parent" android:text="Clear" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:layout_centerVertical="true" />
     </RelativeLayout>
     <ListView android:id="@id/notification_listitem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/r1" />
-</RelativeLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/ntification_page.xml -->
+</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/ntification_page.xml -->

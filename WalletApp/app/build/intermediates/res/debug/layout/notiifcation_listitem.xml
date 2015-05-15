@@ -7,4 +7,4 @@
         <TextView android:textSize="16.0sp" android:id="@id/notify_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:text="Title : " android:layout_toRightOf="@id/notification_imageView" />
         <TextView android:textSize="16.0sp" android:id="@id/notify_message_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:text="Message : " android:layout_toRightOf="@id/notification_imageView" android:layout_below="@id/notify_title_tv" />
     </RelativeLayout>
-</RelativeLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/notiifcation_listitem.xml -->
+</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/notiifcation_listitem.xml -->

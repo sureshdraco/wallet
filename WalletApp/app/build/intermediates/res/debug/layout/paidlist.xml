@@ -24,4 +24,4 @@
         <View android:id="@id/expiredView" android:background="@color/button_gray" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_weight="1.0" />
     </LinearLayout>
     <android.support.v4.view.ViewPager android:id="@id/pager" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/l2" />
-</RelativeLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/paidlist.xml -->
+</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/paidlist.xml -->

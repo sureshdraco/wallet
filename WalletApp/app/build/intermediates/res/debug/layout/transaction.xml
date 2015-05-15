@@ -5,4 +5,4 @@
         <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/t1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="Account Balance" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
         <TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/account_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="0 BD" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
     </RelativeLayout>
-</LinearLayout><!-- From: file:/D:/odesk/WalletApp/app/src/main/res/layout/transaction.xml -->
+</LinearLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/transaction.xml -->

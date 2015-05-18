@@ -13,7 +13,6 @@ public class Global extends Application {
     ArrayList<HashMap<String, String>> expireList;
     ArrayList<HashMap<String, String>> infoList;
     ArrayList<HashMap<String, String>> loginList;
-    ArrayList<HashMap<String, String>> notificationList;
     ArrayList<HashMap<String, String>> notificationSaveList;
     ArrayList<HashMap<String, String>> paidList;
     String paymessage;
@@ -35,7 +34,6 @@ public class Global extends Application {
         this.tokenList = new ArrayList();
         this.infoList = new ArrayList();
         this.TransactioninfoList = new ArrayList();
-        this.notificationList = new ArrayList();
         this.notificationSaveList = new ArrayList();
         this.paidList = new ArrayList();
         this.unpaidList = new ArrayList();
@@ -68,14 +66,6 @@ public class Global extends Application {
 
     public ArrayList<HashMap<String, String>> getLoginList() {
         return this.loginList;
-    }
-
-    public ArrayList<HashMap<String, String>> getNotificationList() {
-        return this.notificationList;
-    }
-
-    public ArrayList<HashMap<String, String>> getNotificationSaveList() {
-        return this.notificationSaveList;
     }
 
     public ArrayList<HashMap<String, String>> getPaidList() {
@@ -137,15 +127,6 @@ public class Global extends Application {
     public void setLoginList(ArrayList<HashMap<String, String>> arrayList) {
         this.loginList = arrayList;
     }
-
-    public void setNotificationList(ArrayList<HashMap<String, String>> arrayList) {
-        this.notificationList = arrayList;
-    }
-
-    public void setNotificationSaveList(ArrayList<HashMap<String, String>> arrayList) {
-        this.notificationSaveList = arrayList;
-    }
-
     public void setPaidList(ArrayList<HashMap<String, String>> arrayList) {
         this.paidList = arrayList;
     }

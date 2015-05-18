@@ -2,172 +2,186 @@
 <items version="2" >
 
     <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-ede9a8ca7f8a283f5c7537e75cbb414c8d109054.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.3.0\jars\classes.jar"
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.3.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-6264e9eb6e01f4721e9adf71056aee3eef88fb27.jar" />
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-db5985378d71a6150a118dcb26f64dfa72e4ab61.jar" />
     </item>
     <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-33bc51b45262832f26bb2193ba542e5d8c944e7c.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-adf614639f1a0657cf8b43e44f02dcdb9d9ffe41.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-19f22965893baa0bb5fdc832f1ebb89151ab27e6.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-82028f9c89548a1f4dd37233c50930eca6c96816.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-9a4c55ca24c52a40ea671d3394bc536360eda364.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-6d739ca8a3f0b5261fc5d9b17a07362c98a9b8d6.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.3.0\jars\classes.jar"
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/7.3.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-82d525359fce7777f643678053fefc1d2bc36434.jar" />
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-f660267ee12a16afce82d3718e66233fcbfe3455.jar" />
     </item>
     <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-d6f523429a9be8595a25171cc3fb045f96943800.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-61b1b4719ae96482988248176883b889159762f1.jar" />
-    </item>
-    <item
-        jar="C:\Users\suresh.kumar\AppData\Local\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-d519b8da2aa2a2dc1c1964651a1f3e8179bab6ac.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-569d6694734546624a95f9cc4e80aed4831f4960.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-feb4eef7af71fa284701552c46dcc7128d0aa50f.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-d82d2fb3c08dfc4fdceaad7119c5843b52a957d1.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.3.0\jars\classes.jar"
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/7.3.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-b01bc0d3d2b98b52a495b1acbb7cc993e7c6bc8a.jar" />
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-936387e95dfb1f9c7d9d3fa525f82032055e08dd.jar" />
     </item>
     <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-fe511bc604156a8a81b266ab1c7fdb7e5aabf460.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-7943077153deb8c7ff50af6dfe4fc1f18b11a259.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-647f35c2beb7125ddd11c2205f96bd36a13e786e.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="565a01f90f1529f73362707c4c185d0623a68782">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-16ce8199ac76e3627c1cdfea0b66ca60c7aa1ff2.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-252f98fe44ecf7bbf497d08ffe086478a58731df.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-5631a24b3ed44d3244a2454df7fffeac33121288.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.3.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-4816d198950daef5f5867e1e891b58d7d446e3fb.jar" />
-    </item>
-    <item
-        jar="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.3.0\jars\classes.jar"
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appstate/7.3.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
-        <dex dex="D:\odesk\WalletSameh\WalletApp\app\build\intermediates\pre-dexed\debug\classes-dc954b2efe625c944a1729b3ae210b339a447e68.jar" />
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-619154693d349b404cd54e559d56d83362c91d76.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-1068151d390eed7b00c9142e442fc18401697d39.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-8d8af519679d6f7d033e2dad76b5ae3765ed606a.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-0ae903b667292f75ef928f3b292ff4edb6058480.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/gson-2.3-4ffb2ff36c7a66fc132a972e3df53e01b2b3f77d.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-491d461b9ce64cc1d830afbe520dbdc87b533f64.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-572544a1e7244536b1aa30b3d1c86afec734373a.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-88aad9e58010da62b6cf177d02f836e7912b7321.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.0/da217367fd25e88df52ba79e47658d4cf928b0d1/commons-collections4-4.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="da217367fd25e88df52ba79e47658d4cf928b0d1">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/commons-collections4-4.0-33f3f3b9966cf5623bcb224ae3fac95d81894e95.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-b282948068ea8ccab52124af3f7c9b0a3b2ca374.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-c3d3b455cd7a4a950cca8fcc99c1bef43a989228.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-7c46283425846782234ce37e998c0d6d9d420ebf.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-63f0342bda7a0bfd2b5cc0ba145231f65cd0f3f6.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-cdab32a62308a5c60d0bca3486cd58656b6701ad.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-0cde6dd1ae4c5a58793af220ffdee2ee87d74a66.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="bb36004beb02b69562cbec9aa7d6a3cf16bf5d1b">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-e76560d38081007dff6387e6a9d95696cc60b536.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-648db0bac7eee2f455a340e049303bcd66621b76.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-a4a29759aa8e2d7e38c57535c54f97ca2f6ac617.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-0ad4b7d7af14c2db6b36573aab72b72956fe94e2.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Documents/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-1f44cb6f1cb6e61ed01ac7c67deb4b20bfea15ca.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-024212c4b4e6388b0714019e4060ff7ddb8589dc.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-2f63e6b30c013e8c42dc5055740111074cd150b3.jar" />
+    </item>
+    <item
+        jar="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/7.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/pre-dexed/debug/classes-feb1a0cfbf97c9744840c6f9dd9f268533b8b054.jar" />
     </item>
 
 </items>

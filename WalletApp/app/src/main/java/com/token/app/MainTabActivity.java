@@ -89,4 +89,27 @@ public class MainTabActivity extends TabActivity {
             }
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        handleIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        handleIntent(intent);
+    }
+
+
+    private void handleIntent(Intent intent) {
+        try {
+            if (intent.getExtras().getBoolean("notifications", false)) {
+                host.setCurrentTabByTag("Notification");
+            }
+        } catch (Exception ignored) {
+        }
+    }
+
 }

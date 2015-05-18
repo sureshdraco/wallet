@@ -44,7 +44,6 @@
     <application
         android:name="com.token.app.Global"
         android:allowBackup="true"
-        android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="Wallet"
         android:theme="@android:style/Theme.Holo.Light.NoActionBar"

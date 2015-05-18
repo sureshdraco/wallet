@@ -3,13 +3,17 @@ package com.token.app;
 import android.app.DatePickerDialog;
 import android.app.DatePickerDialog.OnDateSetListener;
 import android.app.Dialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.os.StrictMode.ThreadPolicy.Builder;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,17 +24,20 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.google.android.gms.plus.PlusShare;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.token.util.GlobalConstants;
 import com.token.util.Utils;
+
 import java.io.IOException;
+import java.lang.reflect.Type;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Locale;
 
 public class NotificationPageActivity extends ActivityInTab {
@@ -50,15 +57,36 @@ public class NotificationPageActivity extends ActivityInTab {
     String title_mString;
     public int year;
 
+
+    BroadcastReceiver notificationsBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            updateNotification();
+        }
+    };
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        NotificationUtil.clearNotifications(this);
+        LocalBroadcastManager.getInstance(this).registerReceiver(notificationsBroadcastReceiver, new IntentFilter("NOTIFICATIONS_UPDATED_BROADCAST"));
+    }
+
+    @Override
+    public void onPause() {
+        LocalBroadcastManager.getInstance(this).unregisterReceiver(notificationsBroadcastReceiver);
+        super.onPause();
+    }
+
     public class NotiifcationListAdapter extends BaseAdapter {
         Context c;
         Global global;
         LayoutInflater mInflater;
         String[] names;
-        ArrayList<HashMap<String, String>> notifylist;
+        ArrayList<NotificationItem> notifylist;
         SharedPreferences sp;
 
-        public NotiifcationListAdapter(Context context, ArrayList<HashMap<String, String>> arrayList) {
+        public NotiifcationListAdapter(Context context, ArrayList<NotificationItem> arrayList) {
             this.c = context;
             this.notifylist = arrayList;
             this.sp = context.getSharedPreferences(GlobalConstants.PREF, 0);
@@ -95,32 +123,29 @@ public class NotificationPageActivity extends ActivityInTab {
             NotificationPageActivity.this.year = instance.get(Calendar.YEAR);
             NotificationPageActivity.this.month = instance.get(Calendar.MONTH);
             NotificationPageActivity.this.day = instance.get(Calendar.DAY_OF_MONTH);
-            NotificationPageActivity.this.notify_mBoolean = this.sp.getBoolean("notify", false);
+            NotificationPageActivity.this.notify_mBoolean = this.sp.getBoolean("notify", true);
             Log.e("Notifylist", ":::::::::" + this.notifylist);
-            Log.e("Notiifcation data count", ":::::" + this.global.getNotificationList().size());
-            if (NotificationPageActivity.this.notify_mBoolean) {
-                NotificationPageActivity.this.image_mString = (String) ((HashMap) this.notifylist.get(i)).get("image");
-                NotificationPageActivity.this.title_mString = (String) ((HashMap) this.notifylist.get(i)).get(PlusShare.KEY_CONTENT_DEEP_LINK_METADATA_TITLE);
-                NotificationPageActivity.this.message_mString = (String) ((HashMap) this.notifylist.get(i)).get("notmsg");
-                String str = (String) ((HashMap) this.notifylist.get(i)).get("date");
-                String str2 = "";
-                try {
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMM yyyy HH:mm:ss", Locale.US);
-                    Log.e("Date for Compare", str);
-                    long time = simpleDateFormat.parse(str).getTime() / 1000;
-                    Log.e("long outpute", String.valueOf(time));
-                    time = Long.parseLong(Long.toString(time)) * 1000;
-                    Log.e("long timestamp", String.valueOf(time));
-                    str = Utils.getFriendlyTime(new Date(time));
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    str = str2;
-                }
-                viewHolder.notify_mImageView.setImageBitmap(NotificationPageActivity.this.getBitmapFromURL(NotificationPageActivity.this.image_mString));
-                viewHolder.title_mTextView.setText(NotificationPageActivity.this.title_mString);
-                viewHolder.message_mTextView.setText(NotificationPageActivity.this.message_mString);
-                viewHolder.date_mTextView.setText(str);
+            NotificationPageActivity.this.image_mString = (String) (this.notifylist.get(i)).getImageUrl();
+            NotificationPageActivity.this.title_mString = (String) (this.notifylist.get(i)).getTitle();
+            NotificationPageActivity.this.message_mString = (String) (this.notifylist.get(i)).getNotificationMessage();
+            String str = (String) ((NotificationItem) this.notifylist.get(i)).getDate();
+            String str2 = "";
+            try {
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMM yyyy HH:mm:ss", Locale.US);
+                Log.e("Date for Compare", str);
+                long time = simpleDateFormat.parse(str).getTime() / 1000;
+                Log.e("long outpute", String.valueOf(time));
+                time = Long.parseLong(Long.toString(time)) * 1000;
+                Log.e("long timestamp", String.valueOf(time));
+                str = Utils.getFriendlyTime(new Date(time));
+            } catch (Exception e) {
+                e.printStackTrace();
+                str = str2;
             }
+            viewHolder.notify_mImageView.setImageBitmap(NotificationPageActivity.this.getBitmapFromURL(NotificationPageActivity.this.image_mString));
+            viewHolder.title_mTextView.setText(NotificationPageActivity.this.title_mString);
+            viewHolder.message_mTextView.setText(NotificationPageActivity.this.message_mString);
+            viewHolder.date_mTextView.setText(str);
             return view;
         }
     }
@@ -242,15 +267,20 @@ public class NotificationPageActivity extends ActivityInTab {
         this.notiifcation_mListView = (ListView) findViewById(R.id.notification_listitem);
         this.clear_mTextView.setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
-                NotificationPageActivity.this.global.getNotificationList().clear();
-                NotificationPageActivity.this.adapter = new NotiifcationListAdapter(NotificationPageActivity.this, NotificationPageActivity.this.global.getNotificationList());
-                NotificationPageActivity.this.notiifcation_mListView.setAdapter(NotificationPageActivity.this.adapter);
+                PreferenceUtil.saveNotificationsList(getApplicationContext(), "[]");
+                updateNotification();
                 NotificationPageActivity.this.clear_mTextView.setClickable(false);
                 NotificationPageActivity.this.clear_mTextView.setEnabled(false);
             }
         });
-        Log.e("Notification List", "::::" + this.global.getNotificationList());
-        this.adapter = new NotiifcationListAdapter(this, this.global.getNotificationList());
+        updateNotification();
+    }
+
+    private void updateNotification() {
+        Type listType = new TypeToken<ArrayList<NotificationItem>>() {
+        }.getType();
+        ArrayList<NotificationItem> notificationItemArrayList = new Gson().fromJson(PreferenceUtil.getNotificationList(this), listType);
+        this.adapter = new NotiifcationListAdapter(this, notificationItemArrayList);
         this.notiifcation_mListView.setAdapter(this.adapter);
     }
 

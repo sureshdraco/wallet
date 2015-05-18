@@ -16,9 +16,14 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.token.util.GlobalConstants;
 
+import java.io.IOException;
+
 public class HelpAndSupportActivity extends Activity implements OnClickListener {
+    private static final String TAG = HelpAndSupportActivity.class.getSimpleName();
     String amount_mString;
     String deviceid_mString;
     Dialog dialog;
@@ -102,6 +107,11 @@ public class HelpAndSupportActivity extends Activity implements OnClickListener 
                 Editor edit = HelpAndSupportActivity.this.sp.edit();
                 edit.putBoolean(GlobalConstants.ISLOGIN, false);
                 edit.commit();
+                try {
+                    GoogleCloudMessaging.getInstance(getApplicationContext()).unregister();
+                } catch (IOException e) {
+                    Log.e(TAG, e.getMessage());
+                }
                 HelpAndSupportActivity.this.startActivity(new Intent(HelpAndSupportActivity.this, MainActivity.class));
                 HelpAndSupportActivity.this.finishFromChild(HelpAndSupportActivity.this.mainTabActivity);
             }

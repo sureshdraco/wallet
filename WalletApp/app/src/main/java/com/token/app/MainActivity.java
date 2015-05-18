@@ -283,4 +283,5 @@ public class MainActivity extends Activity implements OnClickListener {
         getGCMPreferences(context);
         Log.i("", "Saving regId on app version " + getAppVersion(context));
     }
+
 }

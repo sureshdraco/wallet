@@ -12,4 +12,4 @@
             <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/balance_buycrdit_btn" android:background="@color/button_red" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="10.0dip" android:text="Buy Credit" />
         </LinearLayout>
     </RelativeLayout>
-</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/balance.xml -->
+</RelativeLayout><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/balance.xml -->

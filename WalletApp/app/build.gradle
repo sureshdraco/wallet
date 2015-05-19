@@ -40,4 +40,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:7.3.0'
     compile 'com.google.code.gson:gson:2.3'
     compile 'org.apache.httpcomponents:httpclient:4.3.6'
+    compile 'com.mcxiaoke.volley:library:1.0.6@aar'
+    compile 'com.jakewharton:disklrucache:2.0.2'
+
 }

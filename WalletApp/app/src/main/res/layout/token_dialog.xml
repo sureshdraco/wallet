@@ -1,16 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="30.0dip">
-        <RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="20.0dip" android:layout_centerInParent="true">
-            <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/r1" android:background="@drawable/tokencode_bg" android:visibility="gone" android:layout_width="180.0dip" android:layout_height="120.0dip" android:layout_centerHorizontal="true">
-                <TextView android:textSize="25.0sp" android:textStyle="bold" android:textColor="@color/button_red" android:id="@id/t1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="enter code" android:layout_centerHorizontal="true" />
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="30.0dip">
+
+        <RelativeLayout
+            android:background="#ffffffff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:id="@id/r1"
+                android:background="@drawable/tokencode_bg"
+                android:visibility="gone"
+                android:layout_width="180.0dip"
+                android:layout_height="120.0dip"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:textSize="25.0sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/button_red"
+                    android:id="@id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:text="enter code"
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
-            <TextView android:textSize="20.0sp" android:textColor="#ff000000" android:id="@id/t21" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Please Enter Token:" android:layout_below="@id/r1" />
-            <TextView android:textSize="16.0sp" android:textColor="@color/button_gray" android:id="@id/t2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:text="Enter the number that a cashier gives you in the box below.You will see the amount and check to pay" android:layout_below="@id/t21" android:layout_centerHorizontal="true" />
-            <EditText android:textSize="18.0sp" android:id="@id/token_et" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:hint="Please Enter The Token" android:maxLength="4" android:layout_below="@id/t2" android:inputType="number" />
-            <RelativeLayout android:id="@id/next_layout" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/token_et">
-                <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/token_ok_btn" android:background="@color/button_green" android:layout_width="120.0dip" android:layout_height="fill_parent" android:text="Pay" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+            <TextView
+                android:textSize="20.0sp"
+                android:textColor="#ff000000"
+                android:id="@id/t21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:text="Please Enter Token:"
+                android:layout_below="@id/r1" />
+
+            <TextView
+                android:textSize="16.0sp"
+                android:textColor="@color/button_gray"
+                android:id="@id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="5.0dip"
+                android:layout_marginRight="15.0dip"
+                android:text="Enter the number that a cashier gives you in the box below.You will see the amount and check to pay"
+                android:layout_below="@id/t21"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:textSize="18.0sp"
+                android:id="@id/token_et"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="15.0dip"
+                android:hint="Please Enter The Token"
+                android:maxLength="4"
+                android:layout_below="@id/t2"
+                android:inputType="number" />
+
+            <RelativeLayout
+                android:id="@id/next_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginTop="15.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_below="@id/token_et">
+
+                <Button
+                    android:textSize="20.0sp"
+                    android:textStyle="bold"
+                    android:textColor="#ffffffff"
+                    android:id="@id/token_ok_btn"
+                    android:background="@color/button_green"
+                    android:layout_width="120.0dip"
+                    android:layout_height="fill_parent"
+                    android:text="Pay"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
             </RelativeLayout>
         </RelativeLayout>
     </RelativeLayout>

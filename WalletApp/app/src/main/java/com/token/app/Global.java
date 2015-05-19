@@ -1,6 +1,8 @@
 package com.token.app;
 
 import android.app.Application;
+import android.graphics.Bitmap;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -157,5 +159,23 @@ public class Global extends Application {
 
     public void setUnpaidList(ArrayList<HashMap<String, String>> arrayList) {
         this.unpaidList = arrayList;
+    }
+    private static int DISK_IMAGECACHE_SIZE = 1024 * 1024 * 10;
+    private static Bitmap.CompressFormat DISK_IMAGECACHE_COMPRESS_FORMAT = Bitmap.CompressFormat.PNG;
+    private static int DISK_IMAGECACHE_QUALITY = 100;  //PNG is lossless so quality is ignored but must be provided
+
+
+    private void createImageCache() {
+        ImageCacheManager.getInstance().init(this,
+                this.getPackageCodePath()
+                , DISK_IMAGECACHE_SIZE
+                , DISK_IMAGECACHE_COMPRESS_FORMAT
+                , DISK_IMAGECACHE_QUALITY);
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        createImageCache();
     }
 }

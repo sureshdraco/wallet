@@ -46,7 +46,7 @@ public class NotificationUtil {
         Collections.reverse(notificationItemArrayList);
         notificationItemArrayList.add(notificationItem);
         queue.addAll(notificationItemArrayList);
-        notificationItemArrayList = new ArrayList<NotificationItem>(queue);
+        notificationItemArrayList = new ArrayList<>(queue);
         Collections.reverse(notificationItemArrayList);
         PreferenceUtil.saveNotificationsList(context, gson.toJson(notificationItemArrayList));
         LocalBroadcastManager.getInstance(context).sendBroadcast(new Intent("NOTIFICATIONS_UPDATED_BROADCAST"));
@@ -61,7 +61,7 @@ public class NotificationUtil {
         NotificationManager mNotificationManager = (NotificationManager)
                 context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        Intent mainActivityIntent = new Intent(context, MainActivity.class);
+        Intent mainActivityIntent = new Intent(context, MainTabActivity.class);
         mainActivityIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         mainActivityIntent.putExtra("notifications", true);
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0,

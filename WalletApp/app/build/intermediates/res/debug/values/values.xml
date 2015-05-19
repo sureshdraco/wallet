@@ -12,6 +12,60 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="AirtimeContactDetailsBackground">#DAE5E9</color>
+    <color name="AirtimePromotionsTextColor">#64C416</color>
+    <color name="AirtimeTextDescriptionColor">#333333</color>
+    <color name="AirtimeTextPendingColor">#005C7E</color>
+    <color name="AirtimeTransferFailureBackground">#F7DADA</color>
+    <color name="AirtimeTransferFailureText">#E14C4C</color>
+    <color name="AirtimeTransferSuccessBackground">#E6F2DD</color>
+    <color name="AirtimeTransferSuccessText">#64c416</color>
+    <color name="Black">#000000</color>
+    <color name="BlackDuRietz">#ff121212</color>
+    <color name="Black_20PercentOpaque">#2F000000</color>
+    <color name="Blue">#ff00aded</color>
+    <color name="BlueButtonShadowTextColor">#a2e1f8</color>
+    <color name="BlueButtonTextColor">#003f56</color>
+    <color name="ContactBookAccountBalance">#888a8a</color>
+    <color name="Conversation_ontactBookAccountBalance">#888a8a</color>
+    <color name="DarkGrey">#333333</color>
+    <color name="DelimiterLowerLight_DarkBg">#28ffffff</color>
+    <color name="DelimiterLowerLight_LightBg">#ffffffff</color>
+    <color name="DelimiterUpperDark_DarkBg">#ff000000</color>
+    <color name="DelimiterUpperDark_LightBg">#28000000</color>
+    <color name="Gray1">#333333</color>
+    <color name="Gray2">#585858</color>
+    <color name="Gray2_reduced_alpha">#aa585858</color>
+    <color name="Gray3">#7d7d7d</color>
+    <color name="Gray4">#a2a2a2</color>
+    <color name="Gray5">#c7c7c7</color>
+    <color name="GrayButtonShadowTextColor">#99ffffff</color>
+    <color name="GrayButtonTextColor">#464646</color>
+    <color name="Grey">#777777</color>
+    <color name="LightGreen">#6625f317</color>
+    <color name="LightGrey">#eeeeee</color>
+    <color name="LightGrey_50PercentOpaque">#7Feeeeee</color>
+    <color name="LightGrey_pressed">#eeeeee</color>
+    <color name="MediumGrey">#aaaaaa</color>
+    <color name="MediumGrey2">#666666</color>
+    <color name="MessageTextColor">#ff464646</color>
+    <color name="None">#00000000</color>
+    <color name="OnboardingBackground">#F28F2E</color>
+    <color name="Pink">#CA3F99</color>
+    <color name="Red">#e14c4c</color>
+    <color name="SemiBlack">#ff000000</color>
+    <color name="SemiBlackTransparent">#88000000</color>
+    <color name="SlidingmenuBackgroud">#333333</color>
+    <color name="TextColor">#585858</color>
+    <color name="TextShadow">#CC000000</color>
+    <color name="Transparent">#00000000</color>
+    <color name="White">#ffffff</color>
+    <color name="White_reduced_alpha">#aaffffff</color>
+    <color name="YellowGradientStart">#ffcf9c22</color>
+    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -24,6 +78,13 @@
     <color name="background_material_light">#ffeeeeee</color>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="bg1">#ffffff</color>
+    <color name="bg2">#f8f8f8</color>
+    <color name="bg2_reduced_alpha">#aaf8f8f8</color>
+    <color name="bg3">#dadada</color>
+    <color name="bg4">#e8f6fb</color>
+    <color name="bg5">#e5f1db</color>
+    <color name="bonus_green">#90D954</color>
     <color name="bottom_bar">#fffea500</color>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
@@ -62,8 +123,12 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values/colors.xml -->
     <eat-comment/>
+    <color name="fast_bird_orange">#FEA500</color>
     <color name="gray">#ff2a2a33</color>
     <color name="gray_backgound">#ffe5e5e5</color>
+    <color name="green">#64C416</color>
+    <color name="green_pressed">#58ae12</color>
+    <color name="green_reduced_alpha">#aa64C416</color>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
@@ -82,6 +147,13 @@
     <color name="material_blue_grey_950">#ff21272b</color>
     <color name="material_deep_teal_200">#ff80cbc4</color>
     <color name="material_deep_teal_500">#ff009688</color>
+    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="orange">#F28F2E</color>
+    <color name="orange_pressed">#df852a</color>
+    <color name="orange_reduced_alpha">#aaF28F2E</color>
+    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
+    <eat-comment/>
     <color name="primary_dark_material_dark">#ff000000</color>
     <color name="primary_dark_material_light">#ff757575</color>
     <color name="primary_material_dark">#ff212121</color>

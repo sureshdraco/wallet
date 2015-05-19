@@ -60,21 +60,21 @@ public final class R {
 		public static final int common_signin_btn_light_text_pressed = 0x7f040005;
 		public static final int common_signin_btn_text_dark = 0x7f040011;
 		public static final int common_signin_btn_text_light = 0x7f040012;
-		public static final int wallet_bright_foreground_disabled_holo_light = 0x7f040044;
-		public static final int wallet_bright_foreground_holo_dark = 0x7f040045;
-		public static final int wallet_bright_foreground_holo_light = 0x7f040046;
-		public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f040047;
-		public static final int wallet_dim_foreground_holo_dark = 0x7f040048;
-		public static final int wallet_dim_foreground_inverse_disabled_holo_dark = 0x7f040049;
-		public static final int wallet_dim_foreground_inverse_holo_dark = 0x7f04004a;
-		public static final int wallet_highlighted_text_holo_dark = 0x7f04004b;
-		public static final int wallet_highlighted_text_holo_light = 0x7f04004c;
-		public static final int wallet_hint_foreground_holo_dark = 0x7f04004d;
-		public static final int wallet_hint_foreground_holo_light = 0x7f04004e;
-		public static final int wallet_holo_blue_light = 0x7f04004f;
-		public static final int wallet_link_text_light = 0x7f040050;
-		public static final int wallet_primary_text_holo_light = 0x7f04005a;
-		public static final int wallet_secondary_text_holo_dark = 0x7f04005b;
+		public static final int wallet_bright_foreground_disabled_holo_light = 0x7f040084;
+		public static final int wallet_bright_foreground_holo_dark = 0x7f040085;
+		public static final int wallet_bright_foreground_holo_light = 0x7f040086;
+		public static final int wallet_dim_foreground_disabled_holo_dark = 0x7f040087;
+		public static final int wallet_dim_foreground_holo_dark = 0x7f040088;
+		public static final int wallet_dim_foreground_inverse_disabled_holo_dark = 0x7f040089;
+		public static final int wallet_dim_foreground_inverse_holo_dark = 0x7f04008a;
+		public static final int wallet_highlighted_text_holo_dark = 0x7f04008b;
+		public static final int wallet_highlighted_text_holo_light = 0x7f04008c;
+		public static final int wallet_hint_foreground_holo_dark = 0x7f04008d;
+		public static final int wallet_hint_foreground_holo_light = 0x7f04008e;
+		public static final int wallet_holo_blue_light = 0x7f04008f;
+		public static final int wallet_link_text_light = 0x7f040090;
+		public static final int wallet_primary_text_holo_light = 0x7f04009a;
+		public static final int wallet_secondary_text_holo_dark = 0x7f04009b;
 	}
 	public static final class drawable {
 		public static final int common_full_open_on_phone = 0x7f020078;

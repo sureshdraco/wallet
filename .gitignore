@@ -1,3 +1,37 @@
 WalletApp/app/build/*
 WalletApp/app/build/intermediates/*
 WalletApp/local.properties
+
+#built application files
+WalletApp/*.apk
+WalletApp/*.ap_
+
+# files for the dex VM
+WalletApp/*.dex
+
+# Java class files
+WalletApp/*.class
+
+# generated files
+WalletApp/bin/
+WalletApp/gen/
+
+# Local configuration file (sdk path, etc)
+WalletApp/local.properties
+
+# Windows thumbnail db
+WalletApp/Thumbs.db
+
+# OSX files
+WalletApp/.DS_Store
+
+# Eclipse project files
+WalletApp/.classpath
+WalletApp/.project
+
+# Android Studio
+WalletApp/*.iml
+WalletApp/.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+WalletApp/.gradle
+WalletApp/build/

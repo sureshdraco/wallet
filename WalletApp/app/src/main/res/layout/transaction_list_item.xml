@@ -1,162 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:background="#ffffffff"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15.0dip"
-        android:layout_marginBottom="15.0dip">
+        android:layout_marginBottom="15.0dip"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
 
         <TextView
-            android:textSize="13.0sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
             android:id="@id/trans_list_code_tv"
-            android:background="#ff000000"
             android:layout_width="fill_parent"
             android:layout_height="25.0dip"
-            android:text="Transaction code : 121" />
+            android:background="#ff000000"
+            android:gravity="center"
+            android:text="Transaction code : 121"
+            android:textColor="@android:color/white"
+            android:textSize="13.0sp" />
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="#ffffffff"
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
             android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="10.0dip"
             android:layout_marginTop="8.0dip"
-            android:layout_marginRight="10.0dip">
+            android:background="#ffffffff"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="15.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="4"
+                android:gravity="center_vertical"
                 android:text="Payer:"
-                android:ems="4" />
+                android:textColor="@android:color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:textSize="13.0sp"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:id="@id/trans_list_payername_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Payer" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Payer"
+                android:textColor="@android:color/black"
+                android:textSize="13.0sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="#ffffffff"
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
             android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="10.0dip"
             android:layout_marginTop="1.0dip"
-            android:layout_marginRight="10.0dip">
+            android:background="#ffffffff"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="15.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="4"
+                android:gravity="center_vertical"
                 android:text="Amount"
-                android:ems="4" />
+                android:textColor="@android:color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:textSize="13.0sp"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:id="@id/trans_list_amount_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Amount:" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Amount:"
+                android:textColor="@android:color/black"
+                android:textSize="13.0sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="#ffffffff"
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
             android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="10.0dip"
             android:layout_marginTop="1.0dip"
-            android:layout_marginRight="10.0dip">
+            android:background="#ffffffff"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="15.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="4"
+                android:gravity="center_vertical"
                 android:text="ID:"
-                android:ems="4" />
+                android:textColor="@android:color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:textSize="13.0sp"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:id="@id/trans_list_transactionid_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Id" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Id"
+                android:textColor="@android:color/black"
+                android:textSize="13.0sp" />
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:background="#ffffffff"
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
             android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="10.0dip"
             android:layout_marginTop="1.0dip"
-            android:layout_marginRight="10.0dip">
+            android:background="#ffffffff"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="15.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ems="4"
+                android:gravity="center_vertical"
                 android:text="Date:"
-                android:ems="4" />
+                android:textColor="@android:color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:textSize="13.0sp"
-                android:textColor="@android:color/black"
-                android:gravity="center_vertical"
-                android:layout_gravity="center_vertical"
                 android:id="@id/trans_list_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="Date"
+                android:textColor="@android:color/black"
+                android:textSize="13.0sp" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:textSize="13.0sp"
-        android:textColor="@android:color/white"
-        android:gravity="center"
         android:id="@id/trans_list_datecomparator_tv"
-        android:background="#ff000000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18.0dip"
+        android:layout_alignParentRight="true"
         android:layout_marginRight="27.0dip"
+        android:layout_marginTop="18.0dip"
+        android:background="#ff000000"
+        android:gravity="center"
         android:text="121"
-        android:layout_alignParentRight="true" />
+        android:textColor="@android:color/white"
+        android:textSize="13.0sp" />
 </RelativeLayout>

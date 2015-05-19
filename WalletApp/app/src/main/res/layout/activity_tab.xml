@@ -22,8 +22,7 @@
             android:id="@android:id/tabs"
             android:background="#ff25292c"
             android:layout_width="fill_parent"
-            android:layout_height="48.0dip"
-            android:layout_marginBottom="-4.0dip"
+            android:layout_height="50dip"
             android:layout_weight="0.0"
             android:tabStripEnabled="false" />
     </LinearLayout>

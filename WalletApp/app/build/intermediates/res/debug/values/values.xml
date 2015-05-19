@@ -539,7 +539,11 @@ available. Please contact the developer for assistance.</string>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="@android:style/Theme.Light"/>
-    <style name="AppTheme" parent="@style/AppBaseTheme"/>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:editTextBackground">@drawable/apptheme_edit_text_holo_light</item>
+    </style>
     <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance">

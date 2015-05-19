@@ -23,7 +23,7 @@
         android:layout_marginLeft="20.0dip"
         android:layout_marginRight="20.0dip"
         android:layout_marginTop="30.0dip"
-        android:hint="Manager's email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="10.0dip"
         android:singleLine="true"

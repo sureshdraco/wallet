@@ -6,10 +6,13 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 import android.widget.TabHost.TabSpec;
+import android.widget.TabWidget;
+
 import com.token.util.GlobalConstants;
 
 public class MainTabActivity extends TabActivity {
@@ -66,28 +69,16 @@ public class MainTabActivity extends TabActivity {
         } else {
             changeTheTab(2);
         }
-        for (int i = 0; i < host.getTabWidget().getChildCount(); i++) {
-            int currentTab = host.getCurrentTab();
-            for (int i2 = 0; i2 < host.getTabWidget().getChildCount(); i2++) {
-                if (currentTab == i2) {
-                    host.getTabWidget().getChildAt(i2).setBackgroundColor(Color.parseColor("#F44336"));
-                } else {
-                    host.getTabWidget().getChildAt(i2).setBackgroundColor(Color.parseColor("#25292C"));
-                }
+        TabWidget widget = host.getTabWidget();
+        for (int i = 0; i < widget.getChildCount(); i++) {
+            View v = widget.getChildAt(i);
+            widget.getChildAt(i).getLayoutParams().height = 215;
+            if (i == 2) {
+                v.setBackgroundResource(R.drawable.apptheme_tab_unselected_pressed_holo);
+            } else {
+                v.setBackgroundResource(R.drawable.apptheme_tab_indicator_holo);
             }
         }
-        host.setOnTabChangedListener(new OnTabChangeListener() {
-            public void onTabChanged(String str) {
-                int currentTab = MainTabActivity.host.getCurrentTab();
-                for (int i = 0; i < MainTabActivity.host.getTabWidget().getChildCount(); i++) {
-                    if (currentTab == i) {
-                        MainTabActivity.host.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#F44336"));
-                    } else {
-                        MainTabActivity.host.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#25292C"));
-                    }
-                }
-            }
-        });
     }
 
     @Override

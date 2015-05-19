@@ -16,13 +16,12 @@
             android:layout_height="fill_parent"
             android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/t1"
             android:background="@color/button_red"
             android:gravity="left|center"
             android:paddingLeft="20.0dip"
             android:text="Notification Page"
             android:textColor="@android:color/white"
-            android:textSize="20.0sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -36,7 +35,7 @@
             android:gravity="center"
             android:text="Clear"
             android:textColor="@android:color/white"
-            android:textSize="20.0sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </RelativeLayout>
 

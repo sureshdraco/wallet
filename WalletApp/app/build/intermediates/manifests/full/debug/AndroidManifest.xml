@@ -124,8 +124,8 @@
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
             android:name="com.token.app.PaymentActivity"
-            android:label="@android:style/Theme.Holo.Light.NoActionBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
             android:name="com.token.app.TokenInfoActivity"
             android:label="@string/title_activity_confirmation"

@@ -5,4 +5,4 @@
         <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
         <TabWidget android:id="@android:id/tabs" android:background="#ff25292c" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginBottom="-4.0dip" android:layout_weight="0.0" android:tabStripEnabled="false" />
     </LinearLayout>
-</TabHost><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/activity_tab.xml -->
+</TabHost><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/activity_tab.xml -->

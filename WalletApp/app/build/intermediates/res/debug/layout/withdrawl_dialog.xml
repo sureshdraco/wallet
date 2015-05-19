@@ -15,4 +15,4 @@
             <View android:id="@id/vieww" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_below="@id/l4" />
         </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/withdrawl_dialog.xml -->
+</RelativeLayout><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/withdrawl_dialog.xml -->

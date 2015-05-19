@@ -21,4 +21,4 @@
         </LinearLayout>
     </LinearLayout>
     <TextView android:textSize="13.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/trans_list_datecomparator_tv" android:background="#ff000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_marginRight="27.0dip" android:text="121" android:layout_alignParentRight="true" />
-</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/transaction_list_item.xml -->
+</RelativeLayout><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/transaction_list_item.xml -->

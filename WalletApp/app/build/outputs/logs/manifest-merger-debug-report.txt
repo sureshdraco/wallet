@@ -339,7 +339,7 @@ activity#com.token.app.PaymentActivity
 ADDED from AndroidManifest.xml:116:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:119:13
-	android:label
+	android:theme
 		ADDED from AndroidManifest.xml:118:13
 	android:name
 		ADDED from AndroidManifest.xml:117:13

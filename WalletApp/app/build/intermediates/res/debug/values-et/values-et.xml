@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-et/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-et/strings.xml -->
     <eat-comment/>
     <string name="auth_client_needs_enabling_title">Rakenduse kasutamiseks peavad olema lubatud Google Play teenused.</string>
     <string name="auth_client_needs_installation_title">Rakenduse kasutamiseks peavad olema installitud Google Play teenused.</string>

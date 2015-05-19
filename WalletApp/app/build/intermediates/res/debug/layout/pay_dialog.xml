@@ -32,4 +32,4 @@
             <Button android:id="@id/pay_btn" android:background="@drawable/pay_button" android:layout_width="110.0dip" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
         </RelativeLayout>
     </LinearLayout>
-</LinearLayout><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/pay_dialog.xml -->
+</LinearLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/pay_dialog.xml -->

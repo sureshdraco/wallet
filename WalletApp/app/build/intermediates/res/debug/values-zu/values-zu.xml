@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-zu/values.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-zu/values.xml -->
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Zulazulela ekhaya"</string>
     <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
@@ -17,7 +17,7 @@
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"Ukusesha ngezwi"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Yabelana no-"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Yabelana no-%s"</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-zu/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-zu/strings.xml -->
     <eat-comment/>
     <string name="auth_client_needs_enabling_title">Uhlelo lokusebenza ludinga amasevisi we-Google Play ukuze anikwe amandla.</string>
     <string name="auth_client_needs_installation_title">Uhlelo lokusebenza ludinga ukufakwa kwamasevisi we-Google Play.</string>
@@ -25,26 +25,26 @@
     <string name="auth_client_play_services_err_notification_msg">Iphutha lamasevisi we-Google Play</string>
     <string name="auth_client_requested_by_msg">Kucelwe yi-%1$s</string>
     <string name="auth_client_using_bad_version_title">Uhlelo lokusebenza luzame ukusebenzisa inguqulo embi yamasevisi we-Google Play.</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
     <eat-comment/>
     <string msgid="473679118463211576" name="common_android_wear_notification_needs_update_text">"Uhlelo lokusebenza ludinga ukubuyekezelwa kuhlelo lokusebenza le-Android Wear."</string>
     <string msgid="3046420540094071256" name="common_android_wear_update_text">"Lolu hlelo lokusebenza ngeke lusebenze ngaphandle kokuthi ubuyekeze uhlelo lokusebenza le-Android Wear."</string>
     <string msgid="1366439133145190222" name="common_android_wear_update_title">"Buyekeza i-Android Wear"</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-zu/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-zu/strings.xml -->
     <eat-comment/>
     <string name="common_google_play_services_enable_button">Nika amandla amasevisi e-Google Play</string>
     <string name="common_google_play_services_enable_text">Lolu hlelo lokusebenza ngeke lusebenze ngaphandle nje kokuthi unike amandla amasevisi e-Google Play.</string>
     <string name="common_google_play_services_enable_title">Nika amandla amasevisi e-Google Play</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
     <eat-comment/>
     <string msgid="2443362625939284971" name="common_google_play_services_error_notification_requested_by_msg">"Icelwe yi-<ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-zu/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-zu/strings.xml -->
     <eat-comment/>
     <string name="common_google_play_services_install_button">Thola amasevisi e-Google Play</string>
     <string name="common_google_play_services_install_text_phone">Lolu hlelo lokusebenza ngeke lusebenze ngaphandle kwamasevisi e-Google Play, angekho efonini yakho.</string>
     <string name="common_google_play_services_install_text_tablet">Lolu hlelo lokusebenza ngeke lusebenze ngaphandle kwamasevisi e-Google Play, angekho kuthebulethi yakho.</string>
     <string name="common_google_play_services_install_title">Thola amasevisi e-Google Play</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
     <eat-comment/>
     <string msgid="4983316348021735578" name="common_google_play_services_invalid_account_text">"I-Akhawunti ecacisiwe ayikho kule divayisi. Sicela ukhethe i-akhawunti ehlukile."</string>
     <string msgid="1066672360770936753" name="common_google_play_services_invalid_account_title">"I-Akhawunti engavumelekile"</string>
@@ -56,7 +56,7 @@
     <string msgid="1852570676146674985" name="common_google_play_services_notification_ticker">"Iphutha lamasevisi we-Google Play"</string>
     <string msgid="5194079840165204725" name="common_google_play_services_sign_in_failed_text">"Iphutha lokungena ngemvume ku-akhawunti ecacisiwe. Sicela ukhethe i-akhawunti ehlukile."</string>
     <string msgid="8164948898147532159" name="common_google_play_services_sign_in_failed_title">"Ukungena ngemvume kuhlulekile"</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-zu/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-zu/strings.xml -->
     <eat-comment/>
     <string name="common_google_play_services_unknown_issue">Indaba engaziwa yamasevisi we-Google Play</string>
     <string name="common_google_play_services_unsupported_text">Amasevisi we-Google Play, okungukuthi ezinye izinhlelo zakho zithembele kuwo, awasekelwe yidivayisi yakho. Sicela uxhumane nomkhiqizi ukuze uthole usizo.</string>
@@ -64,14 +64,14 @@
     <string name="common_google_play_services_update_button">Isibuyekezo</string>
     <string name="common_google_play_services_update_text">Lolu hlelo lokusebenza ngeke lusebenze ngaphandle nje kokuthi ubuyekeze amasevisi e-Google Play.</string>
     <string name="common_google_play_services_update_title">Buyekeza amasevisi e-Google Play</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
     <eat-comment/>
     <string msgid="411506735369601515" name="common_open_on_phone">"Vula kufoni"</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/values-zu/strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/values-zu/strings.xml -->
     <eat-comment/>
     <string name="common_signin_button_text">Ngena ngemvume</string>
     <string name="common_signin_button_text_long">Ngena ngemvume nge-Google</string>
-    <!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
+    <!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.3.0/res/values-zu/common_strings.xml -->
     <eat-comment/>
     <string msgid="5000919058582214855" name="commono_google_play_services_api_unavailable_text">"Lolu hlelo lokusebenza lidinga isevisi eyodwa noma amaningi we-Google Play angekho okwamanje. Sicela uxhumane nonjiniyela ngosizi."</string>
 </resources>

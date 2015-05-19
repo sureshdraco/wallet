@@ -3,4 +3,4 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_selected="false" android:drawable="@drawable/invoice_img" />
     <item android:state_selected="true" android:drawable="@drawable/invoice_unselected" />
-</selector><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/drawable/invoice_selector.xml -->
+</selector><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/drawable/invoice_selector.xml -->

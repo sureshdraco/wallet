@@ -13,4 +13,4 @@
             <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/token_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="6342" android:layout_below="@id/t31" android:layout_centerHorizontal="true" android:textIsSelectable="true" />
         </RelativeLayout>
     </RelativeLayout>
-</RelativeLayout><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/layout/invoice.xml -->
+</RelativeLayout><!-- From: file:/D:/odesk/WalletSameh/WalletApp/app/src/main/res/layout/invoice.xml -->

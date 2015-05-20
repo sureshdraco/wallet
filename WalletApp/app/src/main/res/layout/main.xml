@@ -72,8 +72,9 @@
         android:textStyle="bold"/>
 
     <TextView
+        android:gravity="center_horizontal"
         android:id="@+id/forgot_password"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginRight="20.0dip"

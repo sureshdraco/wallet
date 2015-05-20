@@ -88,6 +88,7 @@ public class ExpiredFragment extends Fragment {
 				View view2 = (RelativeLayout) this.mInflater.inflate(R.layout.transaction_list_item, null);
 				viewHolder2.code = (TextView) view2.findViewById(R.id.trans_list_code_tv);
 				viewHolder2.amount = (TextView) view2.findViewById(R.id.trans_list_amount_tv);
+				viewHolder2.titleContainer = view2.findViewById(R.id.titleContainer);
 				viewHolder2.payer = (TextView) view2.findViewById(R.id.trans_list_payername_tv);
 				viewHolder2.transactionid = (TextView) view2.findViewById(R.id.trans_list_transactionid_tv);
 				viewHolder2.paymentdate = (TextView) view2.findViewById(R.id.trans_list_date_tv);

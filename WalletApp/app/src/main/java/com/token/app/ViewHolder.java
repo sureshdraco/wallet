@@ -1,5 +1,6 @@
 package com.token.app;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,4 +16,5 @@ public class ViewHolder {
 	TextView amount;
 	TextView code;
 	TextView status;
+	View titleContainer;
 }

@@ -1,5 +1,6 @@
 WalletApp/app/build/*
 WalletApp/app/build/intermediates/*
+WalletApp/app/build/intermediates/dex-cache/*
 WalletApp/app/build/intermediates/res/debug/*
 WalletApp/app/build/intermediates/res/release/*
 WalletApp/local.properties
@@ -33,7 +34,9 @@ WalletApp/.project
 
 # Android Studio
 WalletApp/*.iml
+WalletApp/app/*.iml
 WalletApp/.idea
+WalletApp/.idea/*
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 WalletApp/.gradle
 WalletApp/build/

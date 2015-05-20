@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector android:visible="true" xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_selected="false" android:drawable="@drawable/invoice_img" />
-    <item android:state_selected="true" android:drawable="@drawable/invoice_unselected" />
-</selector><!-- From: file:/Users/suresh/Desktop/odesk/wallet/WalletApp/app/src/main/res/drawable/invoice_selector.xml -->

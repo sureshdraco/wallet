@@ -1,5 +1,7 @@
 WalletApp/app/build/*
 WalletApp/app/build/intermediates/*
+WalletApp/app/build/intermediates/res/debug/*
+WalletApp/app/build/intermediates/res/release/*
 WalletApp/local.properties
 
 #built application files

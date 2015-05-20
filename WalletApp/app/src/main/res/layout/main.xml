@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@android:color/white"
-    android:descendantFocusability="beforeDescendants"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical">
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@android:color/white"
+              android:descendantFocusability="beforeDescendants"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
 
     <ImageView
         android:layout_width="148.0dip"
@@ -13,10 +13,10 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="10.0dip"
         android:layout_marginTop="30.0dip"
-        android:background="@drawable/icon" />
+        android:background="@drawable/icon"/>
 
     <EditText
-        android:id="@id/username_et"
+        android:id="@+id/username_et"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
         android:layout_gravity="center"
@@ -27,10 +27,10 @@
         android:inputType="textEmailAddress"
         android:paddingLeft="10.0dip"
         android:singleLine="true"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"/>
 
     <EditText
-        android:id="@id/password_et"
+        android:id="@+id/password_et"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
         android:layout_gravity="center"
@@ -41,10 +41,10 @@
         android:inputType="textPassword"
         android:padding="6.0dip"
         android:singleLine="true"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"/>
 
     <Button
-        android:id="@id/loginBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
         android:layout_gravity="center_horizontal"
@@ -55,10 +55,10 @@
         android:text="Login"
         android:textColor="#ffffffff"
         android:textSize="20.0sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <Button
-        android:id="@id/registerBtn"
+        android:id="@+id/registerBtn"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
         android:layout_gravity="center_horizontal"
@@ -69,10 +69,10 @@
         android:text="Create Account"
         android:textColor="#ffffffff"
         android:textSize="20.0sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
     <TextView
-        android:id="@id/forgot_password"
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
@@ -80,5 +80,5 @@
         android:layout_marginTop="10.0dip"
         android:text="Forgot Password?"
         android:textColor="@android:color/black"
-        android:textSize="20.0sp" />
+        android:textSize="20.0sp"/>
 </LinearLayout>

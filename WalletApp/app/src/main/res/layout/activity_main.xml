@@ -1,144 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <RelativeLayout
-        android:orientation="vertical"
-        android:id="@id/r1"
-        android:background="@color/button_red"
+        android:id="@+id/r1"
         android:layout_width="fill_parent"
-        android:layout_height="45.0dip">
+        android:layout_height="45.0dip"
+        android:background="@color/button_red"
+        android:orientation="vertical">
 
         <TextView
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:id="@id/t1"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Transactions List"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:text="Transactions List"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:id="@id/l1"
-        android:background="@android:color/white"
+        android:id="@+id/l1"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
-        android:layout_below="@id/r1">
+        android:layout_below="@+id/r1"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="16.0sp"
-                android:gravity="center"
-                android:id="@id/paid_textview"
+                android:id="@+id/paid_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_marginRight="2.0dip"
+                android:layout_weight="99.5"
+                android:gravity="center"
                 android:text="Paid"
-                android:layout_weight="99.5" />
+                android:textSize="16.0sp"/>
 
             <View
-                android:layout_gravity="end|center"
-                android:background="@android:color/darker_gray"
                 android:layout_width="1.0dip"
                 android:layout_height="35.0dip"
-                android:layout_weight="0.5" />
+                android:layout_gravity="end|center"
+                android:layout_weight="0.5"
+                android:background="@android:color/darker_gray"/>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="16.0sp"
-                android:gravity="center"
-                android:id="@id/unpaid_textview"
-                android:padding="2.0dip"
+                android:id="@+id/unpaid_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
+                android:layout_weight="99.5"
+                android:gravity="center"
+                android:padding="2.0dip"
                 android:text="Unpaid"
-                android:layout_weight="99.5" />
+                android:textSize="16.0sp"/>
 
             <View
-                android:layout_gravity="end|center"
-                android:background="@color/button_gray"
                 android:layout_width="1.0dip"
                 android:layout_height="35.0dip"
-                android:layout_weight="0.5" />
+                android:layout_gravity="end|center"
+                android:layout_weight="0.5"
+                android:background="@color/button_gray"/>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="16.0sp"
-                android:gravity="center"
-                android:id="@id/expire_textview"
-                android:padding="2.0dip"
+                android:id="@+id/expire_textview"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
+                android:layout_weight="95.0"
+                android:gravity="center"
+                android:padding="2.0dip"
                 android:text="Expired"
-                android:layout_weight="95.0" />
+                android:textSize="16.0sp"/>
 
             <View
-                android:layout_gravity="end"
-                android:background="@color/button_gray"
                 android:layout_width="1.0dip"
                 android:layout_height="35.0dip"
+                android:layout_gravity="end"
                 android:layout_marginRight="-5.0dip"
-                android:layout_weight="5.0" />
+                android:layout_weight="5.0"
+                android:background="@color/button_gray"/>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:id="@id/l2"
-        android:background="@android:color/white"
+        android:id="@+id/l2"
         android:layout_width="fill_parent"
         android:layout_height="2.0dip"
-        android:layout_below="@id/l1">
+        android:layout_below="@+id/l1"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
         <View
-            android:id="@id/paidView"
-            android:background="@color/button_gray"
+            android:id="@+id/paidView"
             android:layout_width="fill_parent"
             android:layout_height="4.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:background="@color/button_gray"/>
 
         <View
-            android:id="@id/unpaidView"
-            android:background="@color/button_gray"
+            android:id="@+id/unpaidView"
             android:layout_width="fill_parent"
             android:layout_height="4.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:background="@color/button_gray"/>
 
         <View
-            android:id="@id/expiredView"
-            android:background="@color/button_gray"
+            android:id="@+id/expiredView"
             android:layout_width="fill_parent"
             android:layout_height="4.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:background="@color/button_gray"/>
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
-        android:id="@id/pager"
-        android:background="#ffffffff"
+        android:id="@+id/pager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/l2" />
+        android:layout_below="@+id/l2"
+        android:background="#ffffffff"/>
 </RelativeLayout>

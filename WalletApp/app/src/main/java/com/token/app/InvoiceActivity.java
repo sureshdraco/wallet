@@ -51,7 +51,8 @@ public class InvoiceActivity extends Activity {
 				message.obj.toString();
 				InvoiceActivity.this.layout.setVisibility(View.VISIBLE);
 				InvoiceActivity.this.amount_et.getText().clear();
-				((InputMethodManager) InvoiceActivity.this.getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(InvoiceActivity.this.getCurrentFocus().getWindowToken(), 2);
+				((InputMethodManager) InvoiceActivity.this.getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(InvoiceActivity.this.getCurrentFocus().getWindowToken(),
+						2);
 				Log.e("global.tokencode", InvoiceActivity.this.global.getTokencode());
 				InvoiceActivity.this.tokentext.setText(InvoiceActivity.this.global.tokencode);
 			}

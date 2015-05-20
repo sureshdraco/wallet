@@ -25,35 +25,6 @@ public class AllTransactionFragementActivity extends ActivityInTab implements Ta
 	AppSectionsPagerAdapter mAppSectionsPagerAdapter;
 	ViewPager mViewPager;
 
-	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
-		public AppSectionsPagerAdapter(FragmentManager fragmentManager) {
-			super(fragmentManager);
-		}
-
-		public int getCount() {
-			return 3;
-		}
-
-		public Fragment getItem(int i) {
-			switch (i) {
-			case R.styleable.MapAttrs_mapType /* 0 */:
-				AllTransactionFragementActivity.paid_mView.setBackgroundColor(Color.parseColor("#4CAF50"));
-				AllTransactionFragementActivity.unpaid_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
-				AllTransactionFragementActivity.expired_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
-				AllTransactionFragementActivity.paid_mTextView.setTextColor(Color.parseColor("#4CAF50"));
-				AllTransactionFragementActivity.unpaid_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
-				AllTransactionFragementActivity.expired_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
-				return new PaidFragment();
-			case R.styleable.MapAttrs_cameraBearing /* 1 */:
-				return new UnpaidFragment();
-			case R.styleable.MapAttrs_cameraTargetLat /* 2 */:
-				return new ExpiredFragment();
-			default:
-				return null;
-			}
-		}
-	}
-
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.activity_main);
@@ -139,5 +110,34 @@ public class AllTransactionFragementActivity extends ActivityInTab implements Ta
 	}
 
 	public void onTabUnselected(Tab tab, FragmentTransaction fragmentTransaction) {
+	}
+
+	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
+		public AppSectionsPagerAdapter(FragmentManager fragmentManager) {
+			super(fragmentManager);
+		}
+
+		public int getCount() {
+			return 3;
+		}
+
+		public Fragment getItem(int i) {
+			switch (i) {
+			case R.styleable.MapAttrs_mapType /* 0 */:
+				AllTransactionFragementActivity.paid_mView.setBackgroundColor(Color.parseColor("#4CAF50"));
+				AllTransactionFragementActivity.unpaid_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
+				AllTransactionFragementActivity.expired_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
+				AllTransactionFragementActivity.paid_mTextView.setTextColor(Color.parseColor("#4CAF50"));
+				AllTransactionFragementActivity.unpaid_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
+				AllTransactionFragementActivity.expired_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
+				return new PaidFragment();
+			case R.styleable.MapAttrs_cameraBearing /* 1 */:
+				return new UnpaidFragment();
+			case R.styleable.MapAttrs_cameraTargetLat /* 2 */:
+				return new ExpiredFragment();
+			default:
+				return null;
+			}
+		}
 	}
 }

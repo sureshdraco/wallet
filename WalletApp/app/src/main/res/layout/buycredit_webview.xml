@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <RelativeLayout
-        android:orientation="vertical"
-        android:id="@id/r2"
-        android:background="@android:color/black"
+        android:id="@+id/r2"
         android:layout_width="fill_parent"
-        android:layout_height="60.0dip">
+        android:layout_height="60.0dip"
+        android:background="@android:color/black"
+        android:orientation="vertical">
 
         <TextView
-            android:textSize="20.0sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:id="@id/t1"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10.0dip"
             android:text="Buy Credit"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true" />
+            android:textColor="@android:color/white"
+            android:textSize="20.0sp"
+            android:textStyle="bold"/>
     </RelativeLayout>
 
     <WebView
-        android:id="@id/web_view"
+        android:id="@+id/web_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/r2" />
+        android:layout_below="@+id/r2"/>
 
     <ProgressBar
-        android:layout_gravity="center"
-        android:id="@id/pb"
+        android:id="@+id/pb"
         android:layout_width="45.0dip"
         android:layout_height="45.0dip"
-        android:layout_marginRight="5.0dip"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="5.0dip"/>
 </RelativeLayout>

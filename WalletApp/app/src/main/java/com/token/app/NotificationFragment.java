@@ -1,5 +1,8 @@
 package com.token.app;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -8,20 +11,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
-import java.util.ArrayList;
 
 public class NotificationFragment extends Fragment {
 
@@ -33,12 +29,20 @@ public class NotificationFragment extends Fragment {
 	private SeparatedNotifListAdapter adapter;
 	private ArrayList<NotificationItem> notificationItemArrayList;
 	private Handler handler;
+	BroadcastReceiver notificationsBroadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			if (getActivity() != null) {
+				updateNotifications();
+			}
+		}
+	};
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
-		return inflater.inflate(R.layout.ntification_page, container, false);
+		return inflater.inflate(R.layout.notification_fragment, container, false);
 	}
 
 	@Override
@@ -105,15 +109,6 @@ public class NotificationFragment extends Fragment {
 			}
 		});
 	}
-
-	BroadcastReceiver notificationsBroadcastReceiver = new BroadcastReceiver() {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			if (getActivity() != null) {
-				updateNotifications();
-			}
-		}
-	};
 
 	@Override
 	public void onPause() {

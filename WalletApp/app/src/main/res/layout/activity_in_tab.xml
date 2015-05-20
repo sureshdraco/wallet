@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    android:id="@id/contentintab"
+    android:id="@+id/contentintab"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:isScrollContainer="true"
-    xmlns:android="http://schemas.android.com/apk/res/android" />
+    android:isScrollContainer="true"/>

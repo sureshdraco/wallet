@@ -1,5 +1,8 @@
 package com.token.app;
 
+import java.util.Date;
+import java.util.List;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,9 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.android.volley.toolbox.NetworkImageView;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * Created by suresh on 18/10/14.

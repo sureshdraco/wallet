@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:orientation="vertical"
-    android:background="#ffffffff"
-    android:focusableInTouchMode="true"
-    android:descendantFocusability="beforeDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#ffffffff"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
     <RelativeLayout
-        android:orientation="vertical"
-        android:id="@id/r1"
-        android:background="@color/button_red"
+        android:id="@+id/r1"
         android:layout_width="fill_parent"
-        android:layout_height="45.0dip">
+        android:layout_height="45.0dip"
+        android:background="@color/button_red"
+        android:orientation="vertical">
 
         <TextView
-            android:textSize="20.0sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:id="@id/t1"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="PROFILE"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:text="PROFILE"
+            android:textColor="@android:color/white"
+            android:textSize="20.0sp"
+            android:textStyle="bold"/>
     </RelativeLayout>
 
     <ScrollView
@@ -32,240 +32,240 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10.0dip"
-            android:layout_marginRight="10.0dip">
+            android:layout_marginRight="10.0dip"
+            android:orientation="vertical">
 
             <TextView
-                android:textSize="25.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginTop="10.0dip"
-                android:text="Company Information" />
+                android:text="Company Information"
+                android:textColor="@android:color/black"
+                android:textSize="25.0sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:textSize="15.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10.0dip"
+                android:ems="7"
                 android:text="Company Name:"
-                android:ems="7" />
+                android:textColor="@android:color/black"
+                android:textSize="15.0sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Company Name:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_cmpyname_txt"
+                    android:id="@+id/info_cmpyname_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Location:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_location_txt"
+                    android:id="@+id/info_location_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Phone:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_phone1_txt"
+                    android:id="@+id/info_phone1_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Mobile:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_mobile_txt"
+                    android:id="@+id/info_mobile_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Fax Number:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_faxno_txt"
+                    android:id="@+id/info_faxno_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Email:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_email_txt"
+                    android:id="@+id/info_email_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Country:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_country_txt"
+                    android:id="@+id/info_country_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip">
+                android:layout_marginTop="20.0dip"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:textSize="15.0sp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ems="7"
                     android:text="Phone2:"
-                    android:ems="7" />
+                    android:textColor="@android:color/black"
+                    android:textSize="15.0sp"
+                    android:textStyle="bold"/>
 
                 <TextView
-                    android:textSize="13.0sp"
-                    android:textColor="@android:color/black"
-                    android:id="@id/info_phone2_txt"
+                    android:id="@+id/info_phone2_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="13.0sp"/>
             </LinearLayout>
 
             <Button
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="#ffffffff"
-                android:id="@id/logout_btn"
-                android:background="@color/button_red"
+                android:id="@+id/logout_btn"
                 android:layout_width="fill_parent"
                 android:layout_height="40.0dip"
                 android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="20.0dip"
                 android:layout_marginRight="20.0dip"
-                android:text="Logout" />
+                android:layout_marginTop="20.0dip"
+                android:background="@color/button_red"
+                android:text="Logout"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="30.0dip" />
+                android:layout_height="30.0dip"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

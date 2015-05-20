@@ -1,10 +1,9 @@
 package com.token.app;
 
-import android.content.Context;
-import android.util.Log;
-
-import com.google.android.gms.plus.PlusShare;
-import com.token.util.GlobalConstants;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -15,10 +14,11 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.content.Context;
+import android.util.Log;
+
+import com.google.android.gms.plus.PlusShare;
+import com.token.util.GlobalConstants;
 
 public class WebServiceHandler {
 	static ArrayList<HashMap<String, String>> expireList;

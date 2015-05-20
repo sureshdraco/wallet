@@ -1,19 +1,19 @@
 package com.token.app;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.BaseAdapter;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class SeparatedNotifListAdapter extends BaseAdapter {
 
+	public final static int TYPE_SECTION_HEADER = 0;
 	public final Map<String, Adapter> sections = new LinkedHashMap<String, Adapter>();
 	public final NotificationsHeaderAdapter headers;
-	public final static int TYPE_SECTION_HEADER = 0;
 
 	public SeparatedNotifListAdapter(Context context) {
 		headers = new NotificationsHeaderAdapter(context);

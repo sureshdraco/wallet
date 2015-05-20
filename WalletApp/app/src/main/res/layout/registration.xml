@@ -1,212 +1,212 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:orientation="vertical"
-    android:background="#ffffffff"
-    android:focusableInTouchMode="true"
-    android:descendantFocusability="beforeDescendants"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#ffffffff"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
     <TextView
-        android:textSize="22.0sp"
-        android:textStyle="bold"
-        android:textColor="#ffffffff"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:background="@color/button_red"
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
-        android:text="Registration" />
+        android:layout_gravity="center"
+        android:background="@color/button_red"
+        android:gravity="center"
+        android:text="Registration"
+        android:textColor="#ffffffff"
+        android:textSize="22.0sp"
+        android:textStyle="bold"/>
 
     <ScrollView
-        android:scrollbars="none"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="#ff000000"
-                android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginTop="20.0dip"
-                android:text="Login Information" />
+                android:text="Login Information"
+                android:textColor="#ff000000"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
                 android:layout_marginTop="10.0dip"
-                android:layout_marginRight="20.0dip">
+                android:orientation="vertical">
 
                 <EditText
-                    android:textSize="14.0sp"
-                    android:textColor="#ff000000"
-                    android:layout_gravity="center"
-                    android:id="@id/signup_email_et"
-                    android:paddingLeft="10.0dip"
+                    android:id="@+id/signup_email_et"
                     android:layout_width="fill_parent"
                     android:layout_height="35.0dip"
+                    android:layout_gravity="center"
                     android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="10.0dip"
                     android:singleLine="true"
-                    android:inputType="textEmailAddress" />
+                    android:textColor="#ff000000"
+                    android:textSize="14.0sp"/>
 
                 <EditText
-                    android:textSize="14.0sp"
-                    android:textColor="#ff000000"
-                    android:layout_gravity="center"
-                    android:id="@id/signup_password_et"
-                    android:paddingLeft="10.0dip"
+                    android:id="@+id/signup_password_et"
                     android:layout_width="fill_parent"
                     android:layout_height="35.0dip"
+                    android:layout_gravity="center"
                     android:layout_marginTop="15.0dip"
                     android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10.0dip"
                     android:singleLine="true"
-                    android:inputType="textPassword" />
+                    android:textColor="#ff000000"
+                    android:textSize="14.0sp"/>
 
                 <EditText
-                    android:textSize="14.0sp"
-                    android:textColor="#ff000000"
-                    android:layout_gravity="center"
-                    android:id="@id/signup_confirmpassword_et"
-                    android:paddingLeft="10.0dip"
+                    android:id="@+id/signup_confirmpassword_et"
                     android:layout_width="fill_parent"
                     android:layout_height="35.0dip"
+                    android:layout_gravity="center"
                     android:layout_marginTop="15.0dip"
                     android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10.0dip"
                     android:singleLine="true"
-                    android:inputType="textPassword" />
+                    android:textColor="#ff000000"
+                    android:textSize="14.0sp"/>
             </LinearLayout>
 
             <TextView
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="#ff000000"
-                android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginTop="20.0sp"
-                android:text="Personal Information" />
+                android:text="Personal Information"
+                android:textColor="#ff000000"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <EditText
-                android:textSize="14.0sp"
-                android:textColor="#ff000000"
-                android:layout_gravity="center"
-                android:id="@id/signup_firstname_et"
-                android:paddingLeft="10.0dip"
+                android:id="@+id/signup_firstname_et"
                 android:layout_width="fill_parent"
                 android:layout_height="35.0dip"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
                 android:layout_marginRight="20.0dip"
+                android:layout_marginTop="15.0dip"
                 android:hint="First Name"
-                android:singleLine="true" />
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="14.0sp"/>
 
             <EditText
-                android:textSize="14.0sp"
-                android:textColor="#ff000000"
-                android:layout_gravity="center"
-                android:id="@id/signup_lastname_et"
-                android:paddingLeft="10.0dip"
+                android:id="@+id/signup_lastname_et"
                 android:layout_width="fill_parent"
                 android:layout_height="35.0dip"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
                 android:layout_marginRight="20.0dip"
+                android:layout_marginTop="15.0dip"
                 android:hint="Last Name"
-                android:singleLine="true" />
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="14.0sp"/>
 
             <TextView
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="#ff000000"
-                android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left"
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginTop="20.0sp"
-                android:text="Other Information" />
-
-            <EditText
-                android:textSize="14.0sp"
+                android:text="Other Information"
                 android:textColor="#ff000000"
-                android:layout_gravity="center"
-                android:id="@id/signup_civilid_et"
-                android:paddingLeft="10.0dip"
-                android:layout_width="fill_parent"
-                android:layout_height="35.0dip"
-                android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
-                android:layout_marginRight="20.0dip"
-                android:hint="CPR Number"
-                android:singleLine="true" />
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <EditText
-                android:textSize="14.0sp"
-                android:textColor="@android:color/black"
-                android:layout_gravity="center"
-                android:id="@id/signup_number_et"
-                android:paddingLeft="10.0dip"
+                android:id="@+id/signup_civilid_et"
                 android:layout_width="fill_parent"
                 android:layout_height="35.0dip"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
                 android:layout_marginRight="20.0dip"
-                android:hint="Phone Number"
+                android:layout_marginTop="15.0dip"
+                android:hint="CPR Number"
+                android:paddingLeft="10.0dip"
                 android:singleLine="true"
-                android:inputType="number" />
+                android:textColor="#ff000000"
+                android:textSize="14.0sp"/>
+
+            <EditText
+                android:id="@+id/signup_number_et"
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="15.0dip"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:paddingLeft="10.0dip"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="14.0sp"/>
 
             <TextView
-                android:textSize="20.0sp"
-                android:textColor="#ff000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
                 android:layout_marginTop="12.0sp"
-                android:layout_marginRight="20.0dip"
-                android:text="We collect your CPR number and phone number for authentication purposes.This information will never be shared with any unauthorised party." />
+                android:text="We collect your CPR number and phone number for authentication purposes.This information will never be shared with any unauthorised party."
+                android:textColor="#ff000000"
+                android:textSize="20.0sp"/>
 
             <Button
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
+                android:id="@+id/read_terms"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
                 android:layout_gravity="center_horizontal"
-                android:id="@id/read_terms"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="15.0dip"
                 android:background="@color/button_gray"
-                android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
-                android:layout_marginRight="20.0dip"
-                android:text="Read Terms And Conditions" />
+                android:text="Read Terms And Conditions"
+                android:textColor="@android:color/white"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <Button
-                android:textSize="20.0sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:layout_gravity="center_horizontal"
-                android:id="@id/registerBtn"
-                android:background="@color/button_green"
+                android:id="@+id/registerBtn"
                 android:layout_width="fill_parent"
                 android:layout_height="40.0dip"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="20.0dip"
-                android:layout_marginTop="15.0dip"
                 android:layout_marginRight="20.0dip"
-                android:text="Submit" />
+                android:layout_marginTop="15.0dip"
+                android:background="@color/button_green"
+                android:text="Submit"
+                android:textColor="@android:color/white"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="20.0dip" />
+                android:layout_height="20.0dip"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

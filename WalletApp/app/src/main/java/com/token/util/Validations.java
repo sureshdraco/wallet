@@ -1,5 +1,11 @@
 package com.token.util;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.regex.Pattern;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -7,12 +13,6 @@ import android.graphics.BitmapFactory.Options;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
-
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.regex.Pattern;
 
 public class Validations {
 	static Bitmap bmImg;
@@ -25,7 +25,8 @@ public class Validations {
 		NetworkInfo activeNetworkInfo = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
 		return (activeNetworkInfo == null || !activeNetworkInfo.isConnectedOrConnecting()) ? (activeNetworkInfo == null || !(activeNetworkInfo.getState() == State.DISCONNECTED
 				|| activeNetworkInfo.getState() == State.DISCONNECTING || activeNetworkInfo.getState() == State.SUSPENDED || activeNetworkInfo.getState() == State.UNKNOWN)) ? Boolean
-				.valueOf(false) : Boolean.valueOf(false)
+				.valueOf(false)
+				: Boolean.valueOf(false)
 				: Boolean.valueOf(true);
 	}
 

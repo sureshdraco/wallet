@@ -1,10 +1,10 @@
 package com.token.app;
 
+import java.util.HashMap;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import java.util.HashMap;
 
 public class ShowTrasactionInfoActivity extends Activity {
 	TextView code_txt;

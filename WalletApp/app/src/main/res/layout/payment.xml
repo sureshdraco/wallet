@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="fill_parent">
 
     <RelativeLayout
-        android:orientation="vertical"
-        android:id="@id/r1"
-        android:background="@color/button_red"
+        android:id="@+id/r1"
         android:layout_width="fill_parent"
-        android:layout_height="45.0dip">
+        android:layout_height="45.0dip"
+        android:background="@color/button_red"
+        android:orientation="vertical">
 
         <TextView
-            android:textSize="18.0sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:id="@id/header_mTextView"
+            android:id="@+id/header_mTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10.0dip"
             android:text="Account Balance"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true" />
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp"
+            android:textStyle="bold"/>
 
         <TextView
-            android:textSize="18.0sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            android:id="@id/account_balance"
+            android:id="@+id/account_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_marginRight="10.0dip"
             android:text="0 BD"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true" />
+            android:textColor="@android:color/white"
+            android:textSize="18.0sp"
+            android:textStyle="bold"/>
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:id="@id/l1"
-        android:background="@android:color/white"
+        android:id="@+id/l1"
         android:layout_width="fill_parent"
         android:layout_height="40.0dip"
-        android:layout_below="@id/r1">
+        android:layout_below="@+id/r1"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="16.0sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:id="@id/sendmoney_textview"
+                android:id="@+id/sendmoney_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_marginRight="2.0dip"
+                android:layout_weight="99.5"
+                android:gravity="center"
                 android:text="Send Money"
-                android:layout_weight="99.5" />
+                android:textSize="16.0sp"
+                android:textStyle="bold"/>
 
             <View
-                android:layout_gravity="end|center"
-                android:background="@android:color/darker_gray"
                 android:layout_width="1.0dip"
                 android:layout_height="35.0dip"
-                android:layout_weight="0.5" />
+                android:layout_gravity="end|center"
+                android:layout_weight="0.5"
+                android:background="@android:color/darker_gray"/>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="40.0dip"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
 
             <TextView
-                android:textSize="16.0sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:id="@id/receivemoney_textview"
-                android:padding="2.0dip"
+                android:id="@+id/receivemoney_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
+                android:layout_weight="99.5"
+                android:gravity="center"
+                android:padding="2.0dip"
                 android:text="Request Money"
-                android:layout_weight="99.5" />
+                android:textSize="16.0sp"
+                android:textStyle="bold"/>
 
             <View
-                android:layout_gravity="end|center"
                 android:layout_width="1.0dip"
                 android:layout_height="35.0dip"
-                android:layout_weight="0.5" />
+                android:layout_gravity="end|center"
+                android:layout_weight="0.5"/>
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:id="@id/l2"
-        android:background="@android:color/white"
+        android:id="@+id/l2"
         android:layout_width="fill_parent"
         android:layout_height="2.0dip"
-        android:layout_below="@id/l1">
+        android:layout_below="@+id/l1"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
 
         <View
-            android:id="@id/sendMoneyView"
-            android:background="#fff44336"
+            android:id="@+id/sendMoneyView"
             android:layout_width="fill_parent"
             android:layout_height="4.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:background="#fff44336"/>
 
         <View
-            android:id="@id/receiveMoneyView"
-            android:background="@color/button_gray"
+            android:id="@+id/receiveMoneyView"
             android:layout_width="fill_parent"
             android:layout_height="4.0dip"
-            android:layout_weight="1.0" />
+            android:layout_weight="1.0"
+            android:background="@color/button_gray"/>
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
-        android:id="@id/pager"
-        android:background="#ffffffff"
+        android:id="@+id/pager"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/l2" />
+        android:layout_below="@+id/l2"
+        android:background="#ffffffff"/>
 </RelativeLayout>

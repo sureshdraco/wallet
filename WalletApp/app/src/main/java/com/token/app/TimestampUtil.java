@@ -14,31 +14,6 @@ public class TimestampUtil {
 	private static final int DAY_IN_MILLIS = 1000 * 60 * 60 * 24;
 	private static final int HOURS_IN_MILLIS = 1000 * 60 * 60;
 
-	/**
-	 * Helper class for handling ISO 8601 strings of the following format: "2008-03-01T13:00:00+01:00". It also supports parsing the "Z" timezone.
-	 */
-	public static class ISO8601 {
-		/**
-		 * Transform ISO 8601 string to Date.
-		 */
-		public static Date toDate(final String iso8601string)
-				throws ParseException {
-			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(ISO_8601_FORMAT);
-			return simpleDateFormat.parse(iso8601string);
-		}
-	}
-
-	public static class FastBirdFormat {
-		/**
-		 * Transform FastBirdFormat string to Date.
-		 */
-		public static Date toDate(final String iso8601string)
-				throws ParseException {
-			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FAST_BIRD_DATE_FORMAT);
-			return simpleDateFormat.parse(iso8601string);
-		}
-	}
-
 	public static String getFastBirdDateString(String date) {
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FAST_BIRD_DATE_FORMAT);
 		try {
@@ -88,6 +63,31 @@ public class TimestampUtil {
 			return (days / 14) + " week ago";
 		} else {
 			return days + " days ago";
+		}
+	}
+
+	/**
+	 * Helper class for handling ISO 8601 strings of the following format: "2008-03-01T13:00:00+01:00". It also supports parsing the "Z" timezone.
+	 */
+	public static class ISO8601 {
+		/**
+		 * Transform ISO 8601 string to Date.
+		 */
+		public static Date toDate(final String iso8601string)
+				throws ParseException {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(ISO_8601_FORMAT);
+			return simpleDateFormat.parse(iso8601string);
+		}
+	}
+
+	public static class FastBirdFormat {
+		/**
+		 * Transform FastBirdFormat string to Date.
+		 */
+		public static Date toDate(final String iso8601string)
+				throws ParseException {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat(FAST_BIRD_DATE_FORMAT);
+			return simpleDateFormat.parse(iso8601string);
 		}
 	}
 }

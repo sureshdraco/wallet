@@ -1,5 +1,9 @@
 package com.token.app;
 
+import java.io.File;
+
+import org.apache.http.impl.client.DefaultHttpClient;
+
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -17,24 +21,19 @@ import com.android.volley.toolbox.HttpStack;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.ImageLoader;
 
-import org.apache.http.impl.client.DefaultHttpClient;
-
-import java.io.File;
-
 public class VolleyClient {
-	private static final int NETWORK_THREAD_POOL_SIZE = 1;
-	private static VolleyClient mInstance;
-	private RequestQueue mRequestQueue;
-	private static Context mCtx;
-    private ImageLoader imageLoader;
-	private static final String DEFAULT_CACHE_DIR = "volley";
-
 	public static final RetryPolicy NO_RETRY_POLICY = new DefaultRetryPolicy(0, 0, 0);
+	private static final int NETWORK_THREAD_POOL_SIZE = 1;
+	private static final String DEFAULT_CACHE_DIR = "volley";
+	private static VolleyClient mInstance;
+	private static Context mCtx;
+	private RequestQueue mRequestQueue;
+	private ImageLoader imageLoader;
 
 	private VolleyClient(Context context) {
 		mCtx = context;
 		mRequestQueue = getRequestQueue();
-        imageLoader = new ImageLoader(mRequestQueue, new LruBitmapCache(mCtx));
+		imageLoader = new ImageLoader(mRequestQueue, new LruBitmapCache(mCtx));
 	}
 
 	public static synchronized VolleyClient getInstance(Context context) {
@@ -42,15 +41,6 @@ public class VolleyClient {
 			mInstance = new VolleyClient(context);
 		}
 		return mInstance;
-	}
-
-	public RequestQueue getRequestQueue() {
-		if (mRequestQueue == null) {
-			// getApplicationContext() is key, it keeps you from leaking the
-			// Activity or BroadcastReceiver if someone passes one in.
-			mRequestQueue = VolleyClient.newRequestQueue(mCtx.getApplicationContext(), new HttpClientStack(new DefaultHttpClient()));
-		}
-		return mRequestQueue;
 	}
 
 	// Creates requestqueue with thread pool size 1
@@ -80,7 +70,16 @@ public class VolleyClient {
 		return queue;
 	}
 
-    public ImageLoader getImageLoader() {
-        return imageLoader;
-    }
+	public RequestQueue getRequestQueue() {
+		if (mRequestQueue == null) {
+			// getApplicationContext() is key, it keeps you from leaking the
+			// Activity or BroadcastReceiver if someone passes one in.
+			mRequestQueue = VolleyClient.newRequestQueue(mCtx.getApplicationContext(), new HttpClientStack(new DefaultHttpClient()));
+		}
+		return mRequestQueue;
+	}
+
+	public ImageLoader getImageLoader() {
+		return imageLoader;
+	}
 }

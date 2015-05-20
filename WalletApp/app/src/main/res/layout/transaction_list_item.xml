@@ -7,21 +7,20 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15.0dip"
-        android:layout_marginBottom="15.0dip"
+        android:layout_margin="8dip"
         android:background="#ffffffff"
         android:orientation="vertical"
         android:paddingBottom="8dp">
 
         <TextView
-            android:id="@id/trans_list_code_tv"
+            android:id="@+id/trans_list_code_tv"
             android:layout_width="fill_parent"
             android:layout_height="25.0dip"
             android:background="#ff000000"
             android:gravity="center"
             android:text="Transaction code : 121"
             android:textColor="@android:color/white"
-            android:textSize="13.0sp" />
+            android:textSize="13.0sp"/>
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -41,17 +40,17 @@
                 android:text="Payer:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@id/trans_list_payername_tv"
+                android:id="@+id/trans_list_payername_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="Payer"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -72,17 +71,17 @@
                 android:text="Amount"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@id/trans_list_amount_tv"
+                android:id="@+id/trans_list_amount_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="Amount:"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -103,17 +102,17 @@
                 android:text="ID:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@id/trans_list_transactionid_tv"
+                android:id="@+id/trans_list_transactionid_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="Id"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -134,22 +133,22 @@
                 android:text="Date:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
-                android:id="@id/trans_list_date_tv"
+                android:id="@+id/trans_list_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="Date"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@id/trans_list_datecomparator_tv"
+        android:id="@+id/trans_list_datecomparator_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -159,5 +158,5 @@
         android:gravity="center"
         android:text="121"
         android:textColor="@android:color/white"
-        android:textSize="13.0sp" />
+        android:textSize="13.0sp"/>
 </RelativeLayout>

@@ -50,32 +50,6 @@ public class PaymentActivity extends ActivityInTab implements TabListener {
 	String token;
 	EditText token_et;
 
-	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
-		public AppSectionsPagerAdapter(FragmentManager fragmentManager) {
-			super(fragmentManager);
-		}
-
-		public int getCount() {
-			return 2;
-		}
-
-		public Fragment getItem(int i) {
-			switch (i) {
-			case R.styleable.MapAttrs_mapType /* 0 */:
-				PaymentActivity.fragment = new TransactionFragement();
-				PaymentActivity.send_mView.setBackgroundColor(Color.parseColor("#F44336"));
-				PaymentActivity.receive_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
-				PaymentActivity.send_mTextView.setTextColor(Color.parseColor("#F44336"));
-				PaymentActivity.receive_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
-				return PaymentActivity.fragment;
-			case R.styleable.MapAttrs_cameraBearing /* 1 */:
-				PaymentActivity.fragment = new ReceiveMoneyFragment();
-				break;
-			}
-			return PaymentActivity.fragment;
-		}
-	}
-
 	public PaymentActivity() {
 		this.res = "";
 		this.token = "";
@@ -174,5 +148,31 @@ public class PaymentActivity extends ActivityInTab implements TabListener {
 	}
 
 	public void onTabUnselected(Tab tab, FragmentTransaction fragmentTransaction) {
+	}
+
+	public static class AppSectionsPagerAdapter extends FragmentPagerAdapter {
+		public AppSectionsPagerAdapter(FragmentManager fragmentManager) {
+			super(fragmentManager);
+		}
+
+		public int getCount() {
+			return 2;
+		}
+
+		public Fragment getItem(int i) {
+			switch (i) {
+			case R.styleable.MapAttrs_mapType /* 0 */:
+				PaymentActivity.fragment = new TransactionFragement();
+				PaymentActivity.send_mView.setBackgroundColor(Color.parseColor("#F44336"));
+				PaymentActivity.receive_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
+				PaymentActivity.send_mTextView.setTextColor(Color.parseColor("#F44336"));
+				PaymentActivity.receive_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
+				return PaymentActivity.fragment;
+			case R.styleable.MapAttrs_cameraBearing /* 1 */:
+				PaymentActivity.fragment = new ReceiveMoneyFragment();
+				break;
+			}
+			return PaymentActivity.fragment;
+		}
 	}
 }

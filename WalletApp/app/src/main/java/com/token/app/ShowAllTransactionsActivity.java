@@ -1,5 +1,9 @@
 package com.token.app;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -21,10 +25,6 @@ import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
 public class ShowAllTransactionsActivity extends Activity {
 	TransactionAdapter adapter;
 	Global global;
@@ -34,49 +34,6 @@ public class ShowAllTransactionsActivity extends Activity {
 	SharedPreferences sp;
 	Runnable transactioninfoRunnable;
 	Handler transinfohandler;
-
-	class TransactionAdapter extends BaseAdapter {
-		List<String> arrayList;
-		Context mContext;
-		LayoutInflater mInflater;
-		ArrayList<HashMap<String, String>> transactionList;
-
-		public TransactionAdapter(Context context, ArrayList<HashMap<String, String>> arrayList) {
-			this.mContext = context;
-			this.mInflater = LayoutInflater.from(context);
-			this.transactionList = arrayList;
-		}
-
-		public int getCount() {
-			return this.transactionList.size();
-		}
-
-		public Object getItem(int i) {
-			return this.transactionList;
-		}
-
-		public long getItemId(int i) {
-			return 0;
-		}
-
-		public View getView(int i, View view, ViewGroup viewGroup) {
-			ViewHolder viewHolder;
-			ViewHolder viewHolder2 = new ViewHolder();
-			if (view == null) {
-				View view2 = (RelativeLayout) this.mInflater.inflate(R.layout.transaction_list_item, null);
-				viewHolder2.code = (TextView) view2.findViewById(R.id.trans_list_code_tv);
-				viewHolder2.amount = (TextView) view2.findViewById(R.id.trans_list_amount_tv);
-				view2.setTag(viewHolder2);
-				viewHolder = viewHolder2;
-				view = view2;
-			} else {
-				viewHolder = (ViewHolder) view.getTag();
-			}
-			viewHolder.code.setText("Transaction code: " + ((String) ((HashMap) this.transactionList.get(i)).get("transaction_code")));
-			viewHolder.amount.setText("Transaction amount: " + ((String) ((HashMap) this.transactionList.get(i)).get("transaction_amount")));
-			return view;
-		}
-	}
 
 	public ShowAllTransactionsActivity() {
 		this.res_mString = "";
@@ -127,5 +84,48 @@ public class ShowAllTransactionsActivity extends Activity {
 				ShowAllTransactionsActivity.this.startActivity(new Intent(ShowAllTransactionsActivity.this, ShowTrasactionInfoActivity.class));
 			}
 		});
+	}
+
+	class TransactionAdapter extends BaseAdapter {
+		List<String> arrayList;
+		Context mContext;
+		LayoutInflater mInflater;
+		ArrayList<HashMap<String, String>> transactionList;
+
+		public TransactionAdapter(Context context, ArrayList<HashMap<String, String>> arrayList) {
+			this.mContext = context;
+			this.mInflater = LayoutInflater.from(context);
+			this.transactionList = arrayList;
+		}
+
+		public int getCount() {
+			return this.transactionList.size();
+		}
+
+		public Object getItem(int i) {
+			return this.transactionList;
+		}
+
+		public long getItemId(int i) {
+			return 0;
+		}
+
+		public View getView(int i, View view, ViewGroup viewGroup) {
+			ViewHolder viewHolder;
+			ViewHolder viewHolder2 = new ViewHolder();
+			if (view == null) {
+				View view2 = (RelativeLayout) this.mInflater.inflate(R.layout.transaction_list_item, null);
+				viewHolder2.code = (TextView) view2.findViewById(R.id.trans_list_code_tv);
+				viewHolder2.amount = (TextView) view2.findViewById(R.id.trans_list_amount_tv);
+				view2.setTag(viewHolder2);
+				viewHolder = viewHolder2;
+				view = view2;
+			} else {
+				viewHolder = (ViewHolder) view.getTag();
+			}
+			viewHolder.code.setText("Transaction code: " + ((String) ((HashMap) this.transactionList.get(i)).get("transaction_code")));
+			viewHolder.amount.setText("Transaction amount: " + ((String) ((HashMap) this.transactionList.get(i)).get("transaction_amount")));
+			return view;
+		}
 	}
 }

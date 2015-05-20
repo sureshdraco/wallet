@@ -7,14 +7,14 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@id/r1"
+        android:id="@+id/r1"
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
         android:background="@color/button_red"
         android:orientation="vertical">
 
         <TextView
-            android:id="@id/t1"
+            android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -22,36 +22,36 @@
             android:text="Help And Support"
             android:textColor="@android:color/white"
             android:textSize="20.0sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"/>
     </RelativeLayout>
 
     <TextView
-        android:id="@id/t11"
+        android:id="@+id/t11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/r1"
+        android:layout_below="@+id/r1"
         android:layout_centerInParent="true"
         android:layout_marginTop="10.0dip"
         android:gravity="center"
         android:text="If you are experiencing any problems, please choose one of the Help/Support options"
         android:textColor="@android:color/black"
-        android:textSize="16.0sp" />
+        android:textSize="16.0sp"/>
 
     <ScrollView
-        android:id="@id/scrl"
+        android:id="@+id/scrl"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/t11"
+        android:layout_below="@+id/t11"
         android:scrollbars="none">
 
         <LinearLayout
-            android:id="@id/l1"
+            android:id="@+id/l1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@id/l11"
+                android:id="@+id/l11"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30.0dip"
@@ -60,17 +60,17 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@id/witdrawl_btn"
+                    android:id="@+id/witdrawl_btn"
                     android:layout_width="fill_parent"
                     android:layout_height="40.0dip"
                     android:background="@color/button_red"
                     android:text="Withdrawel"
                     android:textColor="#ffffffff"
                     android:textSize="20.0sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <Button
-                    android:id="@id/companyinfo_btn"
+                    android:id="@+id/companyinfo_btn"
                     android:layout_width="fill_parent"
                     android:layout_height="40.0dip"
                     android:layout_marginTop="10.0dip"
@@ -78,10 +78,10 @@
                     android:text="Company Info"
                     android:textColor="#ffffffff"
                     android:textSize="20.0sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <Button
-                    android:id="@id/helplogout_btn"
+                    android:id="@+id/helplogout_btn"
                     android:layout_width="fill_parent"
                     android:layout_height="40.0dip"
                     android:layout_marginTop="10.0dip"
@@ -89,7 +89,7 @@
                     android:text="Logout"
                     android:textColor="#ffffffff"
                     android:textSize="20.0sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

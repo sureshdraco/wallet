@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:orientation="vertical"
-    android:background="#ffe5e5e5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="#ffe5e5e5"
+    android:orientation="vertical">
 
     <ListView
-        android:id="@id/paidlist"
-        android:scrollbars="none"
+        android:id="@+id/paidlist"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="1.0dip" />
+        android:dividerHeight="1.0dip"
+        android:scrollbars="none"/>
 </LinearLayout>

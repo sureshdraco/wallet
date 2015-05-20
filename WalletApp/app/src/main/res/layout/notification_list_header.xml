@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content">
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/notifHeader"
-        android:text="Recent"
-        android:textStyle="bold"
-        android:textSize="18sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:padding="15dp"
         android:paddingBottom="5dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:text="Recent"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
     <View
-        android:layout_marginLeft="15dp"
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="#d9d9d9" />
+        android:layout_marginLeft="15dp"
+        android:background="#d9d9d9"/>
 </LinearLayout>

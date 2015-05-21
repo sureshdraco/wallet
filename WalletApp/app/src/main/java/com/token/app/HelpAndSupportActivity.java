@@ -1,7 +1,5 @@
 package com.token.app;
 
-import java.io.IOException;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -21,6 +19,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.token.util.GlobalConstants;
+
+import java.io.IOException;
 
 public class HelpAndSupportActivity extends Activity implements OnClickListener {
 	private static final String TAG = HelpAndSupportActivity.class.getSimpleName();
@@ -74,9 +74,9 @@ public class HelpAndSupportActivity extends Activity implements OnClickListener 
 				try {
 					String string = HelpAndSupportActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
 					String string2 = HelpAndSupportActivity.this.sp.getString(GlobalConstants.PREF_PASSWORD, "");
-					String str2 = Build.MODEL;
-					Log.e("model number", str2);
-					registerOnServer = WebServiceHandler.registerOnServer(HelpAndSupportActivity.this, string, string2, HelpAndSupportActivity.this.deviceid_mString, str2, "1");
+					String note = Build.MODEL;
+					Log.e("model number", note);
+					registerOnServer = WebServiceHandler.registerOnServer(HelpAndSupportActivity.this, string, string2, HelpAndSupportActivity.this.deviceid_mString, note, "1");
 				} catch (Exception e) {
 					e.printStackTrace();
 					Log.e("Exception", ":::" + e.toString());

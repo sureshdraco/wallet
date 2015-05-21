@@ -1,9 +1,12 @@
 package com.token.app;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import android.text.format.Formatter;
+import android.util.Log;
+
+import com.google.android.gms.plus.PlusShare;
+import com.token.util.GlobalConstants;
 
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -14,13 +17,10 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
-
-import com.google.android.gms.plus.PlusShare;
-import com.token.util.GlobalConstants;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class WebServiceHandler {
 	static ArrayList<HashMap<String, String>> expireList;
@@ -405,21 +405,25 @@ public class WebServiceHandler {
 		}
 	}
 
-	public static String registerOnServer(Context context, String str, String str2, String str3, String str4, String str5) {
+	public static String registerOnServer(Context context, String email, String password, String deviceId, String note, String option) {
 		String str6;
 		Exception e;
 		String str7 = "";
+		WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+		String ip = Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
 		global = (Global) context.getApplicationContext();
 		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/notificationapi/create");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
-		arrayList.add(new BasicNameValuePair("email", str));
-		arrayList.add(new BasicNameValuePair("password", str2));
-		arrayList.add(new BasicNameValuePair("device_id", str3));
-		arrayList.add(new BasicNameValuePair("note", str4));
-		arrayList.add(new BasicNameValuePair("option", str5));
+		arrayList.add(new BasicNameValuePair("email", email));
+		arrayList.add(new BasicNameValuePair("password", password));
+		arrayList.add(new BasicNameValuePair("device_id", deviceId));
+		arrayList.add(new BasicNameValuePair("device_ip", ip));
+		arrayList.add(new BasicNameValuePair("device_model", note));
+		arrayList.add(new BasicNameValuePair("note", note));
+		arrayList.add(new BasicNameValuePair("option", option));
 		Log.e("namevalue of register device", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
@@ -755,6 +759,49 @@ public class WebServiceHandler {
 			e = exception;
 			e.printStackTrace();
 			return str3;
+		}
+	}
+
+	public static String resetPasswordService(Context context, String email, String old, String newPwd, String confirmPwd) {
+		Exception e;
+		String str5 = "";
+		global = (Global) context.getApplicationContext();
+		DefaultHttpClient defaultHttpClient = new DefaultHttpClient();
+		ResponseHandler basicResponseHandler = new BasicResponseHandler();
+		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/usersmaster/resetpassword");
+		List arrayList = new ArrayList();
+		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
+		arrayList.add(new BasicNameValuePair("email", email));
+		arrayList.add(new BasicNameValuePair("oldpassword", old));
+		arrayList.add(new BasicNameValuePair("newpassword", newPwd));
+		arrayList.add(new BasicNameValuePair("confirmpassword", confirmPwd));
+		if (BuildConfig.DEBUG) Log.d("namevalue of reset password Service", arrayList.toString());
+		try {
+			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
+		} catch (UnsupportedEncodingException e2) {
+			e2.printStackTrace();
+		}
+		String str6;
+		try {
+			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
+			try {
+				Log.e("result of reset password Service ", str6);
+				JSONObject jSONObject = new JSONObject(str6);
+				if (!jSONObject.getString("status").equalsIgnoreCase("true")) {
+					return "false";
+				}
+				return "true";
+			} catch (Exception e3) {
+				e = e3;
+				e.printStackTrace();
+				return str6;
+			}
+		} catch (Exception e4) {
+			Exception exception = e4;
+			str6 = str5;
+			e = exception;
+			e.printStackTrace();
+			return str6;
 		}
 	}
 }

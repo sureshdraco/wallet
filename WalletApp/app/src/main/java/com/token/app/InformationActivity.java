@@ -1,9 +1,9 @@
 package com.token.app;
 
-import java.util.HashMap;
-
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -12,15 +12,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 
+import java.util.HashMap;
+
 public class InformationActivity extends Activity {
+	private final Runnable changePasswordRunnable;
+	private final Handler resetPwdHandler;
 	TextView cmpny_txt;
 	TextView country_txt;
 	String deviceid_mString;
@@ -41,6 +47,8 @@ public class InformationActivity extends Activity {
 	TextView phone2_txt;
 	String res;
 	SharedPreferences sp;
+	private String oldPassword, newPwd, confirmPwd;
+	private AlertDialog changePwdDialog;
 
 	public InformationActivity() {
 		this.res = "";
@@ -58,6 +66,32 @@ public class InformationActivity extends Activity {
 				InformationActivity.this.handler.sendMessage(message);
 			}
 		};
+		this.changePasswordRunnable = new Runnable() {
+			public void run() {
+				try {
+					String email = InformationActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
+					InformationActivity.this.res = WebServiceHandler.resetPasswordService(InformationActivity.this, email, oldPassword, newPwd, confirmPwd);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				Message message = new Message();
+				message.obj = InformationActivity.this.res;
+				InformationActivity.this.resetPwdHandler.sendMessage(message);
+			}
+		};
+
+		this.resetPwdHandler = new Handler() {
+			public void handleMessage(Message message) {
+				InformationActivity.this.pd.dismiss();
+				if (message.obj.toString().equalsIgnoreCase("true")) {
+					Toast.makeText(InformationActivity.this, "Reset password success!!", Toast.LENGTH_LONG).show();
+					return;
+				}
+				Toast.makeText(InformationActivity.this, "Reset password failed!!", Toast.LENGTH_LONG).show();
+				changePwdDialog.dismiss();
+			}
+		};
+
 		this.handler = new Handler() {
 			public void handleMessage(Message message) {
 				InformationActivity.this.pd.dismiss();
@@ -107,7 +141,7 @@ public class InformationActivity extends Activity {
 		};
 	}
 
-	public void GetCompanyInfo() {
+	public void getCompanyInfo() {
 		this.pd = ProgressDialog.show(this, "", "Getting Information..Please wait");
 		new Thread(null, this.infoRunnable, "").start();
 	}
@@ -133,6 +167,63 @@ public class InformationActivity extends Activity {
 				new Thread(null, InformationActivity.this.logoutRunnable, "").start();
 			}
 		});
-		GetCompanyInfo();
+		findViewById(R.id.resetPwdBtn).setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				changePassword();
+			}
+		});
+		getCompanyInfo();
+	}
+
+	private void changePassword() {
+		LayoutInflater li = LayoutInflater.from(getApplicationContext());
+		View promptsView = li.inflate(R.layout.change_password_dialog, null);
+
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+		// set prompts.xml to alertdialog builder
+		alertDialogBuilder.setView(promptsView);
+
+		final EditText currentPassword = (EditText) promptsView
+				.findViewById(R.id.currentPassword);
+		final EditText confirmPassword = (EditText) promptsView
+				.findViewById(R.id.confirmPassword);
+		final EditText newPassword = (EditText) promptsView
+				.findViewById(R.id.newPassword);
+
+		// set dialog message
+		alertDialogBuilder
+				.setCancelable(true)
+				.setPositiveButton("OK", null)
+				.setNegativeButton("Cancel",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+
+		// create alert dialog
+		changePwdDialog = alertDialogBuilder.create();
+		changePwdDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+			@Override
+			public void onShow(DialogInterface dialogInterface) {
+				changePwdDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						if (!confirmPassword.getText().toString().equals(newPassword.getText().toString())) {
+							newPassword.setError("Password does not match the confirm password.");
+							return;
+						}
+						oldPassword = currentPassword.getText().toString();
+						newPwd = newPassword.getText().toString();
+						confirmPwd = confirmPassword.getText().toString();
+						new Thread(changePasswordRunnable).start();
+					}
+				});
+			}
+		});
+		// show it
+		changePwdDialog.show();
 	}
 }

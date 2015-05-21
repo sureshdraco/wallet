@@ -263,6 +263,19 @@
                 android:textSize="20.0sp"
                 android:textStyle="bold"/>
 
+            <Button
+                android:id="@+id/resetPwdBtn"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/orange"
+                android:text="Change Password"
+                android:textColor="#ffffffff"
+                android:textSize="20.0sp"
+                android:textStyle="bold"/>
+
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="30.0dip"/>

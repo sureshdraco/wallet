@@ -89,7 +89,7 @@ public class TokenInfoDialog extends Fragment implements OnTouchListener {
 			public void run() {
 				try {
 					String string = TokenInfoDialog.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-					TokenInfoDialog.this.res = WebServiceHandler.AccountBalanceservice(TokenInfoDialog.this.getActivity(), string);
+					TokenInfoDialog.this.res = WebServiceHandler.accountBalanceservice(TokenInfoDialog.this.getActivity(), string);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

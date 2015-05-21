@@ -48,7 +48,7 @@ public class ConfirmationFragement extends Fragment implements OnTouchListener {
 			public void run() {
 				try {
 					String string = ConfirmationFragement.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-					ConfirmationFragement.this.res = WebServiceHandler.AccountBalanceservice(ConfirmationFragement.this.getActivity(), string);
+					ConfirmationFragement.this.res = WebServiceHandler.accountBalanceservice(ConfirmationFragement.this.getActivity(), string);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

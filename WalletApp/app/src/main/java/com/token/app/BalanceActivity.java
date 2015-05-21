@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.internal.view.SupportMenu;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -39,7 +40,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 	String email_mString;
 	Global global;
 	Handler handler;
-	Runnable infoRunnable;
+	Runnable withdrawRunnable;
 	TextView mybalancetext;
 	String password_mString;
 	ProgressDialog pd;
@@ -47,6 +48,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 	String res_mString;
 	SharedPreferences sp;
 	Button withdrawl_mBtn;
+	private SwipeRefreshLayout swipeRefresh;
 
 	public BalanceActivity() {
 		this.res = "";
@@ -56,7 +58,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 			public void run() {
 				try {
 					String string = BalanceActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-					BalanceActivity.this.res = WebServiceHandler.AccountBalanceservice(BalanceActivity.this, string);
+					BalanceActivity.this.res = WebServiceHandler.accountBalanceservice(BalanceActivity.this, string);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -80,9 +82,10 @@ public class BalanceActivity extends Activity implements OnClickListener {
 					BalanceActivity.this.mybalancetext.setText(BalanceActivity.this.global.getAccountbalance() + " BD");
 					BalanceActivity.this.mybalancetext.setTextColor(SupportMenu.CATEGORY_MASK);
 				}
+				swipeRefresh.setRefreshing(false);
 			}
 		};
-		this.infoRunnable = new Runnable() {
+		this.withdrawRunnable = new Runnable() {
 			public void run() {
 				try {
 					String string = BalanceActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
@@ -163,7 +166,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		new Thread(null, this.authenticateRunnable, "").start();
 	}
 
-	public void WithdrawlDialog() {
+	public void withdrawlDialog() {
 		this.dialog = new Dialog(this, 16973840);
 		this.dialog.setContentView(R.layout.withdrawl_dialog);
 		Button button = (Button) this.dialog.findViewById(R.id.withdraw_send);
@@ -194,7 +197,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.balance_witdrawl_btn /* 2131034134 */:
-			WithdrawlDialog();
+			withdrawlDialog();
 			break;
 		case R.id.balance_buycrdit_btn /* 2131034135 */:
 			BuyCreditAuthenticate();
@@ -205,6 +208,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.balance);
+		swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeToRefresh);
 		this.global = (Global) getApplicationContext();
 		this.sp = getSharedPreferences(GlobalConstants.PREF, 0);
 		this.email_mString = this.sp.getString(GlobalConstants.PREF_USERNAME, "");
@@ -217,6 +221,12 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		new Thread(null, this.accountRunnable, "").start();
 		this.withdrawl_mBtn.setOnClickListener(this);
 		this.buycredit_mBtn.setOnClickListener(this);
+		swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+			@Override
+			public void onRefresh() {
+				new Thread(null, BalanceActivity.this.accountRunnable, "").start();
+			}
+		});
 	}
 
 	public void openBuyCredit() {
@@ -249,7 +259,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 
 	public void withDraw() {
 		this.pd = ProgressDialog.show(this, "", "Withdrawal is in process..Please wait");
-		new Thread(null, this.infoRunnable, "").start();
+		new Thread(null, this.withdrawRunnable, "").start();
 	}
 
 	/* renamed from: com.token.app.BalanceActivity.10 */

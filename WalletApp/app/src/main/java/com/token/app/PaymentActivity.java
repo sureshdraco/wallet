@@ -58,7 +58,7 @@ public class PaymentActivity extends ActivityInTab implements TabListener {
 			public void run() {
 				try {
 					String string = PaymentActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-					PaymentActivity.this.res = WebServiceHandler.AccountBalanceservice(PaymentActivity.this, string);
+					PaymentActivity.this.res = WebServiceHandler.accountBalanceservice(PaymentActivity.this, string);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

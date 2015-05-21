@@ -39,7 +39,7 @@ public class WebServiceHandler {
 	static ArrayList<HashMap<String, String>> unpaidList;
 	static HashMap<String, String> unpaidMap;
 
-	public static String AccountBalanceservice(Context context, String str) {
+	public static String accountBalanceservice(Context context, String str) {
 		String str2;
 		Exception e;
 		String str3 = "";

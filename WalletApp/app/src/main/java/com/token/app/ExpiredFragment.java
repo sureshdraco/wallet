@@ -1,13 +1,5 @@
 package com.token.app;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +19,14 @@ import android.widget.TextView;
 
 import com.token.util.GlobalConstants;
 import com.token.util.Utils;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 
 public class ExpiredFragment extends Fragment {
 	TransactionAdapter adapter;
@@ -51,7 +51,9 @@ public class ExpiredFragment extends Fragment {
 		this.showallTrans_mList.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
 				ExpiredFragment.this.global.setTrans_id_mInt(i);
-				ExpiredFragment.this.startActivity(new Intent(ExpiredFragment.this.getActivity(), ShowTrasactionInfoActivity.class));
+				Intent intent = new Intent(getActivity(), ShowTrasactionInfoActivity.class);
+				intent.putExtra(ShowTrasactionInfoActivity.TYPE, ShowTrasactionInfoActivity.EXPIRED);
+				ExpiredFragment.this.startActivity(intent);
 			}
 		});
 		return inflate;

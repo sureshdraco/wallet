@@ -208,7 +208,9 @@
                 android:layout_height="fill_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:background="@drawable/cancel_button"/>
+                android:background="@drawable/dialog_button"
+                android:text="Cancel"
+                android:textColor="@color/White"/>
 
             <Button
                 android:id="@+id/pay_btn"
@@ -217,7 +219,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20.0dip"
-                android:background="@drawable/pay_button"/>
+                android:background="@drawable/dialog_button"
+                android:text="Pay"
+                android:textColor="@color/White"/>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

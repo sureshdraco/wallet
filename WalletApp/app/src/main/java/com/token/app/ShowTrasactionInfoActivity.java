@@ -1,12 +1,16 @@
 package com.token.app;
 
-import java.util.HashMap;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.HashMap;
+
 public class ShowTrasactionInfoActivity extends Activity {
+	public static final String TYPE = "type";
+	public static final int EXPIRED = 1;
+	public static final int PAID = 2;
+	public static final int UNPAID = 3;
 	TextView code_txt;
 	TextView created_txt;
 	TextView creator_txt;
@@ -40,16 +44,28 @@ public class ShowTrasactionInfoActivity extends Activity {
 		this.updated_txt = (TextView) findViewById(R.id.trans_updated_txt);
 		this.created_txt = (TextView) findViewById(R.id.trans_created_txt);
 		this.status_txt = (TextView) findViewById(R.id.trans_status_txt);
-		this.userid_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_user_id"));
-		this.date_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_date"));
-		this.code_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_code"));
-		this.creator_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_creator"));
-		this.payer_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_payer"));
-		this.trans_amount_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("transaction_amount"));
-		this.percentage_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("percentage_amount"));
-		this.paid_amount_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("paid_amount"));
-		this.updated_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("updated_at"));
-		this.created_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("created_at"));
-		this.status_txt.setText((CharSequence) ((HashMap) this.global.getTransactioninfoList().get(this.global.getTrans_id_mInt())).get("status"));
+		HashMap<String, String> info = new HashMap<>();
+		switch (getIntent().getIntExtra(TYPE, EXPIRED)) {
+		case EXPIRED:
+			info = global.getExpireList().get(global.getTrans_id_mInt());
+			break;
+		case UNPAID:
+			info = global.getUnpaidList().get(global.getTrans_id_mInt());
+			break;
+		case PAID:
+			info = global.getPaidList().get(global.getTrans_id_mInt());
+			break;
+		}
+		this.userid_txt.setText(info.get("transaction_user_id"));
+		this.date_txt.setText(info.get("transaction_date"));
+		this.code_txt.setText(info.get("transaction_code"));
+		this.creator_txt.setText(info.get("transaction_creator"));
+		this.payer_txt.setText(info.get("transaction_payer"));
+		this.trans_amount_txt.setText(info.get("transaction_amount"));
+		this.percentage_txt.setText(info.get("percentage_amount"));
+		this.paid_amount_txt.setText(info.get("paid_amount"));
+		this.updated_txt.setText(info.get("updated_at"));
+		this.created_txt.setText(info.get("created_at"));
+		this.status_txt.setText(info.get("status"));
 	}
 }

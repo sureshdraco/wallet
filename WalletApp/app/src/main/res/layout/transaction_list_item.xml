@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -26,7 +26,7 @@
                 android:gravity="center"
                 android:text="Transaction code"
                 android:textColor="@android:color/white"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
 
             <TextView
                 android:id="@+id/trans_list_datecomparator_tv"
@@ -40,7 +40,7 @@
                 android:gravity="center"
                 android:text="121"
                 android:textColor="@android:color/white"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -61,7 +61,7 @@
                 android:text="Payer:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/trans_list_payername_tv"
@@ -71,7 +71,7 @@
                 android:gravity="center_vertical"
                 android:text="Payer"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +92,7 @@
                 android:text="Amount"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/trans_list_amount_tv"
@@ -102,7 +102,7 @@
                 android:gravity="center_vertical"
                 android:text="Amount:"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -123,7 +123,7 @@
                 android:text="ID:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/trans_list_transactionid_tv"
@@ -133,7 +133,7 @@
                 android:gravity="center_vertical"
                 android:text="Id"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -154,7 +154,7 @@
                 android:text="Date:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/trans_list_date_tv"
@@ -164,8 +164,7 @@
                 android:gravity="center_vertical"
                 android:text="Date"
                 android:textColor="@android:color/black"
-                android:textSize="13.0sp" />
+                android:textSize="13.0sp"/>
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

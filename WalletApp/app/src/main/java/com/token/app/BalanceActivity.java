@@ -195,6 +195,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		switch (view.getId()) {
 		case R.id.balance_witdrawl_btn /* 2131034134 */:
 			WithdrawlDialog();
+			break;
 		case R.id.balance_buycrdit_btn /* 2131034135 */:
 			BuyCreditAuthenticate();
 		default:

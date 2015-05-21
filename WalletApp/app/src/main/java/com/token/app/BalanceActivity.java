@@ -153,7 +153,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 			public void handleMessage(Message message) {
 				BalanceActivity.this.buycreditProgressDialog.dismiss();
 				if (message.obj.toString().equalsIgnoreCase("true")) {
-					BalanceActivity.this.startActivity(new Intent(BalanceActivity.this, BuyCreditViewActivity.class));
+					BalanceActivity.this.startActivityForResult(new Intent(BalanceActivity.this, BuyCreditViewActivity.class), 1);
 				} else {
 					Toast.makeText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Toast.LENGTH_LONG).show();
 				}
@@ -257,6 +257,12 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		this.dialog.show();
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+
+	}
+
 	public void withDraw() {
 		this.pd = ProgressDialog.show(this, "", "Withdrawal is in process..Please wait");
 		new Thread(null, this.withdrawRunnable, "").start();
@@ -285,6 +291,10 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		}
 
 		public void onClick(View view) {
+			if (amount_mString.equals("0")) {
+				Toast.makeText(getApplicationContext(), "0 Credit not possible!", Toast.LENGTH_LONG).show();
+				return;
+			}
 			BalanceActivity.this.amount_mString = this.val$amount_mEditBox.getText().toString();
 			BalanceActivity.this.withDraw();
 		}
@@ -299,8 +309,18 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		}
 
 		public void onClick(View view) {
+			if (amount_mString.equals("0")) {
+				Toast.makeText(getApplicationContext(), "0 Credit not possible!", Toast.LENGTH_LONG).show();
+				return;
+			}
 			BalanceActivity.this.amount_mString = this.val$amount_mEditBox.getText().toString();
 			BalanceActivity.this.buyCreditAPI();
 		}
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		new Thread(accountRunnable).start();
 	}
 }

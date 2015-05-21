@@ -1,0 +1,7 @@
+Reset password I get error
+
+ When I try to withdrawal big amount I get wrong error , please fix it
+ 
+   when i confirm user , i need to log out and login to work ? why ? so user can be able to use withdrawal
+   
+   multiple device registration, option 0 and 1

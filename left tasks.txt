@@ -8,4 +8,4 @@ Not enough credits
    
 - multiple device registration, option 0 and 1
 
--register api
+- register api

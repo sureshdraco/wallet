@@ -1,7 +1,11 @@
-Reset password I get error
+- Reset password I get error
 
- When I try to withdrawal big amount I get wrong error , please fix it
+- When I try to withdrawal big amount I get wrong error , please fix it
+Not enough credits
+
  
-   when i confirm user , i need to log out and login to work ? why ? so user can be able to use withdrawal
+- when i confirm user , i need to log out and login to work ? why ? so user can be able to use withdrawal
    
-   multiple device registration, option 0 and 1
+- multiple device registration, option 0 and 1
+
+-register api

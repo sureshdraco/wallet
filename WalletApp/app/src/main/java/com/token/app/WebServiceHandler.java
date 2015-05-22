@@ -405,7 +405,7 @@ public class WebServiceHandler {
 		}
 	}
 
-	public static String registerOnServer(Context context, String email, String password, String deviceId, String note, String option) {
+	public static String registerOnServer(Context context, String email, String password, String deviceId, String model, String option) {
 		String str6;
 		Exception e;
 		String str7 = "";
@@ -421,8 +421,8 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("password", password));
 		arrayList.add(new BasicNameValuePair("device_id", deviceId));
 		arrayList.add(new BasicNameValuePair("device_ip", ip));
-		arrayList.add(new BasicNameValuePair("device_model", note));
-		arrayList.add(new BasicNameValuePair("note", note));
+		arrayList.add(new BasicNameValuePair("device_model", model));
+		arrayList.add(new BasicNameValuePair("note", ""));
 		arrayList.add(new BasicNameValuePair("option", option));
 		Log.e("namevalue of register device", arrayList.toString());
 		try {

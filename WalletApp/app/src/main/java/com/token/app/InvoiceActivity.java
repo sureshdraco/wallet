@@ -17,6 +17,9 @@ import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class InvoiceActivity extends Activity {
 	String amount;
 	EditText amount_et;
@@ -71,7 +74,7 @@ public class InvoiceActivity extends Activity {
 			public void onClick(View view) {
 				InvoiceActivity.this.amount = InvoiceActivity.this.amount_et.getText().toString();
 				if (InvoiceActivity.this.amount.length() == 0) {
-					Toast.makeText(InvoiceActivity.this, "Please Enter Amount First to proceed further", Toast.LENGTH_LONG).show();
+					Crouton.showText(InvoiceActivity.this, "Please Enter Amount First to proceed further", Style.ALERT);
 					return;
 				}
 				InvoiceActivity.this.pd = ProgressDialog.show(InvoiceActivity.this, "", "Loading data..Please wait");

@@ -18,9 +18,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class ReceiveMoneyFragment extends Fragment {
     String amount;
@@ -94,12 +96,12 @@ public class ReceiveMoneyFragment extends Fragment {
     private void generate() {
         ReceiveMoneyFragment.this.amount = ReceiveMoneyFragment.this.amount_et.getText().toString();
         if (ReceiveMoneyFragment.this.amount.length() == 0) {
-            Toast.makeText(ReceiveMoneyFragment.this.getActivity(), "Please Enter Amount First to proceed further", Toast.LENGTH_LONG).show();
+            Crouton.showText(getActivity(), "Please Enter Amount First to proceed further", Style.ALERT);
             return;
         }
 
         if (ReceiveMoneyFragment.this.amount.equals("0")) {
-            Toast.makeText(ReceiveMoneyFragment.this.getActivity(), "0 is not accepted.", Toast.LENGTH_LONG).show();
+            Crouton.showText(getActivity(), "0 is not accepted.", Style.ALERT);
             return;
         }
         ReceiveMoneyFragment.this.pd = ProgressDialog.show(ReceiveMoneyFragment.this.getActivity(), "", "Loading data..Please wait");

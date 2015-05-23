@@ -24,6 +24,9 @@ import com.token.util.GlobalConstants;
 
 import java.util.HashMap;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class InformationActivity extends Activity {
 	private final Runnable changePasswordRunnable;
 	private final Handler resetPwdHandler;
@@ -84,10 +87,10 @@ public class InformationActivity extends Activity {
 			public void handleMessage(Message message) {
 				InformationActivity.this.pd.dismiss();
 				if (message.obj.toString().equalsIgnoreCase("true")) {
-					Toast.makeText(InformationActivity.this, "Reset password success!!", Toast.LENGTH_LONG).show();
+					Crouton.showText(InformationActivity.this, "Reset password success!!", Style.ALERT);
 					return;
 				}
-				Toast.makeText(InformationActivity.this, "Reset password failed!!", Toast.LENGTH_LONG).show();
+				Crouton.showText(InformationActivity.this, "Reset password failed!!", Style.ALERT);
 				changePwdDialog.dismiss();
 			}
 		};
@@ -106,7 +109,7 @@ public class InformationActivity extends Activity {
 					InformationActivity.this.phone2_txt.setText((CharSequence) ((HashMap) InformationActivity.this.global.getInfoList().get(0)).get("phone2"));
 					return;
 				}
-				Toast.makeText(InformationActivity.this, "Error Occured due to some server problem!!", Toast.LENGTH_LONG).show();
+				Crouton.showText(InformationActivity.this, "Error Occured due to some server problem!!", Style.ALERT);
 			}
 		};
 		this.logoutRunnable = new Runnable() {

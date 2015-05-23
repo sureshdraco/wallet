@@ -17,13 +17,15 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class ShowAllTransactionsActivity extends Activity {
 	TransactionAdapter adapter;
@@ -60,7 +62,7 @@ public class ShowAllTransactionsActivity extends Activity {
 					ShowAllTransactionsActivity.this.showallTrans_mList.setAdapter(ShowAllTransactionsActivity.this.adapter);
 					return;
 				}
-				Toast.makeText(ShowAllTransactionsActivity.this, "Error Occured due to some server problem!!", Toast.LENGTH_LONG).show();
+				Crouton.showText(ShowAllTransactionsActivity.this, "Error Occured due to some server problem!!", Style.ALERT);
 			}
 		};
 	}

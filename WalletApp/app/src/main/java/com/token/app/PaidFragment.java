@@ -27,10 +27,12 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 import com.token.util.Utils;
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class PaidFragment extends Fragment {
 	TransactionAdapter adapter;
@@ -69,7 +71,7 @@ public class PaidFragment extends Fragment {
 					PaidFragment.this.showallTrans_mList.setAdapter(PaidFragment.this.adapter);
 					return;
 				}
-				Toast.makeText(PaidFragment.this.getActivity(), "Error Occured due to some server problem!!", Toast.LENGTH_LONG).show();
+				Crouton.showText(getActivity(), "Error Occured due to some server problem!!", Style.ALERT);
 			}
 		};
 	}

@@ -31,6 +31,9 @@ import com.token.util.GlobalConstants;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class MainActivity extends Activity implements OnClickListener {
     public Runnable registeronserver;
     Context context;
@@ -93,7 +96,7 @@ public class MainActivity extends Activity implements OnClickListener {
                     MainActivity.this.startActivity(new Intent(MainActivity.this, MainTabActivity.class));
                     return;
                 }
-                Toast.makeText(MainActivity.this, "Please Enter Correct Username and Password", Toast.LENGTH_LONG).show();
+                Crouton.showText(MainActivity.this, "Please Enter Correct Username and Password", Style.ALERT);
             }
         };
         this.registeronserver = new Runnable() {
@@ -133,17 +136,17 @@ public class MainActivity extends Activity implements OnClickListener {
                 MainActivity.this.pd.dismiss();
                 String obj = message.obj.toString();
                 if (obj.equalsIgnoreCase("true")) {
-                    Toast.makeText(MainActivity.this, "Password has been sent to your Mobile !!", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Password has been sent to your Mobile !!", Style.ALERT);
                 } else if (obj.equalsIgnoreCase("false")) {
-                    Toast.makeText(MainActivity.this, "Your username and mobile combination was incorrect!!", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Your username and mobile combination was incorrect!!", Style.ALERT);
                 } else {
-                    Toast.makeText(MainActivity.this, "Some problem occured!! Please try again later", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Some problem occured!! Please try again later", Style.ALERT);
                 }
             }
         };
     }
 
-    private void Initializations() {
+    private void initializations() {
         this.username_et = (EditText) findViewById(R.id.username_et);
         this.password_et = (EditText) findViewById(R.id.password_et);
         this.forgot_text = (TextView) findViewById(R.id.forgot_password);
@@ -195,7 +198,7 @@ public class MainActivity extends Activity implements OnClickListener {
             Log.e("regid id", this.regid);
             Editor edit = this.sp.edit();
             edit.putString(GlobalConstants.PREF_DEVICEID, this.regid);
-            edit.commit();
+            edit.apply();
             storeRegistrationId(this.context, this.regid);
         } catch (Exception e) {
             e.printStackTrace();
@@ -217,21 +220,22 @@ public class MainActivity extends Activity implements OnClickListener {
                 this.username = this.username_et.getText().toString();
                 this.password = this.password_et.getText().toString();
                 if (this.username.length() == 0) {
-                    Toast.makeText(this, "Please Enter UserName", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Please Enter UserName", Style.ALERT);
                 } else if (this.password_et.length() == 0) {
-                    Toast.makeText(this, "Please Enter Password", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Please Enter Password", Style.ALERT);
                 } else {
                     this.pd = ProgressDialog.show(this, "", "Please wait...App is loading");
                     new Thread(null, this.loginRunnable, "").start();
                 }
                 break;
             case R.id.registerBtn /* 2131034182 */:
+                finish();
                 startActivity(new Intent(this, RegistrationActivity.class));
                 break;
             case R.id.forgot_password /* 2131034183 */:
                 this.username = this.username_et.getText().toString();
                 if (this.username.length() == 0) {
-                    Toast.makeText(this, "Pleae enter Your Email id first to get forgot Password", Toast.LENGTH_LONG).show();
+                    Crouton.showText(MainActivity.this, "Pleae enter Your Email id first to get forgot Password", Style.ALERT);
                     return;
                 }
                 onClickForgetPassword();
@@ -279,7 +283,7 @@ public class MainActivity extends Activity implements OnClickListener {
             return;
         }
         setContentView(R.layout.main);
-        Initializations();
+        initializations();
     }
 
     protected String sendRegistrationIdToBackend() {

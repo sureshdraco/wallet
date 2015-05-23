@@ -715,7 +715,7 @@ public class WebServiceHandler {
 			Log.e("result of paid transaction ", "::::" + global.getPaidList());
 			Log.e("result of unpaid transaction ", global.getUnpaidList().toString());
 			Log.e("result of expire transaction ", global.getExpireList().toString());
-			return str4;
+			return "true";
 		} catch (Exception e2222) {
 			Log.e("getting Exception ", e2222.toString());
 			e2222.printStackTrace();

@@ -110,20 +110,20 @@ public class Utils {
 			if (j3 == 1) {
 				stringBuffer.append("a day");
 			} else {
-				stringBuffer.append(new StringBuilder(String.valueOf(j3)).append(" days").toString());
+				stringBuffer.append(new StringBuilder(String.valueOf(j3)).append(" day").toString());
 			}
 			if (j3 <= 3 && j2 > 0) {
 				if (j2 == 1) {
-					stringBuffer.append(" and an hour");
+					stringBuffer.append(" , an hour");
 				} else {
-					stringBuffer.append(" and " + j2 + " hours");
+					stringBuffer.append(" ," + j2 + " h");
 				}
 			}
 		} else if (j2 > 0) {
 			if (j2 == 1) {
 				stringBuffer.append("an hour");
 			} else {
-				stringBuffer.append(new StringBuilder(String.valueOf(j2)).append(" hours").toString());
+				stringBuffer.append(new StringBuilder(String.valueOf(j2)).append(" h").toString());
 			}
 			if (time > 1) {
 				stringBuffer.append(" and " + time + " minutes");

@@ -22,6 +22,9 @@ import android.widget.Toast;
 
 import com.token.util.GlobalConstants;
 
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
+
 public class BalanceActivity extends Activity implements OnClickListener {
 	Runnable accountRunnable;
 	String amount_mString;
@@ -75,7 +78,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 					BalanceActivity.this.pd.dismiss();
 				}
 				if (!obj.equalsIgnoreCase("true")) {
-					Toast.makeText(BalanceActivity.this, "Error Occured due to some server problem!!", Toast.LENGTH_LONG).show();
+					Crouton.showText(BalanceActivity.this, "Error Occured due to some server problem!!", Style.ALERT);
 				} else if (BalanceActivity.this.global.getAccountbalance().equalsIgnoreCase("")) {
 					BalanceActivity.this.mybalancetext.setText("0 BD");
 				} else {
@@ -103,12 +106,12 @@ public class BalanceActivity extends Activity implements OnClickListener {
 				BalanceActivity.this.pd.dismiss();
 				BalanceActivity.this.dialog.dismiss();
 				if (message.obj.toString().equalsIgnoreCase("true")) {
-					Toast.makeText(BalanceActivity.this, "WithDrawal Done Successfully!!", Toast.LENGTH_LONG).show();
+					Crouton.showText(BalanceActivity.this, "WithDrawal Done Successfully!!", Style.CONFIRM);
 					BalanceActivity.this.pd = ProgressDialog.show(BalanceActivity.this, "", "Loading Balance..Please wait");
 					new Thread(null, BalanceActivity.this.accountRunnable, "").start();
 					return;
 				}
-				Toast.makeText(BalanceActivity.this, "Please contact the company to confirm the account to be able to withdraw ", Toast.LENGTH_LONG).show();
+				Crouton.showText(BalanceActivity.this, "Please contact the company to confirm the account to be able to withdraw", Style.ALERT);
 			}
 		};
 		this.authenticateRunnable = new Runnable() {
@@ -130,7 +133,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 				if (message.obj.toString().equalsIgnoreCase("true")) {
 					BalanceActivity.this.openBuyCredit();
 				} else {
-					Toast.makeText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Toast.LENGTH_LONG).show();
+					Crouton.showText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Style.ALERT);
 				}
 			}
 		};
@@ -155,7 +158,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 				if (message.obj.toString().equalsIgnoreCase("true")) {
 					BalanceActivity.this.startActivityForResult(new Intent(BalanceActivity.this, BuyCreditViewActivity.class), 1);
 				} else {
-					Toast.makeText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Toast.LENGTH_LONG).show();
+					Crouton.showText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Style.ALERT);
 				}
 			}
 		};
@@ -292,7 +295,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 
 		public void onClick(View view) {
 			if (amount_mString.equals("0")) {
-				Toast.makeText(getApplicationContext(), "0 Credit not possible!", Toast.LENGTH_LONG).show();
+				Crouton.showText(BalanceActivity.this, "0 Credit not possible!", Style.ALERT);
 				return;
 			}
 			BalanceActivity.this.amount_mString = this.val$amount_mEditBox.getText().toString();
@@ -310,7 +313,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 
 		public void onClick(View view) {
 			if (amount_mString.equals("0")) {
-				Toast.makeText(getApplicationContext(), "0 Credit not possible!", Toast.LENGTH_LONG).show();
+				Crouton.showText(BalanceActivity.this, "0 Credit not possible!", Style.ALERT);
 				return;
 			}
 			BalanceActivity.this.amount_mString = this.val$amount_mEditBox.getText().toString();

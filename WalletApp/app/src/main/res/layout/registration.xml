@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ffffffff"
@@ -17,7 +16,7 @@
         android:text="Registration"
         android:textColor="#ffffffff"
         android:textSize="22.0sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -38,7 +37,7 @@
                 android:text="Login Information"
                 android:textColor="#ff000000"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -58,7 +57,7 @@
                     android:paddingLeft="10.0dip"
                     android:singleLine="true"
                     android:textColor="#ff000000"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
 
                 <EditText
                     android:id="@+id/signup_password_et"
@@ -71,7 +70,7 @@
                     android:paddingLeft="10.0dip"
                     android:singleLine="true"
                     android:textColor="#ff000000"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
 
                 <EditText
                     android:id="@+id/signup_confirmpassword_et"
@@ -84,7 +83,7 @@
                     android:paddingLeft="10.0dip"
                     android:singleLine="true"
                     android:textColor="#ff000000"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <TextView
@@ -96,7 +95,7 @@
                 android:text="Personal Information"
                 android:textColor="#ff000000"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/signup_firstname_et"
@@ -110,7 +109,7 @@
                 android:paddingLeft="10.0dip"
                 android:singleLine="true"
                 android:textColor="#ff000000"
-                android:textSize="14.0sp"/>
+                android:textSize="14.0sp" />
 
             <EditText
                 android:id="@+id/signup_lastname_et"
@@ -124,7 +123,7 @@
                 android:paddingLeft="10.0dip"
                 android:singleLine="true"
                 android:textColor="#ff000000"
-                android:textSize="14.0sp"/>
+                android:textSize="14.0sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -135,7 +134,7 @@
                 android:text="Other Information"
                 android:textColor="#ff000000"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/signup_civilid_et"
@@ -146,10 +145,11 @@
                 android:layout_marginRight="20.0dip"
                 android:layout_marginTop="15.0dip"
                 android:hint="CPR Number"
+                android:inputType="number"
                 android:paddingLeft="10.0dip"
                 android:singleLine="true"
                 android:textColor="#ff000000"
-                android:textSize="14.0sp"/>
+                android:textSize="14.0sp" />
 
             <EditText
                 android:id="@+id/signup_number_et"
@@ -159,12 +159,12 @@
                 android:layout_marginLeft="20.0dip"
                 android:layout_marginRight="20.0dip"
                 android:layout_marginTop="15.0dip"
-                android:hint="Phone Number"
+                android:hint="97333445567"
                 android:inputType="number"
                 android:paddingLeft="10.0dip"
                 android:singleLine="true"
                 android:textColor="@android:color/black"
-                android:textSize="14.0sp"/>
+                android:textSize="14.0sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -174,7 +174,7 @@
                 android:layout_marginTop="12.0sp"
                 android:text="We collect your CPR number and phone number for authentication purposes.This information will never be shared with any unauthorised party."
                 android:textColor="#ff000000"
-                android:textSize="20.0sp"/>
+                android:textSize="20.0sp" />
 
             <Button
                 android:id="@+id/read_terms"
@@ -188,7 +188,7 @@
                 android:text="Read Terms And Conditions"
                 android:textColor="@android:color/white"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/registerBtn"
@@ -202,11 +202,11 @@
                 android:text="Submit"
                 android:textColor="@android:color/white"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="20.0dip"/>
+                android:layout_height="40.0dip" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -2,7 +2,9 @@ WalletApp/app/build/*
 WalletApp/app/build/intermediates/*
 WalletApp/app/build/intermediates/dex-cache/*
 WalletApp/app/build/intermediates/res/debug/*
+WalletApp/app/build/intermediates/res/debug/raw/*
 WalletApp/app/build/intermediates/res/release/*
+WalletApp/app/build/intermediates/res/
 WalletApp/app/build/generated
 WalletApp/app/build/intermediates
 WalletApp/local.properties

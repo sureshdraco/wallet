@@ -79,11 +79,8 @@ public class BalanceActivity extends Activity implements OnClickListener {
 				}
 				if (!obj.equalsIgnoreCase("true")) {
 					Crouton.showText(BalanceActivity.this, "Error Occured due to some server problem!!", Style.ALERT);
-				} else if (BalanceActivity.this.global.getAccountbalance().equalsIgnoreCase("")) {
-					BalanceActivity.this.mybalancetext.setText("0 BD");
 				} else {
-					BalanceActivity.this.mybalancetext.setText(BalanceActivity.this.global.getAccountbalance() + " BD");
-					BalanceActivity.this.mybalancetext.setTextColor(SupportMenu.CATEGORY_MASK);
+					updateBalance();
 				}
 				swipeRefresh.setRefreshing(false);
 			}
@@ -164,6 +161,15 @@ public class BalanceActivity extends Activity implements OnClickListener {
 		};
 	}
 
+	private void updateBalance() {
+		if (BalanceActivity.this.global.getAccountbalance().equalsIgnoreCase("")) {
+            BalanceActivity.this.mybalancetext.setText("0 BD");
+        } else {
+            BalanceActivity.this.mybalancetext.setText(BalanceActivity.this.global.getAccountbalance() + " BD");
+            BalanceActivity.this.mybalancetext.setTextColor(SupportMenu.CATEGORY_MASK);
+        }
+	}
+
 	public void BuyCreditAuthenticate() {
 		this.buyauthenticateProgressDialog = ProgressDialog.show(this, "", "Please wait");
 		new Thread(null, this.authenticateRunnable, "").start();
@@ -230,6 +236,7 @@ public class BalanceActivity extends Activity implements OnClickListener {
 				new Thread(null, BalanceActivity.this.accountRunnable, "").start();
 			}
 		});
+		updateBalance();
 	}
 
 	public void openBuyCredit() {

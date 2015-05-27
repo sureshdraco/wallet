@@ -10,7 +10,7 @@
         android:layout_height="45.0dip"
         android:orientation="vertical">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t1"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -24,7 +24,7 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/clearnotify_mTextView"
             android:layout_width="70.0dip"
             android:layout_height="fill_parent"

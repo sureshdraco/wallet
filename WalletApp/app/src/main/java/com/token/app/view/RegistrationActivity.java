@@ -23,8 +23,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.token.app.WalletApplication;
 import com.token.app.R;
+import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 import com.token.util.Validations;
@@ -188,6 +188,13 @@ public class RegistrationActivity extends Activity implements OnClickListener {
         this.civilid_et = (EditText) findViewById(R.id.signup_civilid_et);
         this.read_btn = (Button) findViewById(R.id.read_terms);
         this.register_btn = (Button) findViewById(R.id.registerBtn);
+
+        read_btn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegistrationActivity.this, TermsAndConditionsActivity.class));
+            }
+        });
         this.register_btn.setOnClickListener(this);
         this.email_et.addTextChangedListener(new TextWatcher() {
             public void afterTextChanged(Editable editable) {

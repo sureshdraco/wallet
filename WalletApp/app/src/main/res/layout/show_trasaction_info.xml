@@ -14,7 +14,7 @@
         android:background="@color/button_red"
         android:orientation="vertical">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -57,7 +57,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_userid_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -85,7 +85,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_date_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -113,7 +113,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_code_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -141,7 +141,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_creator_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -171,7 +171,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_payer_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -190,7 +190,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -201,7 +201,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_paymentdate_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -220,7 +220,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -231,7 +231,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_amount_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -250,7 +250,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -261,7 +261,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_percentage_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -280,7 +280,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -291,7 +291,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_paid_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -310,7 +310,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -321,7 +321,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_status_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -340,7 +340,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -351,7 +351,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_updated_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -368,7 +368,7 @@
                 android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -379,7 +379,7 @@
                     android:textSize="17.0sp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/trans_created_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

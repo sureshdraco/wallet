@@ -18,7 +18,7 @@
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/notifImage">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/notificationTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:textIsSelectable="true"
             android:textStyle="bold"/>
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/notificationContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
             android:text="Notification 1"
             android:textIsSelectable="true"/>
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/notificationDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

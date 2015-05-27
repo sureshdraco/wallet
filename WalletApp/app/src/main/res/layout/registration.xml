@@ -7,7 +7,7 @@
     android:focusableInTouchMode="true"
     android:orientation="vertical">
 
-    <TextView
+    <com.token.util.MyTextView
         android:layout_width="fill_parent"
         android:layout_height="45.0dip"
         android:layout_gravity="center"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -86,7 +86,7 @@
                     android:textSize="14.0sp" />
             </LinearLayout>
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -125,7 +125,7 @@
                 android:textColor="#ff000000"
                 android:textSize="14.0sp" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -166,7 +166,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="14.0sp" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20.0dip"

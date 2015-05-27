@@ -13,7 +13,7 @@
         android:background="@color/button_red"
         android:orientation="vertical">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:textStyle="bold"/>
     </RelativeLayout>
 
-    <TextView
+    <com.token.util.MyTextView
         android:id="@+id/t11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

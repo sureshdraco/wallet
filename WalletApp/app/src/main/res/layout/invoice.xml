@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textColor="@android:color/black"
             android:textSize="18.0sp"/>
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
             android:layout_marginTop="30.0dip"
             android:visibility="gone">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/t31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
                 android:textSize="20.0sp"
                 android:textStyle="bold"/>
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/token_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

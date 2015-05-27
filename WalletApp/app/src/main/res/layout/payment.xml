@@ -11,7 +11,7 @@
         android:background="@color/button_red"
         android:orientation="vertical">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/header_mTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textSize="18.0sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/account_balance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_weight="1.0"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/sendmoney_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -75,7 +75,7 @@
             android:layout_weight="1.0"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/receivemoney_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"

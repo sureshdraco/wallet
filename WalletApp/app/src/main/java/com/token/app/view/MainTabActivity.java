@@ -36,7 +36,7 @@ public class MainTabActivity extends TabActivity {
 		setContentView(R.layout.activity_tab);
 		this.sp = getSharedPreferences(GlobalConstants.PREFS_NAME, 0);
 		host = getTabHost();
-		Font.setDefaultFont(this, "DEFAULT", "regular.ttf");
+		Font.setDefaultFont(this, "DEFAULT", "roboto_regular.ttf");
 		TabSpec newTabSpec = host.newTabSpec("Invoice");
 		newTabSpec.setIndicator("", getResources().getDrawable(R.drawable.invoice_selector));
 		this.mIntent = new Intent(this, AllTransactionFragementActivity.class);

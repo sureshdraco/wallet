@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -17,20 +17,20 @@
             android:layout_height="wrap_content"
             android:background="#ff000000">
 
-            <TextView
-                android:textStyle="bold"
-                android:paddingLeft="8dp"
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_code_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="25.0dip"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:gravity="center"
+                android:paddingLeft="8dp"
                 android:text="Transaction code"
                 android:textColor="@android:color/white"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp"
+                android:textStyle="bold" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_datecomparator_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:text="121"
                 android:textColor="@android:color/white"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp" />
         </RelativeLayout>
 
         <LinearLayout
@@ -54,7 +54,7 @@
             android:background="#ffffffff"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -63,9 +63,9 @@
                 android:text="Payer:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_payername_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 android:gravity="center_vertical"
                 android:text="Payer"
                 android:textColor="@android:color/black"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +85,7 @@
             android:background="#ffffffff"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -94,9 +94,9 @@
                 android:text="Amount"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_amount_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                 android:gravity="center_vertical"
                 android:text="Amount:"
                 android:textColor="@android:color/black"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -116,7 +116,7 @@
             android:background="#ffffffff"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -125,9 +125,9 @@
                 android:text="ID:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_transactionid_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                 android:gravity="center_vertical"
                 android:text="Id"
                 android:textColor="@android:color/black"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -147,7 +147,7 @@
             android:background="#ffffffff"
             android:orientation="horizontal">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -156,9 +156,9 @@
                 android:text="Date:"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
-            <TextView
+            <com.token.util.MyTextView
                 android:id="@+id/trans_list_date_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                 android:gravity="center_vertical"
                 android:text="Date"
                 android:textColor="@android:color/black"
-                android:textSize="15.0sp"/>
+                android:textSize="15.0sp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ffffffff"
@@ -15,7 +14,7 @@
         android:background="@color/button_red"
         android:orientation="vertical">
 
-        <TextView
+        <com.token.util.MyTextView
             android:id="@+id/t1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +23,7 @@
             android:text="PROFILE"
             android:textColor="@android:color/white"
             android:textSize="20.0sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -38,7 +37,7 @@
             android:layout_marginRight="10.0dip"
             android:orientation="vertical">
 
-            <TextView
+            <com.token.util.MyTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -46,7 +45,7 @@
                 android:text="My Profile"
                 android:textColor="@android:color/black"
                 android:textSize="25.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -54,22 +53,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Company Name:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_cmpyname_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -78,22 +77,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Location:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_location_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -102,22 +101,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Phone:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_phone1_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,22 +125,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Mobile:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_mobile_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -150,22 +149,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Fax Number:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_faxno_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -174,22 +173,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Email:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_email_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -198,22 +197,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Country:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_country_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -222,22 +221,22 @@
                 android:layout_marginTop="20.0dip"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.token.util.MyTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="7"
                     android:text="Phone2:"
                     android:textColor="@android:color/black"
                     android:textSize="15.0sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
-                <TextView
+                <com.token.util.MyTextView
                     android:id="@+id/info_phone2_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+                    android:textSize="13.0sp" />
             </LinearLayout>
 
             <Button
@@ -251,7 +250,7 @@
                 android:text="Logout"
                 android:textColor="#ffffffff"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/resetPwdBtn"
@@ -264,11 +263,11 @@
                 android:text="Change Password"
                 android:textColor="#ffffffff"
                 android:textSize="20.0sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="fill_parent"
-                android:layout_height="30.0dip"/>
+                android:layout_height="30.0dip" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -20,14 +20,14 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import com.token.app.Global;
-import com.token.app.WebServiceHandler;
+import com.token.app.WalletApplication;
+import com.token.app.network.WebServiceHandler;
 
 public class Utils {
 	Runnable accountRunnable;
 	Context context;
 	String email_mString;
-	Global global;
+	WalletApplication global;
 	Handler handler;
 	String res;
 	SharedPreferences sharedPreferences;
@@ -173,7 +173,7 @@ public class Utils {
 	public void getAccountBalance(Context context, String str) {
 		this.context = context;
 		this.sharedPreferences = context.getSharedPreferences(GlobalConstants.PREF, 0);
-		this.global = (Global) context.getApplicationContext();
+		this.global = (WalletApplication) context.getApplicationContext();
 		new Thread(null, this.accountRunnable, "").start();
 	}
 }

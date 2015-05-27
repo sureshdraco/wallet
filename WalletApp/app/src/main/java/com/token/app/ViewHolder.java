@@ -13,8 +13,8 @@ public class ViewHolder {
 	public TextView paymentdate;
 	public TextView title_mTextView;
 	public TextView transactionid;
-	TextView amount;
-	TextView code;
+	public TextView amount;
+	public TextView code;
 	TextView status;
-	View titleContainer;
+	public View titleContainer;
 }

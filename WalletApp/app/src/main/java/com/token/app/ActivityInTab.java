@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
 public class ActivityInTab extends FragmentActivity {
-	void navigateTo(Fragment fragment) {
+	public void navigateTo(Fragment fragment) {
 		FragmentTransaction beginTransaction = getSupportFragmentManager().beginTransaction();
 		beginTransaction.replace(R.id.contentintab, fragment);
 		beginTransaction.addToBackStack(null);

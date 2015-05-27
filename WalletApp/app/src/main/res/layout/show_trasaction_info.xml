@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:background="#ffffffff"
-              android:descendantFocusability="beforeDescendants"
-              android:focusableInTouchMode="true"
-              android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:id="@+id/r2"
@@ -24,7 +24,7 @@
             android:text="Transaction Information"
             android:textColor="#ffffffff"
             android:textSize="20.0sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -41,9 +41,8 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -52,38 +51,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="User Id:"
+                    android:text="Date:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
-
-                <com.token.util.MyTextView
-                    android:id="@+id/trans_userid_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
-                android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="5.0dip">
-
-                <com.token.util.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5.0dip"
-                    android:ems="7"
-                    android:text="Transaction Date:"
-                    android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_date_txt"
@@ -91,15 +61,14 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -108,10 +77,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Transaction Code:"
+                    android:text="Token:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_code_txt"
@@ -119,15 +87,14 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -136,40 +103,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Transaction Creator:"
+                    android:text="Payer:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
-
-                <com.token.util.MyTextView
-                    android:id="@+id/trans_creator_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
-                android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="5.0dip">
-
-                <com.token.util.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5.0dip"
-                    android:ems="7"
-                    android:text="Transaction Payer:"
-                    android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_payer_txt"
@@ -179,15 +115,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -196,10 +131,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Transaction Payment Date:"
+                    android:text="Payment Date:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_paymentdate_txt"
@@ -209,15 +143,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -226,10 +159,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Transaction Amount:"
+                    android:text="Total Amount:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_amount_txt"
@@ -239,15 +171,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -256,10 +187,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Percentage Amount:"
+                    android:text="Fee Amount:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_percentage_txt"
@@ -269,15 +199,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -286,10 +215,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="5.0dip"
                     android:ems="7"
-                    android:text="Paid Amount:"
+                    android:text="Net Amount:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_paid_txt"
@@ -299,15 +227,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -318,8 +245,7 @@
                     android:ems="7"
                     android:text="Status:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_status_txt"
@@ -329,15 +255,14 @@
                     android:gravity="center_vertical"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
+                android:layout_marginTop="10.0dip"
                 android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
                 android:paddingTop="5.0dip">
 
                 <com.token.util.MyTextView
@@ -348,8 +273,7 @@
                     android:ems="7"
                     android:text="Updated At:"
                     android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
+                    android:textSize="17.0sp" />
 
                 <com.token.util.MyTextView
                     android:id="@+id/trans_updated_txt"
@@ -357,37 +281,9 @@
                     android:layout_height="wrap_content"
                     android:text=""
                     android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
+                    android:textSize="14.0sp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20.0dip"
-                android:orientation="horizontal"
-                android:paddingBottom="5.0dip"
-                android:paddingTop="5.0dip">
-
-                <com.token.util.MyTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5.0dip"
-                    android:ems="7"
-                    android:text="Created At:"
-                    android:textColor="@android:color/black"
-                    android:textSize="17.0sp"
-                    android:textStyle="bold"/>
-
-                <com.token.util.MyTextView
-                    android:id="@+id/trans_created_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text=""
-                    android:textColor="@android:color/black"
-                    android:textSize="14.0sp"/>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

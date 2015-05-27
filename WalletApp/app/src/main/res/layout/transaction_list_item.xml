@@ -46,6 +46,7 @@
         </RelativeLayout>
 
         <LinearLayout
+            android:id="@+id/payerRow"
             android:layout_width="fill_parent"
             android:layout_height="20.0dip"
             android:layout_marginLeft="15.0dip"
@@ -103,37 +104,6 @@
                 android:layout_gravity="center_vertical"
                 android:gravity="center_vertical"
                 android:text="Amount:"
-                android:textColor="@android:color/black"
-                android:textSize="15.0sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="20.0dip"
-            android:layout_marginLeft="15.0dip"
-            android:layout_marginRight="10.0dip"
-            android:layout_marginTop="1.0dip"
-            android:background="#ffffffff"
-            android:orientation="horizontal">
-
-            <com.token.util.MyTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:ems="4"
-                android:gravity="center_vertical"
-                android:text="ID:"
-                android:textColor="@android:color/black"
-                android:textSize="15.0sp"
-                android:textStyle="bold" />
-
-            <com.token.util.MyTextView
-                android:id="@+id/trans_list_transactionid_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_vertical"
-                android:text="Id"
                 android:textColor="@android:color/black"
                 android:textSize="15.0sp" />
         </LinearLayout>

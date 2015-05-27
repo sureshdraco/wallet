@@ -20,9 +20,9 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.token.app.WalletApplication;
 import com.token.app.R;
 import com.token.app.ViewHolder;
+import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 import com.token.util.Utils;
@@ -139,8 +139,7 @@ public class PaidFragment extends Fragment {
                 viewHolder2.code = (TextView) view2.findViewById(R.id.trans_list_code_tv);
                 viewHolder2.titleContainer = view2.findViewById(R.id.titleContainer);
                 viewHolder2.amount = (TextView) view2.findViewById(R.id.trans_list_amount_tv);
-                viewHolder2.payer = (TextView) view2.findViewById(R.id.trans_list_payername_tv);
-                viewHolder2.transactionid = (TextView) view2.findViewById(R.id.trans_list_transactionid_tv);
+                viewHolder2.payerRow = view2.findViewById(R.id.payerRow);
                 viewHolder2.paymentdate = (TextView) view2.findViewById(R.id.trans_list_date_tv);
                 viewHolder2.datecomparator_mTextView = (TextView) view2.findViewById(R.id.trans_list_datecomparator_tv);
                 view2.setTag(viewHolder2);
@@ -150,10 +149,9 @@ public class PaidFragment extends Fragment {
                 viewHolder = (ViewHolder) view.getTag();
             }
             viewHolder.code.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_code")));
-            viewHolder.amount.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_amount")));
-            viewHolder.payer.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_payer")));
-            viewHolder.transactionid.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_user_id")));
-            viewHolder.paymentdate.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_payment_date")));
+            viewHolder.amount.setText("BD " + ((String) ((HashMap) this.transactionList.get(i)).get("transaction_amount")));
+            viewHolder.payerRow.setVisibility(View.GONE);
+            viewHolder.paymentdate.setText(((String) ((HashMap) this.transactionList.get(i)).get("transaction_date")));
             viewHolder.titleContainer.setBackgroundColor(Color.parseColor("#4CAF50"));
             try {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US);

@@ -10,9 +10,9 @@ public class ViewHolder {
 	public TextView message_mTextView;
 	public ImageView notify_mImageView;
 	public TextView payer;
+	public View payerRow;
 	public TextView paymentdate;
 	public TextView title_mTextView;
-	public TextView transactionid;
 	public TextView amount;
 	public TextView code;
 	TextView status;

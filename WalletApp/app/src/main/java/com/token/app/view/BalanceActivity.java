@@ -19,8 +19,8 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.token.app.WalletApplication;
 import com.token.app.R;
+import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 
@@ -165,11 +165,11 @@ public class BalanceActivity extends Activity implements OnClickListener {
 
 	private void updateBalance() {
 		if (BalanceActivity.this.global.getAccountbalance().equalsIgnoreCase("")) {
-            BalanceActivity.this.mybalancetext.setText("0 BD");
-        } else {
-            BalanceActivity.this.mybalancetext.setText(BalanceActivity.this.global.getAccountbalance() + " BD");
-            BalanceActivity.this.mybalancetext.setTextColor(SupportMenu.CATEGORY_MASK);
-        }
+			BalanceActivity.this.mybalancetext.setText("BD 0");
+		} else {
+			BalanceActivity.this.mybalancetext.setText("BD " + BalanceActivity.this.global.getAccountbalance());
+			BalanceActivity.this.mybalancetext.setTextColor(SupportMenu.CATEGORY_MASK);
+		}
 	}
 
 	public void BuyCreditAuthenticate() {

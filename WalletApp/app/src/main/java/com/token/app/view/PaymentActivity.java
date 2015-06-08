@@ -132,13 +132,11 @@ public class PaymentActivity extends ActivityInTab implements TabListener {
                     PaymentActivity.receive_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
                     PaymentActivity.send_mTextView.setTextColor(Color.parseColor("#F44336"));
                     PaymentActivity.receive_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
-                    PaymentActivity.this.header_mTextView.setText("Account Balance");
                 } else if (i == 1) {
                     PaymentActivity.send_mView.setBackgroundColor(Color.parseColor("#9E9E9E"));
                     PaymentActivity.receive_mView.setBackgroundColor(Color.parseColor("#4CAF50"));
                     PaymentActivity.send_mTextView.setTextColor(Color.parseColor("#9E9E9E"));
                     PaymentActivity.receive_mTextView.setTextColor(Color.parseColor("#4CAF50"));
-                    PaymentActivity.this.header_mTextView.setText("Create Payment Request");
                 }
             }
         });

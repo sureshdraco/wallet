@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/r1"
                 android:layout_marginLeft="15.0dip"
-                android:text="Please Enter Token:"
+                android:text="Enter Bill Number:"
                 android:textColor="#ff000000"
                 android:textSize="20.0sp"/>
 
@@ -64,7 +64,7 @@
                 android:layout_marginLeft="15.0dip"
                 android:layout_marginRight="15.0dip"
                 android:layout_marginTop="5.0dip"
-                android:text="Enter the number that a cashier gives you in the box below.You will see the amount and check to pay"
+                android:text="Enter bill number to pay it using wallet, the amount will be taken from your balance."
                 android:textColor="@color/button_gray"
                 android:textSize="16.0sp"/>
 
@@ -78,7 +78,7 @@
                 android:layout_marginTop="10.0dip"
                 android:imeActionLabel="Pay"
                 android:imeOptions="actionDone"
-                android:hint="Please Enter The Token"
+                android:hint="Enter Bill Number"
                 android:inputType="number"
                 android:maxLength="4"
                 android:textSize="18.0sp"/>

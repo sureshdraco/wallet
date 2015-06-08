@@ -44,3 +44,4 @@ WalletApp/.idea/*
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 WalletApp/.gradle
 WalletApp/build/
+.idea/*

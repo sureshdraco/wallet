@@ -18,7 +18,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10.0dip"
-            android:text="Account Balance"
+            android:text="Balance"
             android:textColor="@android:color/white"
             android:textSize="18.0sp"
             android:textStyle="bold"/>
@@ -57,7 +57,7 @@
                 android:layout_marginRight="2.0dip"
                 android:layout_weight="99.5"
                 android:gravity="center"
-                android:text="Send Money"
+                android:text="Pay Bill"
                 android:textSize="16.0sp"
                 android:textStyle="bold"/>
 
@@ -82,7 +82,7 @@
                 android:layout_weight="99.5"
                 android:gravity="center"
                 android:padding="2.0dip"
-                android:text="Request Money"
+                android:text="Create Bill"
                 android:textSize="16.0sp"
                 android:textStyle="bold"/>
 

@@ -32,7 +32,7 @@
             android:layout_marginLeft="20.0dip"
             android:layout_marginRight="20.0dip"
             android:layout_marginTop="5.0dip"
-            android:text="enter the amount, you will get token code send it you get paid"
+            android:text="enter the amount, you will get Bill Number send it to your customer:"
             android:textColor="@color/button_gray"
             android:textSize="16.0sp"/>
 

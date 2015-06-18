@@ -24,8 +24,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.token.app.WalletApplication;
 import com.token.app.R;
+import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 import com.token.util.Utils;
@@ -81,6 +81,7 @@ public class TokenInfoDialog extends Fragment implements OnTouchListener {
                 TokenInfoDialog.this.pd.dismiss();
                 if (message.obj.toString().equalsIgnoreCase("true")) {
                     new Thread(null, TokenInfoDialog.this.accountRunnable, "").start();
+                    utils = new Utils();
                     TokenInfoDialog.this.utils.getAccountBalance(TokenInfoDialog.this.getActivity(), "");
                     TokenInfoDialog.this.startActivity(new Intent(TokenInfoDialog.this.getActivity(), ConfirmationActivity.class));
                     TokenInfoDialog.this.getActivity().finish();
@@ -133,14 +134,13 @@ public class TokenInfoDialog extends Fragment implements OnTouchListener {
         this.account_txt = (TextView) linearLayout.findViewById(R.id.account_balance);
         ((Button) linearLayout.findViewById(R.id.pay_btn)).setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
-                TokenInfoDialog.this.paymettype = "paid";
+                TokenInfoDialog.this.paymettype = "Paid";
                 TokenInfoDialog.this.PaymentService();
             }
         });
         ((Button) linearLayout.findViewById(R.id.cancel_btn)).setOnClickListener(new OnClickListener() {
             public void onClick(View view) {
-                TokenInfoDialog.this.paymettype = "decline";
-                TokenInfoDialog.this.PaymentService();
+                getActivity().finish();
             }
         });
         TextView textView = (TextView) linearLayout.findViewById(R.id.token_amount_txt);

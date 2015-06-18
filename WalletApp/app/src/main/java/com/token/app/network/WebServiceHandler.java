@@ -377,6 +377,7 @@ public class WebServiceHandler {
         arrayList.add(new BasicNameValuePair("payer", str3));
         arrayList.add(new BasicNameValuePair("status", str2));
         arrayList.add(new BasicNameValuePair("code", str));
+        arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
         Log.v("namevalue of payment info", arrayList.toString());
         try {
             httpPost.setEntity(new UrlEncodedFormEntity(arrayList));

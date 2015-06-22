@@ -1,99 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:orientation="vertical">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_gravity="center"
+	android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12.0dip"
-        android:background="@drawable/gray_rounded">
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="12.0dip"
+		android:background="@drawable/gray_rounded">
 
-        <com.token.util.MyTextView
-            android:id="@+id/create_text"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="12.0dip"
-            android:gravity="center"
-            android:text="Buy Credit"
-            android:textColor="#ff000000"
-            android:textSize="20.0sp"
-            android:textStyle="bold"/>
+		<com.token.util.MyTextView
+			android:id="@+id/create_text"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="12.0dip"
+			android:gravity="center"
+			android:text="Buy Credit"
+			android:textColor="#ff000000"
+			android:textSize="20.0sp"
+			android:textStyle="bold"/>
 
-        <RelativeLayout
-            android:id="@+id/r2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/create_text"
-            android:layout_margin="10.0dip">
+		<RelativeLayout
+			android:id="@+id/r2"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/create_text"
+			android:layout_margin="10.0dip">
 
-            <LinearLayout
-                android:id="@+id/sell_cost_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:layout_marginTop="10.0dip">
+			<LinearLayout
+				android:id="@+id/sell_cost_layout"
+				android:layout_width="fill_parent"
+				android:layout_height="40.0dip"
+				android:layout_marginTop="10.0dip">
 
-                <com.token.util.MyTextView
-                    android:id="@+id/selectdate_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:ems="6"
-                    android:text="Enter Amount:"
-                    android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
+				<com.token.util.MyTextView
+					android:id="@+id/selectdate_txt"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:ems="6"
+					android:text="Enter Amount:"
+					android:textColor="@android:color/black"
+					android:textSize="13.0sp"/>
 
-                <EditText
-                    android:id="@+id/buycredit_amount_et"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:hint="Enter amount"
-                    android:inputType="numberDecimal"
-                    android:textColor="@android:color/black"
-                    android:textSize="13.0sp"/>
-            </LinearLayout>
+				<EditText
+					android:id="@+id/buycredit_amount_et"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:hint="Enter amount"
+					android:inputType="numberDecimal"
+					android:textColor="@android:color/black"
+					android:textSize="13.0sp"/>
+			</LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/l4"
-                android:layout_width="wrap_content"
-                android:layout_height="45.0dip"
-                android:layout_below="@+id/sell_cost_layout"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="15.0dip">
+			<LinearLayout
+				android:id="@+id/credit_option"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/sell_cost_layout"
+				android:layout_centerInParent="true"
+				android:layout_marginTop="15.0dip"
+				android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/buycredit_cancel"
-                    android:layout_width="90.0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="1.0"
-                    android:ems="5"
-                    android:text="Cancel"
-                    android:textColor="@android:color/black"
-                    android:textSize="15.0sp"/>
+				<RadioGroup
+					android:id="@+id/radioGroup"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/buycredit_send"
-                    android:layout_width="90.0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="20.0dip"
-                    android:layout_weight="1.0"
-                    android:text="Pay"
-                    android:textColor="@android:color/black"
-                    android:textSize="15.0sp"/>
-            </LinearLayout>
+					<RadioButton
+						android:textColor="@color/Black"
+						android:id="@+id/radioBenefit"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:checked="true"
+						android:text="Benefit (ATM)"/>
 
-            <View
-                android:id="@+id/vieww"
-                android:layout_width="fill_parent"
-                android:layout_height="10.0dip"
-                android:layout_below="@+id/l4"/>
-        </RelativeLayout>
-    </RelativeLayout>
+					<RadioButton
+						android:textColor="@color/Black"
+						android:id="@+id/radioCredit"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Credit Card"/>
+
+				</RadioGroup>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/l4"
+				android:layout_width="wrap_content"
+				android:layout_height="45.0dip"
+				android:layout_below="@+id/credit_option"
+				android:layout_centerInParent="true"
+				android:layout_marginTop="15.0dip">
+
+				<Button
+					android:id="@+id/buycredit_cancel"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_weight="1.0"
+					android:ems="5"
+					android:text="Cancel"
+					android:textColor="@android:color/black"
+					android:textSize="15.0sp"/>
+
+				<Button
+					android:id="@+id/buycredit_send"
+					android:layout_width="90.0dip"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_vertical"
+					android:layout_marginLeft="20.0dip"
+					android:layout_weight="1.0"
+					android:text="Buy"
+					android:textColor="@android:color/black"
+					android:textSize="15.0sp"/>
+			</LinearLayout>
+
+			<View
+				android:id="@+id/vieww"
+				android:layout_width="fill_parent"
+				android:layout_height="10.0dip"
+				android:layout_below="@+id/l4"/>
+		</RelativeLayout>
+	</RelativeLayout>
 </RelativeLayout>

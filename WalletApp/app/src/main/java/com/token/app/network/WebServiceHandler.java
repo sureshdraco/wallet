@@ -2,6 +2,7 @@ package com.token.app.network;
 
 import android.content.Context;
 import android.net.wifi.WifiManager;
+import android.os.Environment;
 import android.text.format.Formatter;
 import android.util.Log;
 
@@ -10,6 +11,7 @@ import com.token.app.BuildConfig;
 import com.token.app.WalletApplication;
 import com.token.util.GlobalConstants;
 
+import org.apache.http.NameValuePair;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -19,7 +21,15 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -806,5 +816,66 @@ public class WebServiceHandler {
             e.printStackTrace();
             return str6;
         }
+    }
+
+    public static String transactionReport(Context context, String email, String password, String startDate, String endDate) {
+
+        try {
+            URL url = new URL("http://www.walletgcc.com/wallet/public/transactionapi/report");
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setReadTimeout(10000);
+            conn.setConnectTimeout(15000);
+            conn.setRequestMethod("POST");
+            conn.setDoInput(true);
+            conn.setDoOutput(true);
+            List arrayList = new ArrayList();
+            arrayList.add(new BasicNameValuePair("email", email));
+            arrayList.add(new BasicNameValuePair("password", password));
+            arrayList.add(new BasicNameValuePair("start_date", startDate));
+            arrayList.add(new BasicNameValuePair("end_date", endDate));
+
+            OutputStream os = conn.getOutputStream();
+            BufferedWriter writer = new BufferedWriter(
+                    new OutputStreamWriter(os, "UTF-8"));
+            writer.write(getQuery(arrayList));
+            writer.flush();
+            writer.close();
+            os.close();
+
+            conn.connect();
+            InputStream inputStream = conn.getInputStream();
+            FileOutputStream fileOutputStream = new FileOutputStream(Environment.getExternalStorageDirectory() + "/wallet_transaction_report.pdf");
+            int totalSize = conn.getContentLength();
+
+            byte[] buffer = new byte[1024 * 1024];
+            int bufferLength = 0;
+            while ((bufferLength = inputStream.read(buffer)) > 0) {
+                fileOutputStream.write(buffer, 0, bufferLength);
+            }
+            fileOutputStream.close();
+            return "true";
+        } catch (Exception ex) {
+            Log.e("report", ex.toString());
+            return "false";
+        }
+
+    }
+
+    private static String getQuery(List<BasicNameValuePair> params) throws UnsupportedEncodingException {
+        StringBuilder result = new StringBuilder();
+        boolean first = true;
+
+        for (NameValuePair pair : params) {
+            if (first)
+                first = false;
+            else
+                result.append("&");
+
+            result.append(URLEncoder.encode(pair.getName(), "UTF-8"));
+            result.append("=");
+            result.append(URLEncoder.encode(pair.getValue(), "UTF-8"));
+        }
+
+        return result.toString();
     }
 }

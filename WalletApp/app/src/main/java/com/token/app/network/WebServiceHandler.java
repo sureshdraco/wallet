@@ -61,7 +61,7 @@ public class WebServiceHandler {
 		HttpPost httpPost = new HttpPost("http://walletgcc.com/wallet/public/usersmaster/balanceinfo");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("email", str));
-		Log.v("namevalue of AccountData", arrayList.toString());
+		Log.v("nv of AccountData", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -100,7 +100,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("password", str2));
-		Log.e("namevalue of buyAuthenticateService", arrayList.toString());
+		Log.e("buyAuthenticateService", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -109,7 +109,7 @@ public class WebServiceHandler {
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of buyAuthenticateService ", str3);
+				Log.e("buyAuthenticateService ", str3);
 				JSONObject jSONObject = new JSONObject(str3);
 				if (!jSONObject.getString("status").equalsIgnoreCase("true")) {
 					return "false";
@@ -143,7 +143,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("option", str4));
 		arrayList.add(new BasicNameValuePair("user_id", str));
 		arrayList.add(new BasicNameValuePair("auth", "1"));
-		Log.e("namevalue of buycredit Service", arrayList.toString());
+		Log.e("nv of buycredit Service", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -153,7 +153,7 @@ public class WebServiceHandler {
 		try {
 			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of buyCredit Service ", str6);
+				Log.e("buyCredit Service ", str6);
 				JSONObject jSONObject = new JSONObject(str6);
 				if (!jSONObject.getString("status").equalsIgnoreCase("true")) {
 					return "false";
@@ -186,7 +186,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("mobile", str2));
-		Log.e("namevalue of forgot password", arrayList.toString());
+		Log.e("nv of forgot pwd", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -195,7 +195,7 @@ public class WebServiceHandler {
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of forgot password ", str3);
+				Log.e("result of forgot pwd", str3);
 				str4 = new JSONObject(str3).getString("status");
 				infoList = new ArrayList();
 				return str4.equalsIgnoreCase("success") ? "true" : "false";
@@ -213,7 +213,7 @@ public class WebServiceHandler {
 		}
 	}
 
-	public static String generatetokenservice(Context context, String str, String str2) {
+	public static Response generatetokenservice(Context context, String str, String str2) {
 		String str3;
 		Exception e;
 		String str4 = "";
@@ -224,7 +224,7 @@ public class WebServiceHandler {
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("creator", str));
 		arrayList.add(new BasicNameValuePair("amount", str2));
-		Log.v("namevalue of generate token  info", arrayList.toString());
+		Log.v("nv of generate token", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -233,20 +233,20 @@ public class WebServiceHandler {
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.v("result of Generate Token", str3);
+				Log.v("result of gen Token", str3);
 				global.setTokencode(new JSONObject(str3).getString("transaction_code"));
-				return "true";
+				return new Response("", "true");
 			} catch (Exception e3) {
 				e = e3;
 				e.printStackTrace();
-				return str3;
+				return new Response(new JSONObject(str3).getString("error"), "false");
 			}
 		} catch (Exception e4) {
 			Exception exception = e4;
 			str3 = str4;
 			e = exception;
 			e.printStackTrace();
-			return str3;
+			return new Response("", "false");
 		}
 	}
 
@@ -261,7 +261,7 @@ public class WebServiceHandler {
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
-		Log.e("namevalue of company  info", ":::::::::::::::::" + arrayList.toString());
+		Log.e("nv of company info", ":::::::::::::::::" + arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -388,7 +388,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("status", str2));
 		arrayList.add(new BasicNameValuePair("code", str));
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
-		Log.v("namevalue of payment info", arrayList.toString());
+		Log.v("nv of payment info", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -437,7 +437,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("device_model", model));
 		arrayList.add(new BasicNameValuePair("note", ""));
 		arrayList.add(new BasicNameValuePair("option", option));
-		Log.e("namevalue of register device", arrayList.toString());
+		Log.e("nv of register device", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -446,7 +446,7 @@ public class WebServiceHandler {
 		try {
 			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of Register device on server ", str6);
+				Log.e("result of Register dev", str6);
 				JSONObject jSONObject = new JSONObject(str6);
 				return "true";
 			} catch (Exception e3) {
@@ -478,7 +478,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_CIVILID, str6));
 		arrayList.add(new BasicNameValuePair(GlobalConstants.SIGNUP_PASSWORD, str3));
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
-		Log.e("namevalue of Signup data", arrayList.toString());
+		Log.e("nv of Signup data", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -511,7 +511,7 @@ public class WebServiceHandler {
 		}
 	}
 
-	public static String tokenservice(Context context, String str) {
+	public static Response tokenservice(Context context, String str) {
 		String str2;
 		Exception e;
 		String str3 = "";
@@ -533,7 +533,7 @@ public class WebServiceHandler {
 				Log.v("result", str2);
 				JSONObject jSONObject = new JSONObject(str2);
 				if (jSONObject.getString("status").equalsIgnoreCase("false")) {
-					return "false";
+					return new Response(jSONObject.getString("error"), "false");
 				}
 				tokenDetalList = new ArrayList();
 				tokendetailmap = new HashMap();
@@ -559,18 +559,18 @@ public class WebServiceHandler {
 				tokendetailmap.put(GlobalConstants.TOKEN_LOCATION, string4);
 				tokenDetalList.add(tokendetailmap);
 				global.setTokenList(tokenDetalList);
-				return "true";
+				return new Response("", "true");
 			} catch (Exception e4) {
 				e = e4;
 				e.printStackTrace();
-				return str2;
+				return new Response("", "false");
 			}
 		} catch (Exception e5) {
 			Exception exception = e5;
 			str2 = str3;
 			e = exception;
 			e.printStackTrace();
-			return str2;
+			return new Response("", "false");
 		}
 	}
 
@@ -584,7 +584,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
 		arrayList.add(new BasicNameValuePair("password", str2));
-		Log.e("namevalue of getting transaction info", arrayList.toString());
+		Log.e("nv of transaction info", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e) {
@@ -592,7 +592,7 @@ public class WebServiceHandler {
 		}
 		try {
 			String str4 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
-			Log.e("result of getting transaction info ", str4);
+			Log.e("result of trans info ", str4);
 			transactionInfoList = new ArrayList();
 			paidList = new ArrayList();
 			unpaidList = new ArrayList();
@@ -725,9 +725,9 @@ public class WebServiceHandler {
 			global.setPaidList(paidList);
 			global.setUnpaidList(unpaidList);
 			global.setExpireList(expireList);
-			Log.e("result of paid transaction ", "::::" + global.getPaidList());
-			Log.e("result of unpaid transaction ", global.getUnpaidList().toString());
-			Log.e("result of expire transaction ", global.getExpireList().toString());
+			Log.e("result of paid trans ", "::::" + global.getPaidList());
+			Log.e("result of unpaid trans ", global.getUnpaidList().toString());
+			Log.e("result of expire trans ", global.getExpireList().toString());
 			return "true";
 		} catch (Exception e2222) {
 			Log.e("getting Exception ", e2222.toString());
@@ -757,7 +757,7 @@ public class WebServiceHandler {
 		try {
 			str3 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of withdraw server ", str3);
+				Log.e("result of withdraw", str3);
 				str4 = new JSONObject(str3).getString("status");
 				infoList = new ArrayList();
 				return str4.equalsIgnoreCase("true") ? "true" : "false";
@@ -788,7 +788,7 @@ public class WebServiceHandler {
 		arrayList.add(new BasicNameValuePair("oldpassword", old));
 		arrayList.add(new BasicNameValuePair("newpassword", newPwd));
 		arrayList.add(new BasicNameValuePair("confirmpassword", confirmPwd));
-		if (BuildConfig.DEBUG) Log.d("namevalue of reset password Service", arrayList.toString());
+		if (BuildConfig.DEBUG) Log.d("nv of reset pwd serv", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));
 		} catch (UnsupportedEncodingException e2) {
@@ -798,7 +798,7 @@ public class WebServiceHandler {
 		try {
 			str6 = (String) defaultHttpClient.execute(httpPost, basicResponseHandler);
 			try {
-				Log.e("result of reset password Service ", str6);
+				Log.e("result of reset pwd ser", str6);
 				JSONObject jSONObject = new JSONObject(str6);
 				if (!jSONObject.getString("status").equalsIgnoreCase("true")) {
 					return "false";

@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,8 +15,9 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.token.app.WalletApplication;
 import com.token.app.R;
+import com.token.app.WalletApplication;
+import com.token.app.network.Response;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 
@@ -28,14 +30,14 @@ public class InvoiceActivity extends Activity {
 	WalletApplication global;
 	RelativeLayout layout;
 	ProgressDialog pd;
-	String result;
+	Response result;
 	SharedPreferences sp;
 	Runnable tokenRunnable;
 	Handler tokenhandler;
 	TextView tokentext;
 
 	public InvoiceActivity() {
-		this.result = "";
+		this.result = new Response("", "");
 		this.amount = "";
 		this.tokenRunnable = new Runnable() {
 			public void run() {
@@ -53,13 +55,21 @@ public class InvoiceActivity extends Activity {
 		this.tokenhandler = new Handler() {
 			public void handleMessage(Message message) {
 				InvoiceActivity.this.pd.dismiss();
-				message.obj.toString();
-				InvoiceActivity.this.layout.setVisibility(View.VISIBLE);
+				Response response = (Response) message.obj;
 				InvoiceActivity.this.amount_et.getText().clear();
 				((InputMethodManager) InvoiceActivity.this.getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(InvoiceActivity.this.getCurrentFocus().getWindowToken(),
 						2);
 				Log.e("global.tokencode", InvoiceActivity.this.global.getTokencode());
-				InvoiceActivity.this.tokentext.setText(InvoiceActivity.this.global.tokencode);
+				if (response.getStatus().equalsIgnoreCase("true")) {
+					InvoiceActivity.this.layout.setVisibility(View.VISIBLE);
+					InvoiceActivity.this.tokentext.setText(InvoiceActivity.this.global.tokencode);
+				} else {
+					if (!TextUtils.isEmpty(response.getError())) {
+						Crouton.makeText(InvoiceActivity.this, response.getError(), Style.ALERT).show();
+					} else {
+						Crouton.makeText(InvoiceActivity.this, "Unknown error!", Style.ALERT).show();
+					}
+				}
 			}
 		};
 	}

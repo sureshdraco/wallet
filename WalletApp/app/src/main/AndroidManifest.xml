@@ -115,6 +115,9 @@
         <activity
             android:name=".view.AllTransactionFragementActivity"
             android:screenOrientation="portrait" />
+		<activity
+			android:name=".view.WebViewActivity"
+			android:screenOrientation="portrait" />
         <activity
             android:name=".view.PaymentActivity"
             android:screenOrientation="portrait"

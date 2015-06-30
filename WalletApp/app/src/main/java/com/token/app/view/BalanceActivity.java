@@ -71,6 +71,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 	private Runnable transactionReportRunnable;
 	private StartDatePicker fromPicker;
 	private StartDatePicker toPicker;
+	private View chatBtn;
 
 	public BalanceActivity() {
 		this.res = "";
@@ -224,7 +225,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 			public void handleMessage(Message message) {
 				BalanceActivity.this.buycreditProgressDialog.dismiss();
 				if (message.obj.toString().equalsIgnoreCase("true")) {
-					BalanceActivity.this.startActivityForResult(new Intent(BalanceActivity.this, BuyCreditViewActivity.class), 1);
+					BalanceActivity.this.startActivityForResult(new Intent(BalanceActivity.this, BuyCreditViewActivity.class), 2);
 				} else {
 					Crouton.showText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Style.ALERT);
 				}
@@ -305,10 +306,35 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 		}
 	}
 
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == 1) {
+			// disable chat button
+			chatBtn.setEnabled(false);
+			Toast.makeText(this, "Chat not available now!", Toast.LENGTH_LONG).show();
+		} else {
+			chatBtn.setEnabled(true);
+			chatBtn.setOnClickListener(chatClickListener);
+		}
+	}
+
+	private View.OnClickListener chatClickListener = new View.OnClickListener() {
+		@Override
+		public void onClick(View view) {
+			String url = "http://24bh.com/livehelp/";
+			Intent i = new Intent(BalanceActivity.this, WebViewActivity.class);
+			i.putExtra("url", url);
+			startActivityForResult(i, 1);
+		}
+	};
+
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.balance);
 		swipeRefresh = (SwipeRefreshLayout) findViewById(R.id.swipeToRefresh);
+		chatBtn = findViewById(R.id.chatBtn);
+		chatBtn.setOnClickListener(chatClickListener);
 		this.global = (WalletApplication) getApplicationContext();
 		this.sp = getSharedPreferences(GlobalConstants.PREF, 0);
 		this.email_mString = this.sp.getString(GlobalConstants.PREF_USERNAME, "");
@@ -419,12 +445,6 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 			BalanceActivity.this.buyCreditAPI();
 		}
-	}
-
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		new Thread(accountRunnable).start();
 	}
 
 	public static class StartDatePicker extends DialogFragment {

@@ -24,6 +24,15 @@
             android:textColor="@android:color/white"
             android:textSize="20.0sp"
             android:textStyle="bold" />
+
+		<Button
+			android:id="@+id/chatBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_alignParentRight="true"
+			android:background="@drawable/chat_button"
+			android:text="Chat"
+			android:textColor="@color/White"/>
     </RelativeLayout>
 
     <ScrollView

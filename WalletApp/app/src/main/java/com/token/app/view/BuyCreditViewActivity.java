@@ -77,53 +77,6 @@ public class BuyCreditViewActivity extends Activity {
 		}
 	}
 
-	class DownloadPdfFileFromURL extends AsyncTask<String, String, String> {
-		DownloadPdfFileFromURL() {
-		}
-
-		protected String doInBackground(String... strArr) {
-			try {
-				URL url = new URL(strArr[0]);
-				URLConnection openConnection = url.openConnection();
-				openConnection.connect();
-				int contentLength = openConnection.getContentLength();
-				InputStream bufferedInputStream = new BufferedInputStream(url.openStream(), AccessibilityNodeInfoCompat.ACTION_SCROLL_BACKWARD);
-				OutputStream fileOutputStream = new FileOutputStream("/sdcard/TenantReports/" + BuyCreditViewActivity.this.Webview_url);
-				Log.v("OutputStream", fileOutputStream.toString());
-				byte[] bArr = new byte[AccessibilityNodeInfoCompat.ACTION_NEXT_HTML_ELEMENT];
-				long j = 0;
-				while (true) {
-					int read = bufferedInputStream.read(bArr);
-					if (read == -1) {
-						break;
-					}
-					j += (long) read;
-					publishProgress(new String[] { String.valueOf((int) ((100 * j) / ((long) contentLength))) });
-					fileOutputStream.write(bArr, 0, read);
-				}
-				fileOutputStream.flush();
-				fileOutputStream.close();
-				bufferedInputStream.close();
-			} catch (Exception e) {
-				Log.e("Error: ", e.getMessage());
-			}
-			return null;
-		}
-
-		protected void onPostExecute(String str) {
-			BuyCreditViewActivity.this.dismissDialog(0);
-		}
-
-		protected void onPreExecute() {
-			super.onPreExecute();
-			BuyCreditViewActivity.this.showDialog(0);
-		}
-
-		protected void onProgressUpdate(String... strArr) {
-			BuyCreditViewActivity.this.pDialog.setProgress(Integer.parseInt(strArr[0]));
-		}
-	}
-
 	private class MyBrowser extends WebViewClient {
 		private MyBrowser() {
 		}

@@ -33,14 +33,14 @@ public class GlobalConstants {
 	static {
 		LOGIN_USERNAME = "email";
 		LOGIN_PASSWORD = "password";
-		LOGIN_URL = "http://walletgcc.com/wallet/public/usersmaster/signin";
+		LOGIN_URL = "https://walletgcc.com/wallet/public/usersmaster/signin";
 		LOGIN_ID = "id";
 		LOGIN_FULLNAME = "full_name_master";
 		LOGIN_EMAIL = "email";
 		LOGIN_MOBILE = "mobile";
 		LOGIN_MONEY_TYPE = "send_money_type";
 		LOGIN_ACCOUNTNUMBER = "account_number";
-		SIGNUP_URL = "http://walletgcc.com/wallet/public/usersmaster/saveapi";
+		SIGNUP_URL = "https://walletgcc.com/wallet/public/usersmaster/saveapi";
 		SIGNUP_FIRSTNAME = "first_name";
 		SIGNUP_LASTNAME = "last_name";
 		SIGNUP_EMAIL = "email";

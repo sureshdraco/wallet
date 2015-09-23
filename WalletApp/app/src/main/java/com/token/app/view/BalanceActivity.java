@@ -1,13 +1,12 @@
 package com.token.app.view;
 
-import java.io.File;
-import java.util.Calendar;
-
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -20,6 +19,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.internal.view.SupportMenu;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -36,6 +36,9 @@ import com.token.app.R;
 import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
+
+import java.io.File;
+import java.util.Calendar;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -168,7 +171,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 					new Thread(null, BalanceActivity.this.accountRunnable, "").start();
 					return;
 				}
-				Crouton.showText(BalanceActivity.this, "Please contact the company to confirm the account to be able to withdraw", Style.ALERT);
+				showContactUsDialog();
 			}
 		};
 		this.authenticateRunnable = new Runnable() {
@@ -233,6 +236,45 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 		};
 	}
 
+	private void showContactUsDialog() {
+		LayoutInflater li = LayoutInflater.from(getApplicationContext());
+		View promptsView = li.inflate(R.layout.contact_us_dialog, null);
+
+		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+		// set prompts.xml to alertdialog builder
+		alertDialogBuilder.setView(promptsView);
+
+		// set dialog message
+		alertDialogBuilder
+				.setCancelable(true)
+				.setPositiveButton("Click here", null)
+				.setNegativeButton("Cancel",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								dialog.cancel();
+							}
+						});
+
+		// create alert dialog
+		final AlertDialog alertDialog = alertDialogBuilder.create();
+		alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+			@Override
+			public void onShow(DialogInterface dialogInterface) {
+				alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
+					@Override
+					public void onClick(View view) {
+						Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://walletgcc.com/contact-us/"));
+						BalanceActivity.this.startActivity(i);
+						alertDialog.dismiss();
+					}
+				});
+			}
+		});
+		// show it
+		alertDialog.show();
+	}
+
 	private void updateBalance() {
 		if (BalanceActivity.this.global.getAccountbalance().equalsIgnoreCase("")) {
 			BalanceActivity.this.mybalancetext.setText("BD 0");
@@ -285,24 +327,24 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	public boolean dispatchTouchEvent(MotionEvent motionEvent) {
 		switch (motionEvent.getAction()) {
-		case R.styleable.MapAttrs_mapType /* 0 */:
-			new Thread(null, this.accountRunnable, "").start();
-			break;
+			case R.styleable.MapAttrs_mapType /* 0 */:
+				new Thread(null, this.accountRunnable, "").start();
+				break;
 		}
 		return super.dispatchTouchEvent(motionEvent);
 	}
 
 	public void onClick(View view) {
 		switch (view.getId()) {
-		case R.id.balance_witdrawl_btn /* 2131034134 */:
-			withdrawlDialog();
-			break;
-		case R.id.balance_buycrdit_btn:
-			BuyCreditAuthenticate();
-			break;
-		case R.id.transactionReport:
-			generateTransactionReport();
-			break;
+			case R.id.balance_witdrawl_btn /* 2131034134 */:
+				withdrawlDialog();
+				break;
+			case R.id.balance_buycrdit_btn:
+				BuyCreditAuthenticate();
+				break;
+			case R.id.transactionReport:
+				generateTransactionReport();
+				break;
 		}
 	}
 
@@ -398,7 +440,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.10 */
 	class AnonymousClass10 implements OnClickListener {
-		private final/* synthetic */EditText val$amount_mEditBox;
+		private final/* synthetic */ EditText val$amount_mEditBox;
 
 		AnonymousClass10(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -412,7 +454,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.12 */
 	class AnonymousClass12 implements OnClickListener {
-		private final/* synthetic */EditText val$amount_mEditBox;
+		private final/* synthetic */ EditText val$amount_mEditBox;
 
 		AnonymousClass12(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -430,7 +472,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.14 */
 	class AnonymousClass14 implements OnClickListener {
-		private final/* synthetic */EditText val$amount_mEditBox;
+		private final/* synthetic */ EditText val$amount_mEditBox;
 
 		AnonymousClass14(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -473,7 +515,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 		}
 
 		public String getDate() {
-			return "" + dialog.getDatePicker().getDayOfMonth() + "-" + dialog.getDatePicker().getMonth() + "-" + dialog.getDatePicker().getYear();
+			return "" + dialog.getDatePicker().getDayOfMonth() + "-" + dialog.getDatePicker().getMonth() + 1 + "-" + dialog.getDatePicker().getYear();
 		}
 	}
 }

@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class WebServiceHandler {
-	public static final int TIMEOUT = 3000;
+	public static final int TIMEOUT = 9000;
 	static ArrayList<HashMap<String, String>> expireList;
 	static HashMap<String, String> expireMap;
 	static WalletApplication global;

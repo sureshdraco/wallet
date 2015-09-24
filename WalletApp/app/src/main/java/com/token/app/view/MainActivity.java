@@ -10,7 +10,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,8 +25,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
-import com.token.app.WalletApplication;
+import com.token.app.BuildConfig;
 import com.token.app.R;
+import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
 
@@ -167,11 +167,7 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     private int getAppVersion(Context context) {
-        try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionCode;
-        } catch (NameNotFoundException e) {
-            throw new RuntimeException("Could not get package name: " + e);
-        }
+        return BuildConfig.VERSION_CODE;
     }
 
     private SharedPreferences getGCMPreferences(Context context) {

@@ -1,5 +1,8 @@
 package com.token.app.view;
 
+import java.io.File;
+import java.util.Calendar;
+
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -36,9 +39,6 @@ import com.token.app.R;
 import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
 import com.token.util.GlobalConstants;
-
-import java.io.File;
-import java.util.Calendar;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -327,24 +327,24 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	public boolean dispatchTouchEvent(MotionEvent motionEvent) {
 		switch (motionEvent.getAction()) {
-			case R.styleable.MapAttrs_mapType /* 0 */:
-				new Thread(null, this.accountRunnable, "").start();
-				break;
+		case R.styleable.MapAttrs_mapType /* 0 */:
+			new Thread(null, this.accountRunnable, "").start();
+			break;
 		}
 		return super.dispatchTouchEvent(motionEvent);
 	}
 
 	public void onClick(View view) {
 		switch (view.getId()) {
-			case R.id.balance_witdrawl_btn /* 2131034134 */:
-				withdrawlDialog();
-				break;
-			case R.id.balance_buycrdit_btn:
-				BuyCreditAuthenticate();
-				break;
-			case R.id.transactionReport:
-				generateTransactionReport();
-				break;
+		case R.id.balance_witdrawl_btn /* 2131034134 */:
+			withdrawlDialog();
+			break;
+		case R.id.balance_buycrdit_btn:
+			BuyCreditAuthenticate();
+			break;
+		case R.id.transactionReport:
+			generateTransactionReport();
+			break;
 		}
 	}
 
@@ -440,7 +440,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.10 */
 	class AnonymousClass10 implements OnClickListener {
-		private final/* synthetic */ EditText val$amount_mEditBox;
+		private final/* synthetic */EditText val$amount_mEditBox;
 
 		AnonymousClass10(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -454,7 +454,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.12 */
 	class AnonymousClass12 implements OnClickListener {
-		private final/* synthetic */ EditText val$amount_mEditBox;
+		private final/* synthetic */EditText val$amount_mEditBox;
 
 		AnonymousClass12(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -472,7 +472,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 
 	/* renamed from: com.token.app.view.BalanceActivity.14 */
 	class AnonymousClass14 implements OnClickListener {
-		private final/* synthetic */ EditText val$amount_mEditBox;
+		private final/* synthetic */EditText val$amount_mEditBox;
 
 		AnonymousClass14(EditText editText) {
 			this.val$amount_mEditBox = editText;
@@ -515,7 +515,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 		}
 
 		public String getDate() {
-			return "" + dialog.getDatePicker().getDayOfMonth() + "-" + dialog.getDatePicker().getMonth() + 1 + "-" + dialog.getDatePicker().getYear();
+			return "" + dialog.getDatePicker().getDayOfMonth() + "-" + (dialog.getDatePicker().getMonth() + 1) + "-" + dialog.getDatePicker().getYear();
 		}
 	}
 }

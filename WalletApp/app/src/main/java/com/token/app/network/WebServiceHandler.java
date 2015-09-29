@@ -144,9 +144,9 @@ public class WebServiceHandler {
 		Exception e;
 		String str4 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpPost httpPost = new HttpPost("http://www.walletgcc.com/wallet/public/buycredit/authenticate");
+		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/buycredit/authenticate");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));

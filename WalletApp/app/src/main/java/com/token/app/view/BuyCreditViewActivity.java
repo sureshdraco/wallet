@@ -1,28 +1,24 @@
 package com.token.app.view;
 
-import java.io.BufferedInputStream;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLConnection;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
+import android.net.http.SslError;
+import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.view.accessibility.AccessibilityNodeInfoCompat;
 import android.util.Log;
 import android.view.View;
+import android.webkit.SslErrorHandler;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import com.token.app.WalletApplication;
 import com.token.app.R;
+import com.token.app.WalletApplication;
 
 public class BuyCreditViewActivity extends Activity {
 	public static final int progress_bar_type = 0;
@@ -53,6 +49,9 @@ public class BuyCreditViewActivity extends Activity {
 		this.browser = (WebView) findViewById(R.id.web_view);
 		this.progressBar = (ProgressBar) findViewById(R.id.pb);
 		this.browser.getSettings().setJavaScriptEnabled(true);
+		if (Build.VERSION.SDK_INT >= 21) {
+			this.browser.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+		}
 		this.Webview_url = this.global.getCrediturl_mString();
 		this.progressBar.setVisibility(View.VISIBLE);
 		Log.e("linkname", "else....." + this.Webview_url);
@@ -78,11 +77,14 @@ public class BuyCreditViewActivity extends Activity {
 	}
 
 	private class MyBrowser extends WebViewClient {
+		private final String TAG = MyBrowser.class.getSimpleName();
+
 		private MyBrowser() {
 		}
 
 		public void onPageFinished(WebView webView, String str) {
 			super.onPageFinished(webView, str);
+			Log.d(TAG, str);
 			BuyCreditViewActivity.this.progressBar.setVisibility(View.GONE);
 		}
 
@@ -93,6 +95,7 @@ public class BuyCreditViewActivity extends Activity {
 
 		public boolean shouldOverrideUrlLoading(WebView webView, String str) {
 			webView.loadUrl(str);
+			Log.d(TAG, str);
 			BuyCreditViewActivity.this.Webview_url = str;
 			return true;
 		}

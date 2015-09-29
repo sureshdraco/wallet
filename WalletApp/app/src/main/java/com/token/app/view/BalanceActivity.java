@@ -193,7 +193,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 				if (message.obj.toString().equalsIgnoreCase("true")) {
 					BalanceActivity.this.openBuyCredit();
 				} else {
-					Crouton.showText(BalanceActivity.this, "Error Occured  to authenticate credentials!!", Style.ALERT);
+					Crouton.showText(BalanceActivity.this, "Error occured to authenticate credentials!!", Style.ALERT);
 				}
 			}
 		};
@@ -264,7 +264,7 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
 				alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View view) {
-						Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://walletgcc.com/contact-us/"));
+						Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://walletgcc.com/contact-us/"));
 						BalanceActivity.this.startActivity(i);
 						alertDialog.dismiss();
 					}

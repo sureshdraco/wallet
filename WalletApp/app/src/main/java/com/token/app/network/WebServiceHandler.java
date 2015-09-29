@@ -73,7 +73,7 @@ public class WebServiceHandler {
 	static ArrayList<HashMap<String, String>> unpaidList;
 	static HashMap<String, String> unpaidMap;
 
-	private static DefaultHttpClient getHttpParams() {
+	private static DefaultHttpClient getHttpsParams() {
 		SchemeRegistry schemeRegistry = new SchemeRegistry();
 		try {
 			schemeRegistry.register(new Scheme("https",
@@ -94,13 +94,20 @@ public class WebServiceHandler {
 		return new DefaultHttpClient(mgr, my_httpParams);
 	}
 
+	private static DefaultHttpClient getHttpParams() {
+		HttpParams my_httpParams = new BasicHttpParams();
+		HttpConnectionParams.setConnectionTimeout(my_httpParams, TIMEOUT);
+		HttpConnectionParams.setSoTimeout(my_httpParams, TIMEOUT);
+		return new DefaultHttpClient(my_httpParams);
+	}
+
 	public static String accountBalanceservice(Context context, String str) {
 		String str2;
 		Exception e;
 		String str3 = "";
 		global = (WalletApplication) context.getApplicationContext();
 
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/usersmaster/balanceinfo");
 		List arrayList = new ArrayList();
@@ -178,7 +185,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str5 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/buycredit/create");
 		List arrayList = new ArrayList();
@@ -223,7 +230,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str4 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/usersmaster/forgetpassmethod");
 		List arrayList = new ArrayList();
@@ -262,7 +269,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str4 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/transactionapi/create");
 		List arrayList = new ArrayList();
@@ -299,7 +306,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str3 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/usersmaster/companyinfo");
 		List arrayList = new ArrayList();
@@ -360,7 +367,7 @@ public class WebServiceHandler {
 		Exception exception;
 		String str3 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost(GlobalConstants.LOGIN_URL);
 		List arrayList = new ArrayList();
@@ -424,7 +431,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str5 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/transactionapi/payment");
 		List arrayList = new ArrayList();
@@ -469,7 +476,7 @@ public class WebServiceHandler {
 		WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
 		String ip = Formatter.formatIpAddress(wm.getConnectionInfo().getIpAddress());
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/notificationapi/create");
 		List arrayList = new ArrayList();
@@ -511,7 +518,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str7 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost(GlobalConstants.SIGNUP_URL);
 		List arrayList = new ArrayList();
@@ -594,7 +601,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str3 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/transactionapi/info");
 		List arrayList = new ArrayList();
@@ -655,7 +662,7 @@ public class WebServiceHandler {
 	public static String transInfoService(Context context, String str, String str2) {
 		String str3;
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/usersmaster/transaction");
 		List arrayList = new ArrayList();
@@ -819,7 +826,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str4 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/withdrawapi/create");
 		List arrayList = new ArrayList();
@@ -857,7 +864,7 @@ public class WebServiceHandler {
 		Exception e;
 		String str5 = "";
 		global = (WalletApplication) context.getApplicationContext();
-		DefaultHttpClient defaultHttpClient = getHttpParams();
+		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
 		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/usersmaster/resetpassword");
 		List arrayList = new ArrayList();

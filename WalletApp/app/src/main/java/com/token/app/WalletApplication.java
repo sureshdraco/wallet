@@ -16,6 +16,7 @@ public class WalletApplication extends Application {
 	private static int DISK_IMAGECACHE_SIZE = 1024 * 1024 * 10;
 	private static Bitmap.CompressFormat DISK_IMAGECACHE_COMPRESS_FORMAT = Bitmap.CompressFormat.PNG;
 	private static int DISK_IMAGECACHE_QUALITY = 100; // PNG is lossless so quality is ignored but must be provided
+    public static boolean chatBtnEnabled = true;
 	ArrayList<HashMap<String, String>> TransactioninfoList;
 	String accountbalance;
 	String authenticateid_gString;

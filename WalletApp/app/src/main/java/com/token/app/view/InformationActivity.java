@@ -167,15 +167,23 @@ public class InformationActivity extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == 1) {
 			//disable chat button
-			chatBtn.setEnabled(false);
+            WalletApplication.chatBtnEnabled = false;
+            chatBtn.setEnabled(false);
 			Toast.makeText(this, "Chat not available now!", Toast.LENGTH_LONG).show();
 		} else {
+            WalletApplication.chatBtnEnabled = true;
 			chatBtn.setEnabled(true);
 			chatBtn.setOnClickListener(chatClickListener);
 		}
 	}
 
-	protected void onCreate(Bundle bundle) {
+    @Override
+    protected void onResume() {
+        chatBtn.setEnabled(WalletApplication.chatBtnEnabled);
+        super.onResume();
+    }
+
+    protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.information);
 		chatBtn = findViewById(R.id.chatBtn);

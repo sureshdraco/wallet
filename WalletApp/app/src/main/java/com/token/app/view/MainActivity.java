@@ -274,6 +274,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        WalletApplication.chatBtnEnabled = true;
         this.sp = getSharedPreferences(GlobalConstants.PREFS_NAME, 0);
         this.global = (WalletApplication) getApplicationContext();
         if (this.sp.getBoolean(GlobalConstants.ISLOGIN, false)) {

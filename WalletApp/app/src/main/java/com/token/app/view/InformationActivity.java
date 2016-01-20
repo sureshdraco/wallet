@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import com.token.app.R;
 import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
+import com.token.util.ContactUtil;
 import com.token.util.GlobalConstants;
 import com.token.util.NotificationUtil;
 
@@ -166,24 +168,24 @@ public class InformationActivity extends Activity {
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == 1) {
-			//disable chat button
-            WalletApplication.chatBtnEnabled = false;
-            chatBtn.setEnabled(false);
+			// disable chat button
+			WalletApplication.chatBtnEnabled = false;
+			chatBtn.setEnabled(false);
 			Toast.makeText(this, "Chat not available now!", Toast.LENGTH_LONG).show();
 		} else {
-            WalletApplication.chatBtnEnabled = true;
+			WalletApplication.chatBtnEnabled = true;
 			chatBtn.setEnabled(true);
 			chatBtn.setOnClickListener(chatClickListener);
 		}
 	}
 
-    @Override
-    protected void onResume() {
-        chatBtn.setEnabled(WalletApplication.chatBtnEnabled);
-        super.onResume();
-    }
+	@Override
+	protected void onResume() {
+		chatBtn.setEnabled(WalletApplication.chatBtnEnabled);
+		super.onResume();
+	}
 
-    protected void onCreate(Bundle bundle) {
+	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 		setContentView(R.layout.information);
 		chatBtn = findViewById(R.id.chatBtn);
@@ -273,10 +275,18 @@ public class InformationActivity extends Activity {
 	private View.OnClickListener chatClickListener = new View.OnClickListener() {
 		@Override
 		public void onClick(View view) {
-			String url = "http://24bh.com/livehelp/";
-			Intent i = new Intent(InformationActivity.this, WebViewActivity.class);
-			i.putExtra("url", url);
-			startActivityForResult(i, 1);
+			chatBtn.setEnabled(false);
+			try {
+				new ContactUtil().createContactForAccessNumber(getContentResolver(), "+97336992244", "Wallet");
+				String whatsappId = "+97336992244";
+				Uri uri = Uri.parse("smsto:" + whatsappId);
+				Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+				intent.setPackage("com.whatsapp");
+				startActivity(intent);
+				chatBtn.setEnabled(true);
+			} catch (Exception ex) {
+				Toast.makeText(getApplicationContext(), "Check if you have Whatsapp!", Toast.LENGTH_LONG).show();
+			}
 		}
 	};
 }

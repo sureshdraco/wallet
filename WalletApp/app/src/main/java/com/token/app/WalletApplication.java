@@ -31,6 +31,7 @@ public class WalletApplication extends Application {
 	String token;
 	ArrayList<HashMap<String, String>> tokenList;
 	public String tokencode;
+	public String transactionUrl;
 	int trans_id_mInt;
 	ArrayList<HashMap<String, String>> unpaidList;
 
@@ -39,6 +40,7 @@ public class WalletApplication extends Application {
 		this.tokencode = "";
 		this.token = "";
 		this.paymessage = "";
+		this.transactionUrl = "";
 		this.crediturl_mString = "";
 		this.device_id = "";
 		this.trans_id_mInt = 0;
@@ -50,6 +52,14 @@ public class WalletApplication extends Application {
 		this.paidList = new ArrayList();
 		this.unpaidList = new ArrayList();
 		this.expireList = new ArrayList();
+	}
+
+	public String getTransactionUrl() {
+		return transactionUrl;
+	}
+
+	public void setTransactionUrl(String transactionUrl) {
+		this.transactionUrl = transactionUrl;
 	}
 
 	public String getAccountbalance() {

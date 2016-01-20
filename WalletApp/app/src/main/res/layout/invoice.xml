@@ -1,110 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@android:color/white"
+	android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/r2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+	<RelativeLayout
+		android:id="@+id/r2"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true">
 
-        <com.token.util.MyTextView
-            android:id="@+id/t2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20.0dip"
-            android:layout_marginRight="20.0dip"
-            android:layout_marginTop="50.0dip"
-            android:text="Please Enter Amount (BD) Below:"
-            android:textColor="@android:color/black"
-            android:textSize="18.0sp"/>
+		<com.token.util.MyTextView
+			android:id="@+id/t2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="20.0dip"
+			android:layout_marginRight="20.0dip"
+			android:layout_marginTop="50.0dip"
+			android:text="Please Enter Amount (BD) Below:"
+			android:textColor="@android:color/black"
+			android:textSize="18.0sp"/>
 
-        <com.token.util.MyTextView
-            android:id="@+id/t3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/t2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20.0dip"
-            android:layout_marginRight="20.0dip"
-            android:layout_marginTop="5.0dip"
-            android:text="enter the amount, you will get Bill Number send it to your customer:"
-            android:textColor="@color/button_gray"
-            android:textSize="16.0sp"/>
+		<com.token.util.MyTextView
+			android:id="@+id/t3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/t2"
+			android:layout_centerHorizontal="true"
+			android:layout_marginLeft="20.0dip"
+			android:layout_marginRight="20.0dip"
+			android:layout_marginTop="5.0dip"
+			android:text="enter the amount, you will get Bill Number send it to your customer:"
+			android:textColor="@color/button_gray"
+			android:textSize="16.0sp"/>
 
-        <EditText
-            android:id="@+id/invoice_amount_et"
-            android:layout_width="fill_parent"
-            android:layout_height="40.0dip"
-            android:layout_below="@+id/t3"
-            android:imeActionLabel="Generate"
-            android:imeOptions="actionDone"
-            android:layout_marginLeft="20.0dip"
-            android:layout_marginRight="20.0dip"
-            android:layout_marginTop="10.0dip"
-            android:hint="Please enter amount in BD"
-            android:inputType="numberDecimal"
-            android:paddingLeft="10.0dip"
-            android:textColor="@android:color/black"
-            android:textSize="15.0sp"/>
+		<EditText
+			android:id="@+id/invoice_amount_et"
+			android:layout_width="fill_parent"
+			android:layout_height="40.0dip"
+			android:layout_below="@+id/t3"
+			android:layout_marginLeft="20.0dip"
+			android:layout_marginRight="20.0dip"
+			android:layout_marginTop="10.0dip"
+			android:hint="Please enter amount in BD"
+			android:imeActionLabel="Generate"
+			android:imeOptions="actionDone"
+			android:inputType="numberDecimal"
+			android:paddingLeft="10.0dip"
+			android:textColor="@android:color/black"
+			android:textSize="15.0sp"/>
 
-        <RelativeLayout
-            android:id="@+id/r21"
-            android:layout_width="fill_parent"
-            android:layout_height="40.0dip"
-            android:layout_below="@+id/invoice_amount_et"
-            android:layout_marginLeft="25.0dip"
-            android:layout_marginRight="25.0dip"
-            android:layout_marginTop="15.0dip">
+		<RelativeLayout
+			android:id="@+id/r21"
+			android:layout_width="fill_parent"
+			android:layout_height="40.0dip"
+			android:layout_below="@+id/invoice_amount_et"
+			android:layout_marginLeft="25.0dip"
+			android:layout_marginRight="25.0dip"
+			android:layout_marginTop="15.0dip">
 
-            <Button
-                android:id="@+id/invoice_ok_btn"
-                android:layout_width="120.0dip"
-                android:layout_height="fill_parent"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:background="@color/button_green"
-                android:text="Generate"
-                android:textColor="#ffffffff"
-                android:textSize="20.0sp"
-                android:textStyle="bold"/>
-        </RelativeLayout>
+			<Button
+				android:id="@+id/invoice_ok_btn"
+				android:layout_width="120.0dip"
+				android:layout_height="fill_parent"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:background="@color/button_green"
+				android:text="Generate"
+				android:textColor="#ffffffff"
+				android:textSize="20.0sp"
+				android:textStyle="bold"/>
+		</RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/token_relativeLayout"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/r21"
-            android:layout_marginTop="30.0dip"
-            android:visibility="gone">
+		<RelativeLayout
+			android:id="@+id/token_relativeLayout"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/r21"
+			android:layout_marginTop="30.0dip"
+			android:visibility="gone">
 
-            <com.token.util.MyTextView
-                android:id="@+id/t31"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15.0dip"
-                android:text="Send Token To Payer"
-                android:textColor="@android:color/black"
-                android:textSize="20.0sp"
-                android:textStyle="bold"/>
+			<Button
+				android:id="@+id/copyUrlBtn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_centerHorizontal="true"
+				android:background="@color/Blue"
+				android:padding="5dp"
+				android:text="Click to copy Payment URL"
+				android:textColor="#ffffffff"
+				android:textSize="20.0sp"
+				android:textStyle="bold"/>
 
-            <com.token.util.MyTextView
-                android:id="@+id/token_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/t31"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20.0dip"
-                android:text="6342"
-                android:textColor="@android:color/black"
-                android:textIsSelectable="true"
-                android:textSize="30.0sp"
-                android:textStyle="bold"/>
-        </RelativeLayout>
-    </RelativeLayout>
+			<com.token.util.MyTextView
+				android:id="@+id/t31"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/copyUrlBtn"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="15.0dip"
+				android:text="Send Token To Payer"
+				android:textColor="@android:color/black"
+				android:textSize="20.0sp"
+				android:textStyle="bold"/>
+
+			<com.token.util.MyTextView
+				android:id="@+id/token_number"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/t31"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="20.0dip"
+				android:text="6342"
+				android:textColor="@android:color/black"
+				android:textIsSelectable="true"
+				android:textSize="30.0sp"
+				android:textStyle="bold"/>
+		</RelativeLayout>
+	</RelativeLayout>
 </RelativeLayout>

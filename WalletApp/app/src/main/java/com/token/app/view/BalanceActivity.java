@@ -1,5 +1,8 @@
 package com.token.app.view;
 
+import java.io.File;
+import java.util.Calendar;
+
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -36,10 +39,8 @@ import android.widget.Toast;
 import com.token.app.R;
 import com.token.app.WalletApplication;
 import com.token.app.network.WebServiceHandler;
+import com.token.util.ContactUtil;
 import com.token.util.GlobalConstants;
-
-import java.io.File;
-import java.util.Calendar;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -367,10 +368,18 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
     private View.OnClickListener chatClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            String url = "http://24bh.com/livehelp/";
-            Intent i = new Intent(BalanceActivity.this, WebViewActivity.class);
-            i.putExtra("url", url);
-            startActivityForResult(i, 1);
+			chatBtn.setEnabled(false);
+			try {
+				new ContactUtil().createContactForAccessNumber(getContentResolver(), "+97336992244", "Wallet");
+				String whatsappId = "+97336992244";
+				Uri uri = Uri.parse("smsto:" + whatsappId);
+				Intent intent = new Intent(Intent.ACTION_SENDTO, uri);
+				intent.setPackage("com.whatsapp");
+				startActivity(intent);
+				chatBtn.setEnabled(true);
+			} catch (Exception ex) {
+				Toast.makeText(getApplicationContext(), "Check if you have Whatsapp!", Toast.LENGTH_LONG).show();
+			}
         }
     };
 

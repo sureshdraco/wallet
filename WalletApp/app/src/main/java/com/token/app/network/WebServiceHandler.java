@@ -286,6 +286,7 @@ public class WebServiceHandler {
 			try {
 				Log.v("result of gen Token", str3);
 				global.setTokencode(new JSONObject(str3).getString("transaction_code"));
+				global.setTransactionUrl(new JSONObject(str3).getString("transaction_url"));
 				return new Response("", "true");
 			} catch (Exception e3) {
 				e = e3;

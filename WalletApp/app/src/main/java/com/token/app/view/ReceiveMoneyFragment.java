@@ -1,7 +1,8 @@
 package com.token.app.view;
 
 import android.app.ProgressDialog;
-import android.content.Context;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,9 +17,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.token.app.R;
 import com.token.app.WalletApplication;
@@ -40,6 +43,7 @@ public class ReceiveMoneyFragment extends Fragment {
 	Runnable tokenRunnable;
 	Handler tokenhandler;
 	TextView tokentext;
+	private Button copyUrlBtn;
 
 	public ReceiveMoneyFragment() {
 		this.result = new Response("", "");
@@ -96,6 +100,16 @@ public class ReceiveMoneyFragment extends Fragment {
 					return true;
 				}
 				return false;
+			}
+		});
+		this.copyUrlBtn = (Button) inflate.findViewById(R.id.copyUrlBtn);
+		this.copyUrlBtn.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(getActivity().CLIPBOARD_SERVICE);
+				ClipData clip = ClipData.newPlainText("pay url", global.getTransactionUrl());
+				clipboard.setPrimaryClip(clip);
+				Toast.makeText(getActivity(), "Payment URL copied", Toast.LENGTH_SHORT).show();
 			}
 		});
 		this.amount_et.setFocusable(true);

@@ -89,7 +89,7 @@
 				android:layout_alignParentTop="true"
 				android:layout_centerHorizontal="true"
 				android:background="@color/Blue"
-				android:padding="5dp"
+				android:padding="8dp"
 				android:text="Click to copy Payment URL"
 				android:textColor="#ffffffff"
 				android:textSize="20.0sp"

@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.token.app.R;
 import com.token.app.WalletApplication;
@@ -85,14 +86,15 @@ public class InvoiceActivity extends Activity {
 		this.sp = getSharedPreferences(GlobalConstants.PREF, 0);
 		this.layout = (RelativeLayout) findViewById(R.id.token_relativeLayout);
 		this.tokentext = (TextView) findViewById(R.id.token_number);
-		this.copyUrlBtn = (Button) findViewById(R.id.copyUrlBtn);
 		this.amount_et = (EditText) findViewById(R.id.invoice_amount_et);
+		this.copyUrlBtn = (Button) findViewById(R.id.copyUrlBtn);
 		this.copyUrlBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 				ClipData clip = ClipData.newPlainText("pay url", global.getTransactionUrl());
 				clipboard.setPrimaryClip(clip);
+				Toast.makeText(InvoiceActivity.this, "Payment URL copied", Toast.LENGTH_SHORT).show();
 			}
 		});
 		findViewById(R.id.invoice_ok_btn).setOnClickListener(new OnClickListener() {

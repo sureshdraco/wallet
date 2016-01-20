@@ -96,7 +96,8 @@ public class TokenInfoDialog extends Fragment implements OnTouchListener {
             public void run() {
                 try {
                     String string = TokenInfoDialog.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-                    TokenInfoDialog.this.res = WebServiceHandler.accountBalanceservice(TokenInfoDialog.this.getActivity(), string);
+					String pwd = TokenInfoDialog.this.sp.getString(GlobalConstants.PREF_PASSWORD, "");
+					TokenInfoDialog.this.res = WebServiceHandler.accountBalanceservice(TokenInfoDialog.this.getActivity(), string, pwd);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

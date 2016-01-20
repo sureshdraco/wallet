@@ -101,7 +101,7 @@ public class WebServiceHandler {
 		return new DefaultHttpClient(my_httpParams);
 	}
 
-	public static String accountBalanceservice(Context context, String str) {
+	public static String accountBalanceservice(Context context, String str, String password) {
 		String str2;
 		Exception e;
 		String str3 = "";
@@ -109,9 +109,11 @@ public class WebServiceHandler {
 
 		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/usersmaster/balanceinfo");
+		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/users/balance");
 		List arrayList = new ArrayList();
+		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
+		arrayList.add(new BasicNameValuePair("password", password));
 		Log.v("nv of AccountData", arrayList.toString());
 		try {
 			httpPost.setEntity(new UrlEncodedFormEntity(arrayList));

@@ -38,7 +38,8 @@ public class Utils {
 			public void run() {
 				try {
 					Utils.this.email_mString = Utils.this.sharedPreferences.getString(GlobalConstants.PREF_USERNAME, "");
-					Utils.this.res = WebServiceHandler.accountBalanceservice(Utils.this.context, Utils.this.email_mString);
+					String pwd = Utils.this.sharedPreferences.getString(GlobalConstants.PREF_PASSWORD, "");
+					Utils.this.res = WebServiceHandler.accountBalanceservice(Utils.this.context, email_mString, pwd);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

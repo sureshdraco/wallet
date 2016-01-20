@@ -101,8 +101,9 @@ public class BalanceActivity extends FragmentActivity implements OnClickListener
         this.accountRunnable = new Runnable() {
             public void run() {
                 try {
-                    String string = BalanceActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
-                    BalanceActivity.this.res = WebServiceHandler.accountBalanceservice(BalanceActivity.this, string);
+					String string = BalanceActivity.this.sp.getString(GlobalConstants.PREF_USERNAME, "");
+					String pwd = BalanceActivity.this.sp.getString(GlobalConstants.PREF_PASSWORD, "");
+                    BalanceActivity.this.res = WebServiceHandler.accountBalanceservice(BalanceActivity.this, string, pwd);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

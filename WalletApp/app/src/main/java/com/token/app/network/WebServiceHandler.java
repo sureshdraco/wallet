@@ -109,7 +109,7 @@ public class WebServiceHandler {
 
 		DefaultHttpClient defaultHttpClient = getHttpsParams();
 		ResponseHandler basicResponseHandler = new BasicResponseHandler();
-		HttpPost httpPost = new HttpPost("https://walletgcc.com/wallet/public/users/balance");
+		HttpPost httpPost = new HttpPost("https://www.walletgcc.com/wallet/public/usersmaster/balanceinfo");
 		List arrayList = new ArrayList();
 		arrayList.add(new BasicNameValuePair("_token", "faa8cca04d3234b759203g08dc22afdb2"));
 		arrayList.add(new BasicNameValuePair("email", str));
